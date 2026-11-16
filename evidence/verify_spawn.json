@@ -1,0 +1,173 @@
+{
+ "actors": [
+  {
+   "path": "/Script/PICOOpenXRHMD.PICOCameraPreviewActor",
+   "spawned": true,
+   "name": "PICOCameraPreviewActor_UAID_00E0971E3C29531503_1136532615"
+  },
+  {
+   "path": "/Script/PICOOpenXRMovement.PICOEyeTrackingDebugActor",
+   "spawned": true,
+   "name": "PICOEyeTrackingDebugActor_UAID_00E0971E3C29531503_1136549616"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.SceneCapturesGeneratorPICO",
+   "spawned": true,
+   "name": "SceneCapturesGeneratorPICO_UAID_00E0971E3C29531503_1136553617"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.SpatialAnchorActorPICO",
+   "spawned": true,
+   "name": "SpatialAnchorActorPICO_UAID_00E0971E3C29531503_1136556618"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.SpatialMeshActorPICO",
+   "spawned": true,
+   "name": "SpatialMeshActorPICO_UAID_00E0971E3C29531503_1136559619"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.SpatialPlaneActorPICO",
+   "spawned": true,
+   "name": "SpatialPlaneActorPICO_UAID_00E0971E3C29531503_1136562620"
+  }
+ ],
+ "components": [
+  {
+   "path": "/Script/PICOOpenXRHMD.OpenXRRenderModelPMCPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'OpenXRRenderModelPMCPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRHMD.PokeHoleComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'PokeHoleComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRMovement.BodyTrackingComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'BodyTrackingComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRMovement.FaceTrackingComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'FaceTrackingComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.AnchorComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'AnchorComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.ProceduralMeshComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'ProceduralMeshComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.SpatialMeshComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'SpatialMeshComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRMR.SpatialPlaneComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'SpatialPlaneComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRHandTracking.HandTrackingComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'HandTrackingComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughLayerComponentPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'PassthroughLayerComponentPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughCustomShapeLayerPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'PassthroughCustomShapeLayerPICO' object has no attribute 'register_component'"
+  },
+  {
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughFullScreenLayerPICO",
+   "ok": true,
+   "registered": false,
+   "register_error": "'PassthroughFullScreenLayerPICO' object has no attribute 'register_component'"
+  }
+ ],
+ "objects": [
+  {
+   "path": "/Script/PICOOpenXRRuntimeSettings.PICOOpenXRRuntimeSettings",
+   "ok": true
+  },
+  {
+   "path": "/Script/PICOOpenXRPortal.PICO_PerformancePackSettings",
+   "ok": true
+  },
+  {
+   "path": "/Script/PICOOpenXRPortal.PICO_PortalSettings",
+   "ok": true
+  },
+  {
+   "path": "/Script/PICOOpenXRHMD.PICO_RenderSettings",
+   "ok": false,
+   "error": "class not found"
+  },
+  {
+   "path": "/Script/PICOOpenXRHandTracking.PICOHandGestureSemanticRecognizerAsset",
+   "ok": true
+  },
+  {
+   "path": "/Script/PICOOpenXRPortal.PICOHapticAsset",
+   "ok": false,
+   "error": "class not found"
+  },
+  {
+   "path": "/Script/PICOOpenXRPortal.PICOOpenXRHandGestureRecognizerFactory",
+   "ok": false,
+   "error": "class not found"
+  }
+ ],
+ "settings": {
+  "cdo": true,
+  "has_apply_c_var_settings_from_project_settings": null,
+  "has_get_bool_config_by_key": null,
+  "has_ensure_fb_foveation_level_device_profile": null,
+  "has_toggle_occlusion_culling": null
+ },
+ "widgets": [
+  {
+   "asset": "/PICOOpenXR/Blueprints/UI/EUW_Verification_Main",
+   "loaded": true,
+   "class": "EditorUtilityWidgetBlueprint"
+  },
+  {
+   "asset": "/PICOOpenXR/Blueprints/UI/EUW_VerificationRow",
+   "loaded": true,
+   "class": "EditorUtilityWidgetBlueprint"
+  },
+  {
+   "asset": "/PICOOpenXR/Blueprints/UI/PICOOpenXR_Portal",
+   "loaded": true,
+   "class": "EditorUtilityWidgetBlueprint"
+  },
+  {
+   "asset": "/PICOOpenXR/Blueprints/UI/EUB_MenuEntry",
+   "loaded": true,
+   "class": "EditorUtilityBlueprint"
+  }
+ ],
+ "errors": [],
+ "world": "Untitled_1",
+ "cleanup_done": true
+}

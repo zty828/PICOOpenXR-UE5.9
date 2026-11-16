@@ -1,0 +1,803 @@
+{
+ "classes": [
+  {
+   "class": "PICOOpenXRRuntimeSettings",
+   "path": "/Script/PICOOpenXRRuntimeSettings.PICOOpenXRRuntimeSettings",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOCameraFunctionLibrary",
+   "path": "/Script/PICOOpenXRHMD.PICOCameraFunctionLibrary",
+   "members": 48,
+   "fn_expected": 23,
+   "fn_found": 23,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOCameraPreviewActor",
+   "path": "/Script/PICOOpenXRHMD.PICOCameraPreviewActor",
+   "members": 237,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 12,
+   "pr_found": 12
+  },
+  {
+   "class": "DelegateManagerPICO",
+   "path": "/Script/PICOOpenXRHMD.DelegateManagerPICO",
+   "members": 28,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 3,
+   "pr_found": 3
+  },
+  {
+   "class": "HMDFunctionLibraryPICO",
+   "path": "/Script/PICOOpenXRHMD.HMDFunctionLibraryPICO",
+   "members": 53,
+   "fn_expected": 28,
+   "fn_found": 28,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "MRCCameraPICO",
+   "path": "/Script/PICOOpenXRHMD.MRCCameraPICO",
+   "members": 228,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "OpenXRRenderModelPMCPICO",
+   "path": "/Script/PICOOpenXRHMD.OpenXRRenderModelPMCPICO",
+   "members": 427,
+   "fn_expected": 1,
+   "fn_found": 1,
+   "pr_expected": 3,
+   "pr_found": 3
+  },
+  {
+   "class": "PokeHoleComponentPICO",
+   "path": "/Script/PICOOpenXRHMD.PokeHoleComponentPICO",
+   "members": 433,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 10,
+   "pr_found": 10
+  },
+  {
+   "class": "PICOHapticAsset",
+   "path": "/Script/PICOOpenXRInput.PICOHapticAsset",
+   "members": 31,
+   "fn_expected": 2,
+   "fn_found": 2,
+   "pr_expected": 4,
+   "pr_found": 4
+  },
+  {
+   "class": "InputFunctionLibraryPICO",
+   "path": "/Script/PICOOpenXRInput.InputFunctionLibraryPICO",
+   "members": 29,
+   "fn_expected": 4,
+   "fn_found": 4,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "BodyTrackingComponentPICO",
+   "path": "/Script/PICOOpenXRMovement.BodyTrackingComponentPICO",
+   "members": 522,
+   "fn_expected": 1,
+   "fn_found": 1,
+   "pr_expected": 3,
+   "pr_found": 3
+  },
+  {
+   "class": "PICOEyeTrackingDebugActor",
+   "path": "/Script/PICOOpenXRMovement.PICOEyeTrackingDebugActor",
+   "members": 236,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 11,
+   "pr_found": 11
+  },
+  {
+   "class": "FaceTrackingComponentPICO",
+   "path": "/Script/PICOOpenXRMovement.FaceTrackingComponentPICO",
+   "members": 74,
+   "fn_expected": 3,
+   "fn_found": 3,
+   "pr_expected": 5,
+   "pr_found": 5
+  },
+  {
+   "class": "FaceLiveLinkRetargetAssetPICO",
+   "path": "/Script/PICOOpenXRMovement.FaceLiveLinkRetargetAssetPICO",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOLiveLinkSourceFactory",
+   "path": "/Script/PICOOpenXRMovement.PICOLiveLinkSourceFactory",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "MovementFunctionLibraryPICO",
+   "path": "/Script/PICOOpenXRMovement.MovementFunctionLibraryPICO",
+   "members": 54,
+   "fn_expected": 29,
+   "fn_found": 29,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "AnchorComponentPICO",
+   "path": "/Script/PICOOpenXRMR.AnchorComponentPICO",
+   "members": 70,
+   "fn_expected": 4,
+   "fn_found": 4,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "LaunchSpatialAnchorServicePICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchSpatialAnchorServicePICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "CreateSpatialAnchorPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.CreateSpatialAnchorPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "PersistSpatialAnchorPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.PersistSpatialAnchorPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "UnpersistSpatialAnchorPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.UnpersistSpatialAnchorPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "RequestSpatialAnchorsPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.RequestSpatialAnchorsPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "LaunchSpatialMeshScanningPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchSpatialMeshScanningPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "RequestSpatialMeshPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.RequestSpatialMeshPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "LaunchSpatialPlaneScanningPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchSpatialPlaneScanningPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "RequestSpatialPlanePICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.RequestSpatialPlanePICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "LaunchDynamicObjectTrackingPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchDynamicObjectTrackingPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "RequestDynamicObjectsPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.RequestDynamicObjectsPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "LaunchSceneCaptureServicePICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchSceneCaptureServicePICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "LaunchSceneCaptureAppPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchSceneCaptureAppPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "RequestSceneCapturesPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.RequestSceneCapturesPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "LaunchLightEstimationServicePICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.LaunchLightEstimationServicePICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "RequestLightEstimationPICO_AsyncAction",
+   "path": "/Script/PICOOpenXRMR.RequestLightEstimationPICO_AsyncAction",
+   "members": 27,
+   "fn_expected": 1,
+   "fn_found": 0,
+   "pr_expected": 2,
+   "pr_found": 2
+  },
+  {
+   "class": "MRDelegateManagerPICO",
+   "path": "/Script/PICOOpenXRMR.MRDelegateManagerPICO",
+   "members": 39,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 14,
+   "pr_found": 14
+  },
+  {
+   "class": "MRFunctionLibraryPICO",
+   "path": "/Script/PICOOpenXRMR.MRFunctionLibraryPICO",
+   "members": 58,
+   "fn_expected": 33,
+   "fn_found": 33,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "MRSkyLightPICO",
+   "path": "/Script/PICOOpenXRMR.MRSkyLightPICO",
+   "members": 226,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "LightEstimationTexturePICO",
+   "path": "/Script/PICOOpenXRMR.LightEstimationTexturePICO",
+   "members": 86,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "ProceduralMeshComponentPICO",
+   "path": "/Script/PICOOpenXRMR.ProceduralMeshComponentPICO",
+   "members": 423,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "SceneCapturesGeneratorPICO",
+   "path": "/Script/PICOOpenXRMR.SceneCapturesGeneratorPICO",
+   "members": 241,
+   "fn_expected": 7,
+   "fn_found": 7,
+   "pr_expected": 9,
+   "pr_found": 9
+  },
+  {
+   "class": "SpatialAnchorActorPICO",
+   "path": "/Script/PICOOpenXRMR.SpatialAnchorActorPICO",
+   "members": 227,
+   "fn_expected": 2,
+   "fn_found": 2,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "SpatialMeshActorPICO",
+   "path": "/Script/PICOOpenXRMR.SpatialMeshActorPICO",
+   "members": 235,
+   "fn_expected": 5,
+   "fn_found": 5,
+   "pr_expected": 5,
+   "pr_found": 5
+  },
+  {
+   "class": "SpatialMeshComponentPICO",
+   "path": "/Script/PICOOpenXRMR.SpatialMeshComponentPICO",
+   "members": 424,
+   "fn_expected": 1,
+   "fn_found": 1,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "SpatialPlaneActorPICO",
+   "path": "/Script/PICOOpenXRMR.SpatialPlaneActorPICO",
+   "members": 236,
+   "fn_expected": 5,
+   "fn_found": 5,
+   "pr_expected": 6,
+   "pr_found": 6
+  },
+  {
+   "class": "SpatialPlaneComponentPICO",
+   "path": "/Script/PICOOpenXRMR.SpatialPlaneComponentPICO",
+   "members": 425,
+   "fn_expected": 2,
+   "fn_found": 2,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOHandGestureRecognizerAsset",
+   "path": "/Script/PICOOpenXRHandTracking.PICOHandGestureRecognizerAsset",
+   "members": 30,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 5,
+   "pr_found": 5
+  },
+  {
+   "class": "PICOHandGestureSemanticRecognizerAsset",
+   "path": "/Script/PICOOpenXRHandTracking.PICOHandGestureSemanticRecognizerAsset",
+   "members": 29,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 4,
+   "pr_found": 4
+  },
+  {
+   "class": "HandTrackingComponentPICO",
+   "path": "/Script/PICOOpenXRHandTracking.HandTrackingComponentPICO",
+   "members": 540,
+   "fn_expected": 10,
+   "fn_found": 10,
+   "pr_expected": 12,
+   "pr_found": 12
+  },
+  {
+   "class": "HandTrackingFunctionLibraryPICO",
+   "path": "/Script/PICOOpenXRHandTracking.HandTrackingFunctionLibraryPICO",
+   "members": 32,
+   "fn_expected": 7,
+   "fn_found": 7,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PassthroughFunctionLibraryPICO",
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughFunctionLibraryPICO",
+   "members": 26,
+   "fn_expected": 1,
+   "fn_found": 1,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PassthroughLayerBasePICO",
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughLayerBasePICO",
+   "members": 50,
+   "fn_expected": 13,
+   "fn_found": 13,
+   "pr_expected": 14,
+   "pr_found": 14
+  },
+  {
+   "class": "PassthroughFullScreenLayerPICO",
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughFullScreenLayerPICO",
+   "members": 50,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PassthroughCustomShapeLayerPICO",
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughCustomShapeLayerPICO",
+   "members": 50,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PassthroughLayerComponentPICO",
+   "path": "/Script/PICOOpenXRPassthrough.PassthroughLayerComponentPICO",
+   "members": 167,
+   "fn_expected": 6,
+   "fn_found": 6,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOHapticAssetFactory",
+   "path": "/Script/PICOOpenXREditor.PICOHapticAssetFactory",
+   "members": 37,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOHapticAssetThumbnailRenderer",
+   "path": "/Script/PICOOpenXREditor.PICOHapticAssetThumbnailRenderer",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRConfigEditorWidget",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRConfigEditorWidget",
+   "members": 223,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOHandGestureEditorLibrary",
+   "path": "/Script/PICOOpenXREditor.PICOHandGestureEditorLibrary",
+   "members": 28,
+   "fn_expected": 3,
+   "fn_found": 3,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRHandGestureRecognizerExporter",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRHandGestureRecognizerExporter",
+   "members": 33,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRHandGestureRecognizerFactory",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRHandGestureRecognizerFactory",
+   "members": 37,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRHandGestureSemanticRecognizerExporter",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRHandGestureSemanticRecognizerExporter",
+   "members": 33,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRHandGestureSemanticRecognizerFactory",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRHandGestureSemanticRecognizerFactory",
+   "members": 37,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRPoseAssetExporter",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRPoseAssetExporter",
+   "members": 33,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRPoseAssetFactory",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRPoseAssetFactory",
+   "members": 37,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOOpenXRHandPoseJsonImportData",
+   "path": "/Script/PICOOpenXREditor.PICOOpenXRHandPoseJsonImportData",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICO_PerformancePackSettings",
+   "path": "/Script/PICOOpenXRPortal.PICO_PerformancePackSettings",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOPortalFunctionLibrary",
+   "path": "/Script/PICOOpenXRPortal.PICOPortalFunctionLibrary",
+   "members": 46,
+   "fn_expected": 21,
+   "fn_found": 21,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOVerificatonEventManager",
+   "path": "/Script/PICOOpenXRPortal.PICOVerificatonEventManager",
+   "members": 26,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 1,
+   "pr_found": 1
+  },
+  {
+   "class": "PICO_PortalSettings",
+   "path": "/Script/PICOOpenXRPortal.PICO_PortalSettings",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICO_RenderSettings",
+   "path": "/Script/PICOOpenXRPortal.PICO_RenderSettings",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICO_PortalSubsystem",
+   "path": "/Script/PICOOpenXRPortal.PICO_PortalSubsystem",
+   "members": 25,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOVerificationSplitterRow",
+   "path": "/Script/PICOOpenXRPortal.PICOVerificationSplitterRow",
+   "members": 120,
+   "fn_expected": 4,
+   "fn_found": 4,
+   "pr_expected": 1,
+   "pr_found": 1
+  },
+  {
+   "class": "PICOVerificationRestart",
+   "path": "/Script/PICOOpenXRPortal.PICOVerificationRestart",
+   "members": 115,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOVerificationObject",
+   "path": "/Script/PICOOpenXRPortal.PICOVerificationObject",
+   "members": 27,
+   "fn_expected": 2,
+   "fn_found": 2,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOSetMSAAObject",
+   "path": "/Script/PICOOpenXRPortal.PICOSetMSAAObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOEnableMultiviewObject",
+   "path": "/Script/PICOOpenXRPortal.PICOEnableMultiviewObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOEnableMobileHDRObject",
+   "path": "/Script/PICOOpenXRPortal.PICOEnableMobileHDRObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOEnableVulkanObject",
+   "path": "/Script/PICOOpenXRPortal.PICOEnableVulkanObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOHalfPrecisionFloatObject",
+   "path": "/Script/PICOOpenXRPortal.PICOHalfPrecisionFloatObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICODisableAmbientOcclusionObject",
+   "path": "/Script/PICOOpenXRPortal.PICODisableAmbientOcclusionObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOEnableOcclusionCullingObject",
+   "path": "/Script/PICOOpenXRPortal.PICOEnableOcclusionCullingObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICODisableMovableSpotlightShadowsObject",
+   "path": "/Script/PICOOpenXRPortal.PICODisableMovableSpotlightShadowsObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICODisablePICOXRPluginObject",
+   "path": "/Script/PICOOpenXRPortal.PICODisablePICOXRPluginObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOSetAndroidSDKMinimumObject",
+   "path": "/Script/PICOOpenXRPortal.PICOSetAndroidSDKMinimumObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOSetAndroidSDKTargetObject",
+   "path": "/Script/PICOOpenXRPortal.PICOSetAndroidSDKTargetObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICOSetArm64CPUObject",
+   "path": "/Script/PICOOpenXRPortal.PICOSetArm64CPUObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  },
+  {
+   "class": "PICODisableTouchInterfaceObject",
+   "path": "/Script/PICOOpenXRPortal.PICODisableTouchInterfaceObject",
+   "members": 27,
+   "fn_expected": 0,
+   "fn_found": 0,
+   "pr_expected": 0,
+   "pr_found": 0
+  }
+ ],
+ "missing_classes": [],
+ "fn_total": 233,
+ "fn_found": 217,
+ "pr_total": 154,
+ "pr_found": 154,
+ "fn_missing": [
+  "LaunchSpatialAnchorServicePICO_AsyncAction.LaunchSpatialAnchorServicePICO_Async",
+  "CreateSpatialAnchorPICO_AsyncAction.CreateSpatialAnchorPICO_Async",
+  "PersistSpatialAnchorPICO_AsyncAction.PersistSpatialAnchorPICO_Async",
+  "UnpersistSpatialAnchorPICO_AsyncAction.UnpersistSpatialAnchorPICO_Async",
+  "RequestSpatialAnchorsPICO_AsyncAction.LoadSpatialAnchorPICO_Async",
+  "LaunchSpatialMeshScanningPICO_AsyncAction.LaunchSpatialMeshScanningPICO_Async",
+  "RequestSpatialMeshPICO_AsyncAction.RequestSpatialMeshInfosPICO_Async",
+  "LaunchSpatialPlaneScanningPICO_AsyncAction.LaunchSpatialPlaneScanningPICO_Async",
+  "RequestSpatialPlanePICO_AsyncAction.RequestSpatialPlaneInfosPICO_Async",
+  "LaunchDynamicObjectTrackingPICO_AsyncAction.LaunchDynamicObjectTrackingPICO_Async",
+  "RequestDynamicObjectsPICO_AsyncAction.RequestDynamicObjectInfosPICO_Async",
+  "LaunchSceneCaptureServicePICO_AsyncAction.LaunchSceneCaptureServicePICO_Async",
+  "LaunchSceneCaptureAppPICO_AsyncAction.LaunchSceneCaptureAppPICO_Async",
+  "RequestSceneCapturesPICO_AsyncAction.RequestSceneCapturesPICO_Async",
+  "LaunchLightEstimationServicePICO_AsyncAction.LaunchLightEstimationServicePICO_Async",
+  "RequestLightEstimationPICO_AsyncAction.RequestLightEstimationPICO_Async"
+ ],
+ "pr_missing": [],
+ "load_errors": []
+}

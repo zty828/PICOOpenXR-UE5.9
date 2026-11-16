@@ -1,0 +1,94 @@
+{
+  "engine": "5.9.0-60351404+++UE5+Release-5.9",
+  "project": "F:/CG/Projects/PICOUE/Host/PICOClean59/PICOClean59.uproject",
+  "plugin_mounted": true,
+  "modules": [
+    {
+      "module": "PICOOpenXRHMD",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRInput",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRMovement",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRMR",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRHandTracking",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRHandInteraction",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRPassthrough",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRRuntimeSettings",
+      "runtime_check": null,
+      "script_package": true
+    },
+    {
+      "module": "PICOOpenXREditor",
+      "runtime_check": null,
+      "script_package": false
+    },
+    {
+      "module": "PICOOpenXRPortal",
+      "runtime_check": null,
+      "script_package": false
+    }
+  ],
+  "classes": {
+    "total": 86,
+    "ok": 86,
+    "fail": []
+  },
+  "structs": {
+    "total": 51,
+    "ok": 51,
+    "fail": []
+  },
+  "enums": {
+    "total": 63,
+    "ok": 63,
+    "fail": []
+  },
+  "assets": {
+    "total": 121,
+    "ok": 121,
+    "fail": []
+  },
+  "blueprints": {
+    "total": 17,
+    "compiled": 17,
+    "fail": []
+  },
+  "errors": [],
+  "module_probe": {
+    "PICOOpenXRHMD": true,
+    "PICOOpenXRInput": true,
+    "PICOOpenXRMovement": true,
+    "PICOOpenXRMR": true,
+    "PICOOpenXRHandTracking": true,
+    "PICOOpenXRPassthrough": true,
+    "PICOOpenXRRuntimeSettings": true,
+    "PICOOpenXREditor": true,
+    "PICOOpenXRPortal": true
+  }
+}

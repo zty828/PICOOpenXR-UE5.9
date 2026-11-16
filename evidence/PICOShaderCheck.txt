@@ -1,0 +1,9 @@
+KNOWN_TYPE|FPICOCubemapPS|REGISTERED|/Plugin/PICOOpenXR/Private/PICOShaders.usf|MainForCubemap
+KNOWN_TYPE|FDisplayMappingPixelShader|REGISTERED|/Engine/Private/DisplayMappingPixelShader.usf|DisplayMappingPS
+PLUGIN_SHADER_TYPES|1
+STYPE|FPICOCubemapPS|/Plugin/PICOOpenXR/Private/PICOShaders.usf|MainForCubemap
+GLOBAL_SHADERMAP|ok|featurelevel=3|platform=0
+SHADER|FPICOCubemapPS|COMPILED
+SHADER|FDisplayMappingPixelShader|COMPILED
+SHADER|FPICOCubemapPS|COMPILED
+SUMMARY|known=2|unregistered=0|compiled=3|missing=0

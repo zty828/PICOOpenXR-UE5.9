@@ -1,0 +1,242 @@
+PICOOpenXR UE5.8 -> UE5.9 adaptation patch report
+PRISTINE: F:\CG\UEPlugins\PICO-Unreal-SDK-6.1.4\UE_5.8\Plugins\PICOOpenXR
+WORK    : F:\CG\Projects\PICOUE\Host\PICOHost59\Plugins\PICOOpenXR
+Generated: 2026-11-16 08:07:38
+
+=== SUMMARY ===
+pristine_files=350 work_files=351 modified=14 added=1 removed=0
+
+=== MODIFIED FILES ===
+PICOOpenXR.uplugin | 2744 -> 2744
+Source\PICOOpenXREditor\Private\PICO_HandGestureEditorLibrary.cpp | 52732 -> 52752
+Source\PICOOpenXRHMD\Private\PICO_HMD.cpp | 147511 -> 148228
+Source\PICOOpenXRInput\Private\PICO_Controller.cpp | 68151 -> 69200
+Source\PICOOpenXRInput\Private\PICO_Controller.h | 6044 -> 6513
+Source\PICOOpenXRMR\Private\PICO_DynamicObject.cpp | 16348 -> 16488
+Source\PICOOpenXRMR\Private\PICO_LightEstimation.cpp | 9955 -> 10028
+Source\PICOOpenXRMR\Private\PICO_MR.cpp | 46831 -> 46871
+Source\PICOOpenXRMR\Private\PICO_MRAsyncActions.cpp | 33912 -> 33960
+Source\PICOOpenXRMR\Private\PICO_SceneCapture.cpp | 12377 -> 12517
+Source\PICOOpenXRMR\Private\PICO_SpatialAnchor.cpp | 25712 -> 25732
+Source\PICOOpenXRMR\Private\PICO_SpatialMesh.cpp | 10813 -> 10913
+Source\PICOOpenXRMR\Private\PICO_SpatialPlane.cpp | 9914 -> 10034
+Source\PICOOpenXRRuntimeSettings\Private\PICOOpenXRRuntimeSettings.cpp | 10648 -> 12410
+
+=== ADDED FILES ===
+Config\DefaultPICOOpenXR.ini (791)
+
+==============================================================================
+PICOOpenXR.uplugin
+==============================================================================
++ 	"EngineVersion": "5.9.0",
+- 	"EngineVersion": "5.8.0",
+
+==============================================================================
+Source\PICOOpenXREditor\Private\PICO_HandGestureEditorLibrary.cpp
+==============================================================================
++ 			OutError = FString::Printf(TEXT("Expected %d joints, found %d."), static_cast<int32>(UE_ARRAY_COUNT(OpenXRJointMappings)), JointValues->Num());
+- 			OutError = FString::Printf(TEXT("Expected %d joints, found %d."), UE_ARRAY_COUNT(OpenXRJointMappings), JointValues->Num());
+
+==============================================================================
+Source\PICOOpenXRHMD\Private\PICO_HMD.cpp
+==============================================================================
++ 			// UE 5.9 moved ERHIThreadMode / GPendingRHIThreadMode from RHICommandList.h (RHI/Public)
++ 			// into RenderCore's private RHIThread.h and stopped exporting them, so plugins can no
++ 			// longer toggle the RHI thread mode directly. The only remaining public channel is the
++ 			// console command "r.RHIThread.Enable" (0 = off, 1 = dedicated thread, 2 = task threads),
++ 			// which latches the same GPendingRHIThreadMode on the next render thread config latch.
++ 			const bool bRHIDisableCommandIssued = GEngine != nullptr
++ 				&& GEngine->Exec(nullptr, TEXT("r.RHIThread.Enable 0"));
++ 			UE_LOG(LogPICOOpenXRHMD, Log, TEXT("PICO disable RHI thread requested (r.RHIThread.Enable 0), issued: %d"), bRHIDisableCommandIssued ? 1 : 0);
++ 				UE_LOG(LogPICOOpenXRHMD, Log, TEXT("Config Model: %d"), static_cast<int32>(Model));
++ 				UE_LOG(LogPICOOpenXRHMD, Log, TEXT("Config FPS: %d"), static_cast<int32>(FPS));
+- 			GPendingRHIThreadMode = ERHIThreadMode::None;
+- 				UE_LOG(LogPICOOpenXRHMD, Log, TEXT("Config Model: %d"), Model);
+- 				UE_LOG(LogPICOOpenXRHMD, Log, TEXT("Config FPS: %d"), FPS);
+
+==============================================================================
+Source\PICOOpenXRInput\Private\PICO_Controller.cpp
+==============================================================================
++ 		AddProfile(InteractionProfile, /*bHasHaptics=*/false);
++ 		AddProfile(InteractionProfile, /*bHasHaptics=*/true);
++ 		AddProfile(InteractionProfile, /*bHasHaptics=*/true);
++ 			AddProfile(InteractionProfile, /*bHasHaptics=*/true);
++ 	// Only bind haptic paths if the parametric haptics extension is enabled *and* the profile actually exposes one.
++ 	// Profiles reported with hasHaptics == false (e.g. /interaction_profiles/bytedance/pico_g3_controller) have no
++ 	// /output/haptic path; suggesting it makes the runtime fail the entire call for that profile, which would drop
++ 	// every binding we registered for it instead of just the vibration ones.
++ 	// Profiles we did not register ourselves (engine built-in ones) keep the previous behaviour.
++ 	const int32 ProfileIndex = Profiles.Find(InInteractionProfile);
++ 	const bool bProfileHasHaptics =
++ 		ProfileIndex == INDEX_NONE ||
++ 		!ProfileHasHaptics.IsValidIndex(ProfileIndex) ||
++ 		ProfileHasHaptics[ProfileIndex];
++ 	if (bParametricHapticsExtensionEnabled && bProfileHasHaptics)
++ 	else if (!bParametricHapticsExtensionEnabled)
++ 		UE_LOG(LogPICOOpenXRInput, Log, TEXT("Skipping haptic bindings - interaction profile %u does not expose a haptic output path"), static_cast<uint32>(InInteractionProfile));
++ void FControllerPICO::AddProfile(XrPath Profile, bool bHasHaptics)
++ 	ProfileHasHaptics.Add(bHasHaptics);
++ 	{
++ 	}
+- 		AddProfile(InteractionProfile);
+- 		AddProfile(InteractionProfile);
+- 		AddProfile(InteractionProfile);
+- 			AddProfile(InteractionProfile);
+- 	// Only bind haptic paths if parametric haptics extension is enabled
+- 	if (bParametricHapticsExtensionEnabled)
+- void FControllerPICO::AddProfile(XrPath Profile)
+
+==============================================================================
+Source\PICOOpenXRInput\Private\PICO_Controller.h
+==============================================================================
++ 	// bHasHaptics must mirror the OutHasHaptics value reported for the same profile in GetInteractionProfiles,
++ 	// otherwise we would suggest a /output/haptic binding for a profile that has no haptic path and the runtime
++ 	// rejects the whole xrSuggestInteractionProfileBindings call (XR_ERROR_PATH_UNSUPPORTED).
++ 	void AddProfile(XrPath Profile, bool bHasHaptics = true);
++ 	// Parallel to Profiles: true when the profile exposes a haptic output path usable by this plugin.
++ 	TArray<bool> ProfileHasHaptics;
+- 	void AddProfile(XrPath Profile);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_DynamicObject.cpp
+==============================================================================
++ 		UE_LOG(LogMRPICO, Error, TEXT("CreateDynamicObjectProvider failed OutResult:%d"), static_cast<int32>(OutResult));
++ 			UE_LOG(LogMRPICO, Error, TEXT("EnumerateSpatialEntityComponentTypes Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 			UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntityDynamicObjectData Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntitySphere Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntityPeripheralData Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"), static_cast<int32>(OutResult));
+- 		UE_LOG(LogMRPICO, Error, TEXT("CreateDynamicObjectProvider failed OutResult:%d"), OutResult);
+- 			UE_LOG(LogMRPICO, Error, TEXT("EnumerateSpatialEntityComponentTypes Failed OutResult:%d"), OutResult);
+- 			UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"), OutResult);
+- 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntityDynamicObjectData Failed OutResult:%d"), OutResult);
+- 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntitySphere Failed OutResult:%d"), OutResult);
+- 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntityPeripheralData Failed OutResult:%d"), OutResult);
+- 				UE_LOG(LogMRPICO, Warning, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"), OutResult);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_LightEstimation.cpp
+==============================================================================
++ 			       static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("EnumerateSpatialEntityComponentTypes Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLightEstimateData Failed OutResult:%d"), static_cast<int32>(OutResult));
++ 						UE_LOG(LogMRPICO, Verbose, TEXT("GetSpatialEntityLightEstimateData Success OutResult:%d"), static_cast<int32>(OutResult));
+- #include "OculusShaders.h"
+- 			       OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("EnumerateSpatialEntityComponentTypes Failed OutResult:%d"), OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"), OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLightEstimateData Failed OutResult:%d"), OutResult);
+- 						UE_LOG(LogMRPICO, Verbose, TEXT("GetSpatialEntityLightEstimateData Success OutResult:%d"), OutResult);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_MR.cpp
+==============================================================================
++ 					UE_LOG(LogMRPICO,VeryVerbose,TEXT("Semantic:%d"),static_cast<int32>(Semantic));
++ 				UE_LOG(LogMRPICO, VeryVerbose, TEXT("PollEvent State:%d"), static_cast<int32>(State));
+- 					UE_LOG(LogMRPICO,VeryVerbose,TEXT("Semantic:%d"),Semantic);
+- 				UE_LOG(LogMRPICO, VeryVerbose, TEXT("PollEvent State:%d"), State);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_MRAsyncActions.cpp
+==============================================================================
++ 				UE_LOG(LogMRPICO, Error, TEXT("LaunchDynamicObjectTracking: CreateProvider failed Result=%d"), static_cast<int32>(CreateResult));
++ 			static_cast<int32>(Result), FDynamicObjectExtensionPICO::GetInstance()->IsHandleValid() ? 1 : 0);
+- 				UE_LOG(LogMRPICO, Error, TEXT("LaunchDynamicObjectTracking: CreateProvider failed Result=%d"), CreateResult);
+- 			Result, FDynamicObjectExtensionPICO::GetInstance()->IsHandleValid());
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_SceneCapture.cpp
+==============================================================================
++ 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSceneCaptureProvider failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("EnumerateSpatialEntityComponentTypes Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityPolygon Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"),static_cast<int32>(OutResult));
+- 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSceneCaptureProvider failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("EnumerateSpatialEntityComponentTypes Failed OutResult:%d"),OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityPolygon Failed OutResult:%d"),OutResult);
+- 							UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"),OutResult);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_SpatialAnchor.cpp
+==============================================================================
++ 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSpatialAnchorProvider failed OutResult:%d"),static_cast<int32>(OutResult));
+- 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSpatialAnchorProvider failed OutResult:%d"),OutResult);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_SpatialMesh.cpp
+==============================================================================
++ 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSpatialMeshProvider failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 					UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntitySemantic Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityTriangleMesh Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"),static_cast<int32>(OutResult));
+- 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSpatialMeshProvider failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),OutResult);
+- 					UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntitySemantic Failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityTriangleMesh Failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"),OutResult);
+
+==============================================================================
+Source\PICOOpenXRMR\Private\PICO_SpatialPlane.cpp
+==============================================================================
++ 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSpatialPlaneProvider failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialPlaneOrientation Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntitySemantic Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityTriangleMesh Failed OutResult:%d"),static_cast<int32>(OutResult));
++ 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"),static_cast<int32>(OutResult));
+- 			UE_LOG(LogMRPICO, Error, TEXT("OnBeginSession CreateSpatialPlaneProvider failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialPlaneOrientation Failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityLocation Failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntitySemantic Failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityTriangleMesh Failed OutResult:%d"),OutResult);
+- 				UE_LOG(LogMRPICO, Error, TEXT("GetSpatialEntityBoundary3D Failed OutResult:%d"),OutResult);
+
+==============================================================================
+Source\PICOOpenXRRuntimeSettings\Private\PICOOpenXRRuntimeSettings.cpp
+==============================================================================
++ 	// UE 5.9 added a hard gate in the engine's OpenXR plugin: on Android the OpenXR HMD module
++ 	// refuses to initialise unless the app was packaged as an OpenXR "immersive HMD" application,
++ 	// i.e. AndroidRuntimeSettings::bPackageForOpenXRImmersive (UE 5.8 had no such requirement and
++ 	// silently relied on the runtime being present). A project migrated from 5.8 to 5.9 would
++ 	// therefore lose OpenXR - and with it every PICO feature - on device, while still running fine
++ 	// in the editor. Keep the flag enabled the same way this class already maintains the
++ 	// "pvr.app.type" activity meta-data, but never override a value the project set on purpose.
++ 	void EnsureOpenXRImmersivePackagingEnabled()
++ 		const FString SettingName = TEXT("bPackageForOpenXRImmersive");
++ 		if (!IFileManager::Get().FileExists(*DefaultEnginePath))
++ 		if (GConfig->GetString(*SectionName, *SettingName, ExistingValue, DefaultEnginePath))
++ 			// Already configured (possibly disabled on purpose) - leave it untouched.
++ 			GConfig->UnloadFile(DefaultEnginePath);
++ 		GConfig->SetString(*SectionName, *SettingName, TEXT("True"), DefaultEnginePath);
++ 		UE_LOG(LogPICOOpenXRSettings, Display, TEXT("PICO OpenXR: enabled bPackageForOpenXRImmersive in %s (required by UE5.9 to keep OpenXR active on Android)."), *DefaultEnginePath);
++ 			return;
++ 			return;
++ 		const FString SectionName = TEXT("/Script/AndroidRuntimeSettings.AndroidRuntimeSettings");
++ 		const FString DefaultEnginePath = FConfigCacheIni::NormalizeConfigIniPath(FPaths::Combine(FPaths::ProjectConfigDir(), TEXT("DefaultEngine.ini")));
++ 		FString ExistingValue;
++ 		GConfig->LoadFile(DefaultEnginePath);
++ 		GConfig->Flush(false);
++ 		GConfig->UnloadFile(DefaultEnginePath);
++ 	EnsureOpenXRImmersivePackagingEnabled();
++ 
++ 		{
++ 		}
++ 
++ 		{
++ 		}
++ 
++ 	{
++ 	}
++ 
++ 
+
+=== SUMMARY === pristine_files=350 work_files=351 modified=14 added=1 removed=0

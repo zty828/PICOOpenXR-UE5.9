@@ -1,0 +1,17 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" PICOHost59Editor Win64 Development -Project="F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" -WaitMutex
+Log file: C:\Users\zhou9\AppData\Local\UnrealBuildTool\Log.txt
+Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+  Executing up to 8 processes, one per physical core
+UbaServer - Listening on 0.0.0.0:1345
+Invalidating makefile for PICOHost59Editor (DefaultEngine.ini modified)
+D:\GameEngine\UE_5.9\Engine\Source\Editor\SwarmInterface\SwarmInterface.Build.cs: warning: Referenced directory 'F:\GameEngine\UE5.8.3Source\Tools\NETFXSDK\4.6.2\lib\um\x64' does not exist.
+WARNING: Unable to find Visual Studio SDK. Editor integration will be disabled
+Warning: Plugin 'Fab' does not list plugin 'ToolsetRegistry' as a dependency, but module 'FabToolset' depends on module 'ToolsetRegistry'.
+Target is up to date
+Using Unreal Build Accelerator local executor to run 0 action(s)
+Total time in Unreal Build Accelerator local executor: 0.25 seconds
+Output binary: D:\GameEngine\UE_5.9\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Trace written to file C:\Users\zhou9\AppData\Local\UnrealBuildTool\Trace.uba with size 6.0kb

@@ -1,0 +1,30 @@
+# ---- Unreal build output ----
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Build/
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+*.xcodeproj/
+*.xcworkspace/
+
+# ---- compiled artifacts ----
+*.pdb
+*.obj
+*.o
+*.lib.tmp
+
+# ---- make sure evidence logs are tracked ----
+!evidence/*.log
+!evidence/**/*.log
+
+# ---- OS noise ----
+Thumbs.db
+.DS_Store
+desktop.ini

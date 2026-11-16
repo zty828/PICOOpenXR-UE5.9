@@ -1,0 +1,25 @@
+# Keep Windows line endings out of the repo for text; never touch binary payloads.
+* text=auto eol=lf
+
+# Unreal assets and compiled payloads are binary — no newline translation, no diff.
+*.uasset binary
+*.umap  binary
+*.so    binary
+*.dll   binary
+*.lib   binary
+*.png   binary
+*.jpg   binary
+*.tps   binary
+
+# Source and docs
+*.h    text eol=lf
+*.hpp  text eol=lf
+*.cpp  text eol=lf
+*.cs   text eol=lf
+*.usf  text eol=lf
+*.ini  text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.bat  text eol=crlf
+*.uplugin text eol=lf

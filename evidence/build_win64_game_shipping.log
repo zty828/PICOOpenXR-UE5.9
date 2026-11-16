@@ -1,0 +1,35 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" PICOHost59 Win64 Shipping -Project="F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" -WaitMutex
+Log file: C:\Users\zhou9\AppData\Local\UnrealBuildTool\Log.txt
+Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+  Executing up to 8 processes, one per physical core
+UbaServer - Listening on 0.0.0.0:1345
+Invalidating makefile for PICOHost59 (DefaultEngine.ini modified)
+Building PICOHost59...
+===== Toolchain Information =====
+Using ISPC compiler (D:\GameEngine\UE_5.9\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.44.35229 toolchain (F:\GameEngine\UE5.8.3Source\Tools\VS2022\VC\Tools\MSVC\14.44.35207) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[Adaptive Build] Excluded from PICOOpenXRRuntimeSettings unity file: PICOOpenXRRuntimeSettings.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandInteraction unity file: PICOOpenXRHandInteraction.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandTracking unity file: PICO_HandGestureSemanticRecognizerAsset.cpp, PICO_HandTracking.cpp, PICO_HandTrackingComponent.cpp, PICO_HandTrackingFunctionLibrary.cpp
+[Adaptive Build] Excluded from PICOOpenXRMR unity file: PICO_AnchorComponent.cpp, PICO_DynamicObject.cpp, PICO_LightEstimation.cpp, PICO_MR.cpp, PICO_MRAsyncActions.cpp, PICO_MRExtension.cpp, PICO_MRFunctionLibrary.cpp, PICO_MRModule.cpp, PICO_MRSkyLight.cpp, PICO_MRTextures.cpp, PICO_ProceduralMeshComponent.cpp, PICO_SceneCapture.cpp, PICO_SceneCapturesGenerator.cpp, PICO_SpatialAnchor.cpp, PICO_SpatialAnchorActor.cpp, PICO_SpatialMesh.cpp, PICO_SpatialMeshActor.cpp, PICO_SpatialMeshComponent.cpp, PICO_SpatialPlane.cpp, PICO_SpatialPlaneActor.cpp, PICO_SpatialPlaneComponent.cpp
+[Adaptive Build] Excluded from PICOOpenXRInput unity file: PICO_Controller.cpp, PICO_InputFunctionLibrary.cpp, PICO_InputModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRHMD unity file: PICO_CameraFunctionLibrary.cpp, PICO_CameraPreviewActor.cpp, PICO_DynamicResolutionState.cpp, PICO_HMD.cpp, PICO_HMDFunctionLibrary.cpp, PICO_HMDModule.cpp, PICO_MRCCamera.cpp, PICO_OpenXRRenderModelPMC.cpp, PICO_PokeHoleComponent.cpp, PICO_Shaders.cpp
+[Adaptive Build] Excluded from PICOOpenXRPassthrough unity file: PICO_Passthrough.cpp, PICO_PassthroughFunctionLibrary.cpp, PICO_PassthroughLayer.cpp, PICO_PassthroughLayerShape.cpp, PICO_PassthroughModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRMovement unity file: PICO_BodyTracking.cpp, PICO_BodyTrackingComponent.cpp, PICO_ExpandDevice.cpp, PICO_EyeTracking.cpp, PICO_EyeTrackingDebugActor.cpp, PICO_FaceTracking.cpp, PICO_FaceTrackingComponent.cpp, PICO_LiveLinkRetargetAsset.cpp, PICO_LiveLinkSource.cpp, PICO_LiveLinkSourceFactory.cpp, PICO_MotionTracking.cpp, PICO_MovementExtension.cpp, PICO_MovementFunctionLibrary.cpp, PICO_MovementModule.cpp
+===== End Toolchain Information =====
+Using Unreal Build Accelerator local executor to run 3 action(s)
+  CPU 8 physical cores, 16 logical cores
+  Memory 31.94 GB physical, 33.2 GB/46.44 GB committed
+  UBA Storage capacity 40 GB
+[1/3] Compile [x64] PICOOpenXRRuntimeSettings.cpp
+[2/3] Link [x64] PICOHost59-Win64-Shipping.exe
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Win64\PICOHost59-Win64-Shipping.lib ﾺￍﾶￔￏ￳ F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Win64\PICOHost59-Win64-Shipping.exp
+[3/3] WriteMetadata PICOHost59-Win64-Shipping.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 265.59 seconds
+Output binary: F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Win64\PICOHost59-Win64-Shipping.exe
+
+Result: Succeeded
+Trace written to file C:\Users\zhou9\AppData\Local\UnrealBuildTool\Trace.uba with size 45.6kb

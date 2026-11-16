@@ -1,0 +1,1288 @@
+Running AutomationTool...
+Using bundled DotNet SDK version: 10.0 win-x64
+Starting AutomationTool...
+Parsing command line: BuildCookRun -project=F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject -noP4 -platform=Android -clientconfig=Development -cook -build -stage -pak -package -archive -archivedirectory=F:\CG\Projects\PICOUE\artifacts\AndroidPackage -map=/Game/Maps/PICOTestMap -unattended -utf8output -nocompileeditor -log=F:\CG\Projects\PICOUE\logs\uat_android02.log
+Initializing script modules...
+Total script module initialization time: 0.38 s.
+Using F:\GameEngine\UE5.8.3Source\Tools\VS2022\MSBuild\Current\Bin\MSBuild.exe
+Executing commands...
+Setting up ProjectParams for F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject
+********** BUILD COMMAND STARTED **********
+Running: D:\GameEngine\UE_5.9\Engine\Binaries\ThirdParty\DotNet\10.0\win-x64\dotnet.exe "D:\GameEngine\UE_5.9\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" PICOHost59 Android Development -Project=F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject  -remoteini="F:\CG\Projects\PICOUE\Host\PICOHost59"  -skipdeploy  -log="C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\UBA-PICOHost59-Android-Development.txt"
+Log file: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\UBA-PICOHost59-Android-Development.txt
+Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+  Executing up to 8 processes, one per physical core
+  Requested 1.5 GB memory per action, 11.5 GB available: limiting max parallel actions to 7
+UbaServer - Listening on 0.0.0.0:1345
+Invalidating makefile for PICOHost59 (DefaultEngine.ini modified)
+Android (12470979, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin
+NDK toolchain: r27c, NDK version: 270300, ClangVersion: 18.0.3
+Compiling Native 64-bit code with NDK API 'android-26'
+Link: F:\GameEngine\AndroidSDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --gcc-toolchain="F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64" --sysroot="F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -static-libstdc++ -no-canonical-prefixes -shared -Wl,-Bsymbolic -Wl,--no-undefined -Wl,--gc-sections -gz --target=aarch64-none-linux-android26 -DANDROID=1 -march=armv8-a -Wl,-no-pie -fuse-ld=lld -Wl,-soname,libUnreal.so -Wl,--version-script="F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Build/Android/a/PICOHost59/Development/ExportSymbols.ldscript" -Wl,--build-id=sha1 -Wl,--pack-dyn-relocs=android+relr,--use-android-relr-tags -Wl,--hash-style=gnu -z max-page-size=16384 -fdiagnostics-absolute-paths -fdiagnostics-color -fdiagnostics-format=msvc -o "F:/CG/Projects/PICOUE/Host/PICOHost59/Binaries/Android/PICOHost59-arm64.so" @"F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Build/Android/a/PICOHost59/Development/PICOHost59-arm64.so.rsp"
+Building PICOHost59...
+===== Toolchain Information =====
+Using ISPC compiler (D:\GameEngine\UE_5.9\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+Using Clang compiler 18.0.3 (F:\GameEngine\AndroidSDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe)
+  Android (12470979, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262) Target: x86_64-w64-windows-gnu Thread model: posix InstalledDir: F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin
+Using Clang archiver (F:\GameEngine\AndroidSDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar.exe)
+  LLVM (http://llvm.org/):   LLVM version 18.0.3   Optimized build.
+[Adaptive Build] Excluded from PICOOpenXRInput unity file: PICO_Controller.cpp, PICO_InputFunctionLibrary.cpp, PICO_InputModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRPassthrough unity file: PICO_Passthrough.cpp, PICO_PassthroughFunctionLibrary.cpp, PICO_PassthroughLayer.cpp, PICO_PassthroughLayerShape.cpp, PICO_PassthroughModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRRuntimeSettings unity file: PICOOpenXRRuntimeSettings.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandTracking unity file: PICO_HandGestureSemanticRecognizerAsset.cpp, PICO_HandTracking.cpp, PICO_HandTrackingComponent.cpp, PICO_HandTrackingFunctionLibrary.cpp
+[Adaptive Build] Excluded from PICOOpenXRHMD unity file: PICO_CameraFunctionLibrary.cpp, PICO_CameraPreviewActor.cpp, PICO_DynamicResolutionState.cpp, PICO_HMD.cpp, PICO_HMDFunctionLibrary.cpp, PICO_HMDModule.cpp, PICO_MRCCamera.cpp, PICO_OpenXRRenderModelPMC.cpp, PICO_PokeHoleComponent.cpp, PICO_Shaders.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandInteraction unity file: PICOOpenXRHandInteraction.cpp
+[Adaptive Build] Excluded from PICOOpenXRMR unity file: PICO_AnchorComponent.cpp, PICO_DynamicObject.cpp, PICO_LightEstimation.cpp, PICO_MR.cpp, PICO_MRAsyncActions.cpp, PICO_MRExtension.cpp, PICO_MRFunctionLibrary.cpp, PICO_MRModule.cpp, PICO_MRSkyLight.cpp, PICO_MRTextures.cpp, PICO_ProceduralMeshComponent.cpp, PICO_SceneCapture.cpp, PICO_SceneCapturesGenerator.cpp, PICO_SpatialAnchor.cpp, PICO_SpatialAnchorActor.cpp, PICO_SpatialMesh.cpp, PICO_SpatialMeshActor.cpp, PICO_SpatialMeshComponent.cpp, PICO_SpatialPlane.cpp, PICO_SpatialPlaneActor.cpp, PICO_SpatialPlaneComponent.cpp
+[Adaptive Build] Excluded from PICOOpenXRMovement unity file: PICO_BodyTracking.cpp, PICO_BodyTrackingComponent.cpp, PICO_ExpandDevice.cpp, PICO_EyeTracking.cpp, PICO_EyeTrackingDebugActor.cpp, PICO_FaceTracking.cpp, PICO_FaceTrackingComponent.cpp, PICO_LiveLinkRetargetAsset.cpp, PICO_LiveLinkSource.cpp, PICO_LiveLinkSourceFactory.cpp, PICO_MotionTracking.cpp, PICO_MovementExtension.cpp, PICO_MovementFunctionLibrary.cpp, PICO_MovementModule.cpp
+===== End Toolchain Information =====
+Using Unreal Build Accelerator local executor to run 5 action(s)
+  CPU 8 physical cores, 16 logical cores
+  Memory 31.94 GB physical, 33.54 GB/46.44 GB committed
+  UBA Storage capacity 40 GB
+[1/5] Compile [arm64] PICO_InputModule.cpp
+[2/5] Compile [arm64] PICO_InputFunctionLibrary.cpp
+[3/5] Compile [arm64] PICO_Controller.cpp
+[4/5] clang++ PICOHost59-arm64.so
+[5/5] WriteMetadata PICOHost59.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 25.75 seconds
+Output binary: F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Android\PICOHost59-arm64.so
+
+Result: Succeeded
+Trace written to file C:\Users\zhou9\AppData\Local\UnrealBuildTool\Trace.uba with size 12.6kb
+Took 31.26s to run dotnet.exe, ExitCode=0
+No build products were made
+Build command time: 31.27 s
+********** BUILD COMMAND COMPLETED **********
+********** COOK COMMAND STARTED **********
+HasMapsToCook /Game/Maps/PICOTestMap
+Params.HasMapsToCook /Game/Maps/PICOTestMap
+Running UnrealEditor Cook for project F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject
+Commandlet log file is D:\GameEngine\UE_5.9\Engine\Programs\AutomationTool\Saved\Cook-2026.11.16-07.51.40.txt
+Running: D:\GameEngine\UE_5.9\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" -run=Cook -Map=/Game/Maps/PICOTestMap -TargetPlatform=Android  -unversioned -fileopenlog -abslog="D:\GameEngine\UE_5.9\Engine\Programs\AutomationTool\Saved\Cook-2026.11.16-07.51.40.txt" -stdout -CrashForUAT -unattended -NoLogTimes
+LogInit: Display: Running engine for game: PICOHost59
+LogCore: Display: Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+LogTrace: Display: Control listening on port 1985
+LogCsvProfiler: Display: Metadata set : platform="Windows"
+LogCsvProfiler: Display: Metadata set : config="Development"
+LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.9-CL-60351404"
+LogCsvProfiler: Display: Metadata set : engineversion="5.9.0-60351404+++UE5+Release-5.9"
+LogCsvProfiler: Display: Metadata set : enginereleaseversion="5.9.0"
+LogCsvProfiler: Display: Metadata set : os="Windows 11 (26H2) [10.0.26300.9457] "
+LogCsvProfiler: Display: Metadata set : cpu="AuthenticAMD|AMD Ryzen 7 5700X 8-Core Processor"
+LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+LogCsvProfiler: Display: Metadata set : asan="0"
+LogCsvProfiler: Display: Metadata set : mergedmodules="0"
+LogCsvProfiler: Display: Metadata set : compacttset="0"
+LogCsvProfiler: Display: Metadata set : commandline="" F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject -run=Cook -Map=/Game/Maps/PICOTestMap -TargetPlatform=Android -unversioned -fileopenlog -abslog=D:\GameEngine\UE_5.9\Engine\Programs\AutomationTool\Saved\Cook-2026.11.16-07.51.40.txt -stdout -CrashForUAT -unattended -NoLogTimes""
+LogCsvProfiler: Display: Metadata set : loginid="372f29574cf19f161d46c2b6c7de193b"
+LogCsvProfiler: Display: Metadata set : llm="0"
+LogCsvProfiler: Display: Metadata set : zenstreaming="0"
+LogCsvProfiler: Display: Metadata set : systemresolution.resx="1280"
+LogCsvProfiler: Display: Metadata set : systemresolution.resy="720"
+LogAudio: Display: Audio Device Manager not initializing due to all audio being disabled. If this is not intentional, please check command line arguments for "-nosound".
+LogAssetRegistry: Display: FindShardedCacheFiles: 1 via .ref, 0 via migration fallback, 1 total
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="F:/CG/Projects/PICOUE/Host/PICOHost59/PICOHost59.uproject" -log="F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Logs/AutoSDKInfo.txt" -verbose -timestamps
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PreLoad): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogAssetRegistry: Display: LoadCacheFiles: loading 1 cache files, memory-mapping=enabled
+LogConfig: Display: Loading VulkanPC ini files took 0.08 seconds
+LogConfig: Display: Loading Android ini files took 0.08 seconds
+LogConfig: Display: Loading Wasm ini files took 0.08 seconds
+LogConfig: Display: Loading Mac ini files took 0.08 seconds
+LogConfig: Display: Loading IOS ini files took 0.08 seconds
+LogConfig: Display: Loading Unix ini files took 0.09 seconds
+LogConfig: Display: Loading VisionOS ini files took 0.09 seconds
+LogConfig: Display: Loading TVOS ini files took 0.09 seconds
+LogConfig: Display: Loading Windows ini files took 0.09 seconds
+LogConfig: Display: Loading Linux ini files took 0.10 seconds
+Log file: F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Logs\AutoSDKInfo.txt
+Trace written to file C:\Users\zhou9\AppData\Local\UnrealBuildTool\Trace.uba with size 1.1kb
+##PlatformValidate: Win64 VALID 10.0.26100.0
+##PlatformValidate: Mac INVALID 26.1.1
+##PlatformValidate: IOS INVALID 26.1.1
+##PlatformValidate: Android VALID r27c
+##PlatformValidate: Linux INVALID v26_clang-20.1.8-rockylinux8
+##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+##PlatformValidate: TVOS INVALID 26.1.1
+##PlatformValidate: VisionOS INVALID <UNKNOWN>
+##PlatformValidate: Wasm INVALID 6.0.10
+Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform VisionOS. Check your SDK.json files
+LogAssetRegistry: Display: Asset registry cache read as 119.9 MiB from F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/CachedAssetRegistry/CachedAssetRegistry_0_653913F64AB2058274EE558E49A44590.bin (memory-mapped=yes)
+RenderDocPlugin: Display: RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+LogAsyncCompilation: Display: MemorySharingInfo: UsedMemory=390MiB, MaxMemoryAvailable=47554MiB
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogHAL: Display: Platform has ~ 32 GB [34295525376 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+LogObj: Display: Attempting to load config data for Default__DownlinkBandwidthManagerConfig before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogTextureFormatASTC: Display: ASTCEnc version 5.0.1 library loaded
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatASTC
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatDXT
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatETC2
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatIntelISPCTexComp
+LogTextureFormatOodle: Display: Oodle Texture TFO init; latest sdk version = 2.9.16
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.16.dll
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatOodle
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatUncompressed
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTC'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXT'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'AndroidClient'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ASTCClient'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_DXTClient'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_ETC2Client'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_Multi'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Android_MultiClient'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'IOS'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Linux'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Mac'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'TVOS'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsEditor'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Wasm'
+LogTargetPlatformManager: Display: Building Assets For Android
+LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+LogObj: Display: Attempting to load config data for Default__SlateThemeManager before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogHMD: Warning: Required extension XR_BD_controller_interaction is not available
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : xrCreateInstance called with invalid API version 1.1.  Max supported version is 1.0
+LogHMD: Warning: Required extension XR_BD_controller_interaction is not available
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : LoaderInstance::CreateInstance chained CreateInstance call failed
+Error [GENERAL | xrCreateInstance | OpenXR-Loader] : xrCreateInstance failed
+LogHMD: Warning: Failed to create an OpenXR instance, result is XR_ERROR_VALIDATION_FAILURE. Please check if you have an OpenXR runtime installed.
+LogHMD: Warning: The following OpenXR API versions were enabled (see project settings:plugins:OpenXR):
+LogHMD: Warning: - 1.1
+LogHMD: Warning: - 1.0
+LogHMD: Warning: The following extensions were enabled:
+LogHMD: Warning: - XR_KHR_D3D11_enable
+LogHMD: Warning: - XR_KHR_D3D12_enable
+LogHMD: Warning: - XR_KHR_opengl_enable
+LogHMD: Warning: - XR_KHR_vulkan_enable
+LogHMD: Warning: - XR_KHR_composition_layer_depth
+LogHMD: Warning: - XR_KHR_composition_layer_cylinder
+LogHMD: Warning: - XR_KHR_visibility_mask
+LogHMD: Warning: - XR_KHR_binding_modification
+LogHMD: Warning: - XR_EXT_dpad_binding
+LogHMD: Warning: - XR_EXT_palm_pose
+LogHMD: Warning: - XR_EXT_active_action_set_priority
+LogHMD: Warning: - XR_EXT_local_floor
+LogHMD: Warning: - XR_EXT_user_presence
+LogHMD: Warning: - XR_FB_display_refresh_rate
+LogHMD: Warning: - XR_EXT_interaction_profile_battery_state_display
+LogHMD: Warning: - XR_EXT_render_model
+LogHMD: Warning: - XR_EXT_interaction_render_model
+LogHMD: Warning: The following layers were enumerated:
+LogCsvProfiler: Display: Metadata set : verbatimrhiname="Null"
+LogCsvProfiler: Display: Metadata set : rhiname="Null"
+LogCsvProfiler: Display: Metadata set : rhifeaturelevel="SM6"
+LogCsvProfiler: Display: Metadata set : shaderplatform="PCD3D_SM6"
+LogCsvProfiler: Display: Metadata set : gpu=""
+LogCsvProfiler: Display: Metadata set : gpudriver=""
+LogDerivedDataCache: Display: ../../../Engine/DerivedDataCache/Compressed.ddp: Opened pak cache for reading. (2061 MiB)
+LogZenServiceInstance: Display: Launching zen utility 'D:/GameEngine/UE_5.9/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/5.9/Saved/Zen/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Launching executable 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe', working dir 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install', data dir 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir C:\Users\zhou9\AppData\Local\UnrealEngine\Common\Zen\Data --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 20492  --child-id Zen_20492_Startup'
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogDerivedDataCache: Display: ZenLocal: Using ZenServer HTTP service at [::1] with namespace ue.ddc. Status: OK!.
+LogUbaHorde: Display: UBA/Horde Configuration [Uba.Provider.Horde]: Not Enabled
+LogShaderCompilers: Display: No distributed shader compiler controller found
+LogShaderCompilers: Display: Using 13 local workers for shader compilation
+LogShaderCompilers: Display: Compiling shader autogen file: F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush
+LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+LogEditorDomain: Display: EditorDomain is Disabled
+LogAssetRegistry: Display: AssetDataGatherer spent 0.000s loading caches from F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/CachedAssetRegistry.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+LogDeviceProfileManager: Display: Deviceprofile Swan not found.
+LogDeviceProfileManager: Display: Deviceprofile PICO4Ultra not found.
+LogDeviceProfileManager: Display: Deviceprofile Others not found.
+LogCsvProfiler: Display: Metadata set : deviceprofile="WindowsEditor"
+LogStreaming: Display: FlushAsyncLoading(1): 1 QueuedPackages, 0 AsyncPackages
+LogTextureEncodingSettings: Display: Texture Encode Speed: Final (cook).
+LogTextureEncodingSettings: Display: Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+LogTextureEncodingSettings: Display: Shared linear texture encoding: Disabled
+LogMeshReduction: Display: Using QuadricMeshReduction for automatic static mesh reduction
+LogMeshReduction: Display: Using SkeletalMeshReduction for automatic skeletal mesh reduction
+LogMeshReduction: Display: Using ProxyLODMeshReduction for automatic mesh merging
+LogMeshReduction: Display: No distributed automatic mesh merging module available
+LogVirtualization: Display: VirtualizationSystem name found in ini file: None
+LogVirtualization: Display: FNullVirtualizationSystem mounted, virtualization will be disabled
+LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize started...
+LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize took 11.015 ms
+LogLore: Display: Successfully initialized Lore SDK (0.12.1-nightly+2160_3929)
+LogMetaSound: Display: MetaSound Page Target Initialized to 'Default'
+LogAudio: Display: Registering Engine Module Parameter Interfaces...
+LogToolsetRegistry: Display: Registering Toolset SequencerScriptingEditor.SequencerToolsFunctionLibrary
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneTimeWarpExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneDoubleVectorTrackExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneFloatVectorTrackExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneBindingExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneSequenceExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneSectionEasingExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneSectionExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneBindingTagExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieScenePropertyTrackExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneTrackExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneFolderExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneEventTrackExtensions
+LogToolsetRegistry: Display: Registering Toolset SequencerScripting.MovieSceneConditionExtensions
+LogToolsetRegistry: Display: Registering Toolset PCGEditor.PCGEditorSubsystem
+LogToolsetRegistry: Display: Registering Toolset UMGEditor.UMGDebuggerSubsystem
+LogToolsetRegistry: Display: Registering Toolset UMGEditor.WidgetBlueprintEditorSubsystem
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogToolsetRegistry: Display: Registering Toolset SequencerAnimTools.SequencerAnimToolsEditorLibrary
+LogToolsetRegistry: Display: Registering Toolset FabToolset.FabToolset
+LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogToolsetRegistry: Display: Registering Toolset DataflowEditor.DataflowScriptingSubsystem
+LogToolsetRegistry: Display: Registering Toolset ToolsetRegistry.AgentSkillToolset
+LogToolsetRegistry: Display: Registering Toolset AIAssistantEditor.AIAssistantToolset
+LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+LogToolsetRegistry: Display: Registering Toolset SourceControl.SourceControlHelpers
+LogCsvProfiler: Display: Metadata set : raytracing="0"
+LogToolsetRegistry: Display: Registering Toolset ControlRigEditor.ControlRigSequencerEditorLibrary
+LogToolsetRegistry: Display: Registering Toolset OptimusScripting.DeformerGraphScriptingSubsystem
+LogToolsetRegistry: Display: Registering Toolset LevelSequenceEditor.LevelSequenceEditorBlueprintLibrary
+LogToolsetRegistry: Display: Registering Toolset LevelSequenceEditor.LevelSequenceEditorSubsystem
+LogToolsetRegistry: Display: Registering Toolset SequenceValidator.SequenceValidatorSubsystem
+LogToolsetRegistry: Display: Registering Toolset TemplateSequenceEditor.TemplateSequenceEditorSubsystem
+LogToolsetRegistry: Display: Registering Toolset SlateDebugger.SlateDebuggerSubsystem
+LogCook: Display: CookProcessCount=1. CookMultiprocess is disabled and the cooker is running as a single process.
+LogCook: Display: CookSettings for Memory:
+	MemoryMaxUsedVirtual 0MiB
+	MemoryMaxUsedPhysical 0MiB
+	MemoryMinFreeVirtual 2048MiB
+	MemoryMinFreePhysical 2048MiB
+	MemoryTriggerGCAtPressureLevel None
+	SoftGCMemoryUseTrigger disabled
+	SoftGCTimeBudgetTrigger enabled (0.05 budget, 30s min period)
+LogCook: Display: SkipOnlyEditorOnly is enabled, unsolicited packages will not be cooked unless they are referenced from the cooked version of the instigator package.
+LogCook: Display: ---- Pre Content Initialisation: End ----
+LogCook: Display: ---- Post Content Initialisation: Start ----
+LogEditorDomain: Display: Cycle detected in parents of class /Script/RigVMDeveloper.RigVMUnitNode. Allow flags for editordomain and incremental cooking will be invalid.
+LogEditorDomain: Display: Cycle detected in parents of class /Script/LiveLinkGraphNode.K2Node_EvaluateLiveLinkFrameWithSpecificRole. Allow flags for editordomain and incremental cooking will be invalid.
+LogZenStore: Display: Establishing oplog 'PICOHost59.2ccf01de/EditorDomain'
+LogZenStore: Display: Zen project 'PICOHost59.2ccf01de' already exists
+LogZenStore: Display: Zen oplog 'PICOHost59.2ccf01de/EditorDomain' already exists
+LogCook: Display: Waiting for Asset Registry
+LogAssetRegistry: Display: OnInitialSearchCompleted: skipping cache save: no packages were parsed from disk since the last save (NumCachedAssetFiles=9347, NumUncachedAssetFiles=0, LastCacheSaveNumUncachedAssetFiles=0) -- the on-disk cache already matches the in-memory state.
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogCook: Display: INCREMENTAL COOK DEPENDENCIES: Enabled. Incremental Cook Dependencies are enabled in Editor.ini:[CookSettings]:LegacyIterative=false.
+LogZenStore: Display: Establishing oplog 'PICOHost59.2ccf01de/Android'
+LogZenStore: Display: Zen project 'PICOHost59.2ccf01de' already exists
+LogStorageServerPlatformFile: Display: Found 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/ue.projectstore'
+LogStorageServerPlatformFile: Display: Using connection settings from ue.projectstore: HostAddrs='[::1]+192.168.1.3+172.19.224.1+172.20.240.1' and HostPort='8558'
+LogStorageServerPlatformFile: Display: Found 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/ue.projectstore'
+LogStorageServerPlatformFile: Display: Using password authentication from ue.projectstore
+LogStorageServerPlatformFile: Display: Using settings from ue.projectstore: ServerProject='PICOHost59.2ccf01de' and ServerPlatform='Android'
+LogStorageServerConnection: Display: Creating zen store connection to [::1]:8558 ("::1").
+LogStorageServerConnection: Display: Zen store connection established to [::1]:8558.
+LogCook: Display: CalculateGlobalDependenciesHash(Android):
+LogCook: Display: 	FGuid CookIncrementalVersion = 2a76bc74-3fbc-4203-bddc-20ffa01de846
+LogCook: Display: 	[Editor]:CookSettings.ProjectCookIncrementalVersion = 00000000-0000-0000-0000-000000000000
+LogCook: Display: 	[Engine]:Core.System.CanStripEditorOnlyExportsAndImports = True
+LogCook: Display: 	[Engine]:Core.System.CanSkipEditorReferencedPackagesWhenCooking = False
+LogCook: Display: 	CanUseUnversionedPropertySerialization = True
+LogCook: Display: 	[Editor]:CookSettings.AutomaticOptionalInclusionAssetType = /Script/Niagara.NiagaraScript, /Script/Niagara.NiagaraEmitter, /Script/Niagara.NiagaraSystem, /Script/NiagaraEditor.NiagaraParameterDefinitions, /Script/Niagara.NiagaraEffectType, /Script/Niagara.NiagaraValidationRuleSet, /Script/OptimusCore.OptimusDeformer
+LogCook: Display: 	IsCookFlagSet(ECookInitializationFlags::Unversioned) = True
+LogCook: Display: 	FCoreRedirects::AppendHashOfGlobalRedirects = d2148dd9f06ef466f3ebd886b9ccfaae9c57b233f56710daced4471471873434
+LogCook: Display: 	GlobalDependenciesHash(Android) = 333c6dbe905a6cbc00bc07a09566eeb68deca94fb75ed39cb62fe6e9ecdc062c
+LogCook: Display: FULL COOK: Incremental Cooks are disabled by default in Editor.ini:[CookSettings]:CookIncrementalDefaultIncremental=false, and commandline did not specify -forcerecook=false. Deleting previously cooked packages for platform Android and recooking all packages discovered in the current cook.
+LogZenStore: Display: Deleting oplog 'PICOHost59.2ccf01de/Android' if it exists
+LogZenStoreWriter: Display: Deleting F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/...
+LogZenStore: Display: Zen oplog 'PICOHost59.2ccf01de/Android' created
+LogCook: Display: Sandbox cleanup took 0.365 seconds for platforms Android
+LogCook: Display: Compiling global changed shaders for platform 'Android'
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'Global' (SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 1, Unique Shadermaps: 212 (21200.00%)
+LogShaderLibrary: Display: Total Shaders: 1902, Unique Shaders: 1897 (99.74%)
+LogShaderLibrary: Display: Total Shader Size: 6.97mb, Unique Shaders Size: 6.97mb (99.96%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 2
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 205
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     2, 2, 2, 2, 2, 1, 1, 1, 1, 1
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Compute: 898 shaders (47.34%), compressed size: 4.09 MB (4.67 KB avg per shader), uncompressed size: 16.69 MB (19.03 KB avg per shader)
+LogShaderLibrary: Display: SF_Pixel: 903 shaders (47.60%), compressed size: 2.78 MB (3.16 KB avg per shader), uncompressed size: 9.08 MB (10.29 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 96 shaders (5.06%), compressed size: 0.10 MB (1.03 KB avg per shader), uncompressed size: 0.22 MB (2.32 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Shaders/SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID/ShaderDebug-Global-SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID/Dump.txt'
+LogShaderLibrary: Display: =================
+LogCook: Display: Discovering localized assets for cultures: en
+LogCook: Display: Found 0 localized assets
+LogCook: Display: ---- Post Content Initialisation: End ----
+LogCook: Display: Cooked packages 0 Packages Remain 506 Total 506
+LogCook: Display: Cook Diagnostics: OpenFileHandles=333, VirtualMemory=1576MiB, VirtualMemoryAvailable=13739MiB
+LogCook: Display: Garbage collection triggered (Soft). Triggered by conditions:
+  CookSettings.SoftGCTimeTrigger: Periodic triggering of SoftGC: No duration data.
+LogCookCommandlet: Display: GarbageCollection... (Periodic GC)
+LogCook: Display: Cooked packages 80 Packages Remain 489 Total 569
+LogWorldPartition: Display: [Cook] Gathering packages to cook from generators for owner object World /Engine/Maps/Templates/OpenWorld.OpenWorld.
+LogWorldPartition: Display: WorldPartition initialize started...
+LogWorldPartition: Display: WorldPartition initialize took 17.764 ms
+LogWorldPartition: Display: GenerateStreaming for 'OpenWorld.Engine' started...
+LogWorldPartition: Display: GenerateStreaming for 'OpenWorld.Engine' took 12.591 ms
+LogWorldPartition: Display: [Cook] Gathered 64 packages to generate from 1 Generators.
+LogWorldPartition: Display: [Cook] Sending 64 packages to be generated.
+LogWorldPartition: Display: [Cook] Debug(GetGenerateList) : OwnerWorld=World /Engine/Maps/Templates/OpenWorld.OpenWorld
+LogCook: Display: Splitting Package /Engine/Maps/Templates/OpenWorld with splitter FWorldCookPackageSplitter acting on object World /Engine/Maps/Templates/OpenWorld.OpenWorld.
+LogWorldPartition: Display: [Cook] Gathering packages to cook from generators for owner object World /Game/Maps/PICOTestMap.PICOTestMap.
+LogWorldPartition: Display: WorldPartition initialize started...
+LogWorldPartition: Display: WorldPartition initialize took 7.393 ms (total: 25.158 ms)
+LogWorldPartition: Display: GenerateStreaming for 'PICOTestMap' started...
+LogWorldPartition: Display: GenerateStreaming for 'PICOTestMap' took 6.705 ms (total: 19.296 ms)
+LogWorldPartition: Display: [Cook] Gathered 65 packages to generate from 1 Generators.
+LogWorldPartition: Display: [Cook] Sending 65 packages to be generated.
+LogWorldPartition: Display: [Cook] Debug(GetGenerateList) : OwnerWorld=World /Game/Maps/PICOTestMap.PICOTestMap
+LogCook: Display: Splitting Package /Game/Maps/PICOTestMap with splitter FWorldCookPackageSplitter acting on object World /Game/Maps/PICOTestMap.PICOTestMap.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Processing 65 packages
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Gathered 8 modified packages
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Processing 64 packages
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Gathered 8 modified packages
+LogCook: Display: Cooked packages 200 Packages Remain 518 Total 718
+LogCook: Display: Cooked packages 200 Packages Remain 524 Total 724
+LogWorldPartition: Display: [Cook] Debug(TearDown): OwnerWorld=World /Game/Maps/PICOTestMap.PICOTestMap
+LogCook: Display: Cooked packages 232 Packages Remain 492 Total 724
+LogCook: Display: Package /PICOOpenXR/DevTools/MixedReality/BP_SpatialAnchorActor_Sample has a dependency on package /PICOOpenXR/Meshes/MixedReality/S_Gnomon which does not exist.
+LogCook: Display: Package /PICOOpenXR/DevTools/MixedReality/BP_SceneCapture has a dependency on package /PICOOpenXR/Meshes/MixedReality/SceneCaptureBounds which does not exist.
+LogCook: Display: Cooked packages 284 Packages Remain 453 Total 737
+LogWorldPartition: Display: [Cook] Debug(TearDown): OwnerWorld=World /Engine/Maps/Templates/OpenWorld.OpenWorld
+LogTextureBuildUtilities: Display: Unexpected non-BC PixelFormat: 47.
+LogCook: Display: Cooked packages 575 Packages Remain 162 Total 737
+LogCook: Display: Cooking /NNEDenoiser/NNEDT_Oidn2-3_Balanced -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDTOM_Output_Default -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDTOM_Output_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDTIM_ColorAlbedoNormal_Default -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDTIM_ColorAlbedoNormal_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDOM_Output_Default -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDOM_Output_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDIM_HighQuality_Default -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDIM_HighQuality_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDIM_ColorAlbedoNormal_Default -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDIM_ColorAlbedoNormal_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNED_Oidn2-3_HighQuality -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNED_Oidn2-3_Fast_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNED_Oidn2-3_Fast -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNED_Oidn2-3_Balanced_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNED_Oidn2-3_Balanced -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNEDT_Oidn2-3_Balanced_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Splitting Package /ToolsetRegistry/ToolsetManifestSeed with splitter FToolsetManifestCookPackageSplitter acting on object ToolsetManifestSeed /ToolsetRegistry/ToolsetManifestSeed.ToolsetManifestSeed.
+LogCook: Display: Cooking /NNEDenoiser/NNE_oidn2-3-0_rt_hdr_calb_cnrm_large__dyn__fp16_opset11_ForwardAlpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNE_oidn2-3-0_rt_hdr_calb_cnrm_large__dyn__fp16_opset11_DenoiseAlpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNE_oidn2-3-0_rt_hdr_alb_nrm__dyn__fp16_opset11_ForwardAlpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNE_oidn2-3-0_rt_hdr_alb_nrm__dyn__fp16_opset11_DenoiseAlpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNE_oidn2-3-0_rt_hdr_alb_nrm_small__dyn__fp16_opset11_ForwardAlpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNE_oidn2-3-0_rt_hdr_alb_nrm_small__dyn__fp16_opset11_DenoiseAlpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooking /NNEDenoiser/NNED_Oidn2-3_HighQuality_Alpha -> Rejected PlatformSpecificNeverCook
+LogCook: Display: Cooked packages 737 Packages Remain 0 Total 737
+LogCook: Display: Cook Diagnostics: OpenFileHandles=5588, VirtualMemory=1950MiB, VirtualMemoryAvailable=10973MiB
+LogCook: Display: ---- Finalisation: Start ----
+LogCook: Display: CookArtifact 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/PICOHost59/Metadata/ValidationCookArtifact.json' saved.
+LogAssetRegistryGenerator: Display: Saving asset registry v24.
+LogAssetRegistryGenerator: Display: Generated development asset registry F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/PICOHost59/Metadata/DevelopmentAssetRegistry.bin num assets 749, size is 555.21kb, XxHash64[LE] = 0x9E6C87484269A08A, waited on hash 0.00 seconds
+LogAssetRegistryGenerator: Display: Generated asset registry num assets 717, size is 193.73kb
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'PICOHost59' (SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 258, Unique Shadermaps: 123 (47.67%)
+LogShaderLibrary: Display: Total Shaders: 1211, Unique Shaders: 895 (73.91%)
+LogShaderLibrary: Display: Total Shader Size: 4.60mb, Unique Shaders Size: 3.67mb (79.83%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 6
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 222
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     23, 20, 19, 15, 15, 11, 11, 11, 9, 9
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Pixel: 570 shaders (63.69%), compressed size: 2.45 MB (4.40 KB avg per shader), uncompressed size: 9.38 MB (16.85 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 276 shaders (30.84%), compressed size: 1.05 MB (3.91 KB avg per shader), uncompressed size: 3.65 MB (13.53 KB avg per shader)
+LogShaderLibrary: Display: SF_Compute: 49 shaders (5.47%), compressed size: 0.17 MB (3.52 KB avg per shader), uncompressed size: 0.62 MB (12.94 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Shaders/SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID/ShaderDebug-PICOHost59-SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID/Dump.txt'
+LogShaderLibrary: Display: =================
+LogCook: Display: Dependent plugin "UAF" referenced by "IK Rig" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Dependent plugin "UAFAnimGraph" referenced by "IK Rig" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Dependent plugin "SteamShared" referenced by "EOS Shared" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Finalize package store(s)...
+LogZenStoreWriter: Display: Flushing...
+LogZenStoreWriter: Display: Saving Zen filesystem manifest 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/PICOHost59/Metadata/zenfs.manifest'
+LogZenStoreWriter: Display: Output:	54201 Public runtime script objects
+LogCook: Display: Cook by the book total time in tick 15.361517s total time 18.014606
+LogCook: Display: Peak Used virtual 1984 MiB Peak Used physical 2162 MiB
+LogCook: Display: Packages Cooked: 705, Packages Incrementally Skipped: 0, Packages Skipped by Platform: 32, Total Packages: 737
+LogCookStats: Display: Hierarchy Timer Information:
+LogCookStats: Display:   Root: 0.000s (0)
+LogCookStats: Display:     CleanSandbox: 0.365s (1)
+LogCookStats: Display:     CollectFilesToCook: 0.008s (1)
+LogCookStats: Display:       CookModificationDelegate: 0.001s (1)
+LogCookStats: Display:     GenerateLongPackageName: 0.001s (1)
+LogCookStats: Display:     TickMainCookLoop: 15.523s (Workers: 8.743s) (86427)
+LogCookStats: Display:       PumpPollables: 0.002s (Workers: 0.002s) (37)
+LogCookStats: Display:       PumpRequests: 0.025s (24)
+LogCookStats: Display:       LoadPackageForCooking: 1.252s (Workers: 0.439s) (28630)
+LogCookStats: Display:       ValidateSourcePackage: 0.000s (737)
+LogCookStats: Display:       SavingPackages: 13.903s (Workers: 4.933s) (58227)
+LogCookStats: Display:         PollPendingCookedPlatformDatas: 0.458s (Workers: 0.001s) (1680)
+LogCookStats: Display:         PrepareSave: 7.107s (Workers: 2.664s) (23608)
+LogCookStats: Display:         PrecachePlatformDataForNextPackage: 2.225s (Workers: 0.234s) (3102)
+LogCookStats: Display:           PrepareSave: 2.224s (Workers: 0.234s) (3380)
+LogCookStats: Display:         SaveCookedPackage: 4.034s (Workers: 2.024s) (32930)
+LogCookStats: Display:           GEditorSavePackage: 3.238s (Workers: 1.305s) (30618)
+LogCookStats: Display:             VerifyCanCookPackage: 0.003s (705)
+LogCookStats: Display:           TargetDomainDependencies: 0.183s (Workers: 0.000s) (725)
+LogCookStats: Display:         ClearAllCachedCookedPlatformData: 0.058s (Workers: 0.003s) (1250)
+LogCookStats: Display:       PostLoadPackageFixup: 0.000s (3)
+LogCookStats: Display:       WaitForAsync: 0.182s (8614)
+LogCookStats: Display:     CookByTheBookFinished: 0.549s (Workers: 0.039s) (119)
+LogCookStats: Display:       SavingCurrentIniSettings: 0.073s (1)
+LogCookStats: Display:         ProcessingAccessedStrings: 0.003s (1)
+LogCookStats: Display:       ChunkGeneration: 0.012s (1)
+LogCookStats: Display:       FinishPopulateShaderLibrary: 0.001s (1)
+LogCookStats: Display:       CalculateReferencedSet: 0.000s (1)
+LogCookStats: Display:       CookArtifacts.UpdateOplogPackages: 0.011s (Workers: 0.002s) (15)
+LogCookStats: Display:       PruneShaderLibrary: 0.001s (1)
+LogCookStats: Display:       GeneratorPreSave: 0.000s (1)
+LogCookStats: Display:       BuildChunkManifest: 0.012s (1)
+LogCookStats: Display:         FixupPackageDependenciesForChunks: 0.006s (1)
+LogCookStats: Display:       SaveManifests: 0.000s (1)
+LogCookStats: Display:       SaveAssetRegistry: 0.044s (Workers: 0.016s) (91)
+LogCookStats: Display:       WriteCookerOpenOrder: 0.004s (1)
+LogCookStats: Display:       WriteCookMetadata: 0.002s (1)
+LogCookStats: Display:       WriteReferencedSet: 0.001s (1)
+LogCookStats: Display:       FinalizePackageStore: 0.231s (Workers: 0.021s) (15)
+LogCookStats: Display: Misc Cook Stats
+LogCookStats: Display: ===============
+LogCookStats: Display: Validation
+LogCookStats: Display:     Stats=[]
+LogCookStats: Display: Niagara
+LogCookStats: Display:     NiagaraScriptTranslationCount=0
+LogCookStats: Display:     NiagaraCpuScriptCompileCount=0
+LogCookStats: Display:     NiagaraCpuScriptDdcCacheHitCount=0
+LogCookStats: Display:     NiagaraCpuScriptDdcCacheMissCount=0
+LogCookStats: Display:     NiagaraGpuScriptCompileCount=0
+LogCookStats: Display:     NiagaraGpuScriptDdcCacheHitCount=0
+LogCookStats: Display:     NiagaraGpuScriptDdcCacheMissCount=0
+LogCookStats: Display:     NiagaraSystemWaitForCompilationCompleteTime=0.000000
+LogCookStats: Display: ComputeKernelShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: NiagaraShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: ShaderCompiler
+LogCookStats: Display:     BlockingTimeSec=0.000200
+LogCookStats: Display:     AsyncCompileTimeSec=0.000000
+LogCookStats: Display:     GlobalBeginCompileShaderTimeSec=0.000000
+LogCookStats: Display:     GlobalBeginCompileShaderCalls=0
+LogCookStats: Display:     ProcessAsyncResultsTimeSec=0.000170
+LogCookStats: Display: GlobalShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: Material
+LogCookStats: Display:     FinishCacheShadersSec=0.414803
+LogCookStats: Display: Cook.Profile.Params
+LogCookStats: Display:     CookProject=PICOHost59
+LogCookStats: Display:     CookCultures=
+LogCookStats: Display:     CookLabel=
+LogCookStats: Display:     TargetPlatforms=Android
+LogCookStats: Display:     IsCookAll=false
+LogCookStats: Display:     IsCookOnTheFly=false
+LogCookStats: Display:     IsIncrementalCook=false
+LogCookStats: Display:     IsIterativeCook=false
+LogCookStats: Display:     IsFastCook=false
+LogCookStats: Display:     IsUnversioned=true
+LogCookStats: Display: CookOnTheFlyServer.Package.Load
+LogCookStats: Display:     NumRequestedLoads=3390
+LogCookStats: Display:     NumPackagesLoaded=3656
+LogCookStats: Display:     NumInlineLoads=266
+LogCookStats: Display: CookOnTheFlyServer.Package.Save
+LogCookStats: Display:     NumPackagesIncrementallySkipped=0
+LogCookStats: Display: CookOnTheFlyServer.QueueSize
+LogCookStats: Display:     PeakRequest=568
+LogCookStats: Display:     PeakLoad=184
+LogCookStats: Display:     PeakSave=44
+LogCookStats: Display: Package.Load
+LogCookStats: Display:     LoadPackageTimeSec=1.927526
+LogCookStats: Display: Package.Save
+LogCookStats: Display:     NumPackagesSaved=713
+LogCookStats: Display:     SavePackageTimeSec=3.088399
+LogCookStats: Display:     TagPackageExportsPresaveTimeSec=0.000000
+LogCookStats: Display:     TagPackageExportsTimeSec=0.000000
+LogCookStats: Display:     FullyLoadLoadersTimeSec=0.000000
+LogCookStats: Display:     ResetLoadersTimeSec=0.000000
+LogCookStats: Display:     TagPackageExportsGetObjectsWithOuter=0.000000
+LogCookStats: Display:     TagPackageExportsGetObjectsWithMarks=0.000000
+LogCookStats: Display:     SerializeImportsTimeSec=0.000000
+LogCookStats: Display:     SortExportsSeekfreeInnerTimeSec=0.000000
+LogCookStats: Display:     SerializeExportsTimeSec=0.000000
+LogCookStats: Display:     SerializeBulkDataTimeSec=0.008103
+LogCookStats: Display:     AsyncWriteTimeSec=0.000000
+LogCookStats: Display:     MBWritten=0.000000
+LogCookStats: Display: Package.DifferentPackagesSizeMBPerAsset
+LogCookStats: Display: Package.NumberOfDifferencesInPackagesPerAsset
+LogCookStats: Display: Package.PackageDifferencesSizeMBPerAsset
+LogCookStats: Display: Package.DiffTotal
+LogCookStats: Display:     NumberOfDifferentPackages=0
+LogCookStats: Display:     DifferentPackagesSizeMB=0.000000
+LogCookStats: Display:     NumberOfDifferencesInPackages=0
+LogCookStats: Display:     PackageDifferencesSizeMB=0.000000
+LogCookStats: Display: UnversionedProperties
+LogCookStats: Display:     SavedStructs=0
+LogCookStats: Display:     SavedMB=0
+LogCookStats: Display:     EquivalentTaggedMB=0
+LogCookStats: Display:     CompressionRatio=-nan(ind)
+LogCookStats: Display:     BitfieldWasteKB=0
+LogCookStats: Display:
+LogCookStats: Display: Cook Profile
+LogCookStats: Display: ============
+LogCookStats: Display:  0.CookWallTimeSec=43.947086
+LogCookStats: Display:  0. 0.StartupWallTimeSec=25.638456
+LogCookStats: Display:  0. 1.CookProcessingTime=18.308630
+LogCookStats: Display:  0. 1. 1.StartCookByTheBookTimeSec=2.234954
+LogCookStats: Display:  0. 1. 1. 0.BlockOnAssetRegistryTimeSec=0.104484
+LogCookStats: Display:  0. 1. 1. 1.GameCookModificationDelegateTimeSec=0.000737
+LogCookStats: Display:  0. 1. 2.TickCookOnTheSideTimeSec=0.316184
+LogCookStats: Display:  0. 1. 2. 0.TickCookOnTheSideLoadPackagesTimeSec=1.253359
+LogCookStats: Display:  0. 1. 2. 1.TickCookOnTheSideSaveCookedPackageTimeSec=6.061341
+LogCookStats: Display:  0. 1. 2. 1. 0.TickCookOnTheSideResolveRedirectorsTimeSec=0.000000
+LogCookStats: Display:  0. 1. 2. 2.TickCookOnTheSidePrepareSaveTimeSec=9.305945
+LogCookStats: Display:  0. 1. 3.TickLoopGCTimeSec=0.070361
+LogCookStats: Display:  0. 1. 4.TickLoopRecompileShaderRequestsTimeSec=0.000000
+LogCookStats: Display:  0. 1. 5.TickLoopShaderProcessAsyncResultsTimeSec=0.000011
+LogCookStats: Display:  0. 1. 6.TickLoopProcessDeferredCommandsTimeSec=0.000003
+LogCookStats: Display:  0. 1. 7.TickLoopTickCommandletStatsTimeSec=0.000001
+LogCookStats: Display:  0. 1. 8.TickLoopFlushRenderingCommandsTimeSec=0.001564
+LogCookStats: Display:  0. 1. 9.ShaderFlushTimeSec=0.000000
+LogCookStats: Display:  0. 1. 10.ValidationTimeSec=0.000294
+LogCookStats: Display:
+LogCookStats: Display: DDC Summary Stats
+LogCookStats: Display: =================
+LogCookStats: Display: BackEnd         = Installed
+LogCookStats: Display: HasLocalCache   =      true
+LogCookStats: Display: HasSharedCache  =     false
+LogCookStats: Display: HasCloudCache   =     false
+LogCookStats: Display: HasZenCache     =      true
+LogCookStats: Display: TotalGetHits    =      6475
+LogCookStats: Display: TotalGetMisses  =         0
+LogCookStats: Display: TotalGets       =      6475
+LogCookStats: Display: TotalGetHitPct  =  1.000000
+LogCookStats: Display: GetMissPct      =  0.000000
+LogCookStats: Display: TotalPutHits    =         0
+LogCookStats: Display: TotalPutMisses  =         0
+LogCookStats: Display: TotalPuts       =         0
+LogCookStats: Display: TotalPutHitPct  =  0.000000
+LogCookStats: Display: PutMissPct      =  0.000000
+LogCookStats: Display: LocalGetHits    =      3841
+LogCookStats: Display: LocalGetMisses  =         0
+LogCookStats: Display: LocalGetTotal   =      3841
+LogCookStats: Display: LocalGetHitPct  =  1.000000
+LogCookStats: Display: SharedGetHits   =         0
+LogCookStats: Display: SharedGetTotal  =         0
+LogCookStats: Display: SharedGetHitPct =  0.000000
+LogCookStats: Display: ZenLocalGetHits =      3841
+LogCookStats: Display: ZenLocalGetTotal=      3841
+LogCookStats: Display: ZenLocalGetHitPct=  1.000000
+LogCookStats: Display: ZenRemoteGetHits=         0
+LogCookStats: Display: ZenRemoteGetTotal=         0
+LogCookStats: Display: ZenRemoteGetHitPct=  0.000000
+LogCookStats: Display: ZenRemoteReadSpeed=  0.000000
+LogCookStats: Display: ZenRemoteWriteSpeed=  0.000000
+LogCookStats: Display: ZenRemoteLatency=  0.000000
+LogCookStats: Display: CloudGetHits    =         0
+LogCookStats: Display: CloudGetTotal   =         0
+LogCookStats: Display: CloudGetHitPct  =  0.000000
+LogCookStats: Display: LocalLatency    =  2.866937
+LogCookStats: Display: LocalReadSpeed  = 22.332120
+LogCookStats: Display: LocalWriteSpeed =  0.000000
+LogCookStats: Display: SharedLatency   =  0.000000
+LogCookStats: Display: SharedReadSpeed =  0.000000
+LogCookStats: Display: SharedWriteSpeed=  0.000000
+LogCookStats: Display: CloudLatency    =  0.000000
+LogCookStats: Display: CloudReadSpeed  =  0.000000
+LogCookStats: Display: CloudWriteSpeed =  0.000000
+LogCookStats: Display:
+LogCookStats: Display: DDC Resource Stats
+LogCookStats: Display: =======================================================================================================
+LogCookStats: Display: Asset Type                          Total Time (Sec)  GameThread Time (Sec)  Assets Built  MB Processed
+LogCookStats: Display: ----------------------------------  ----------------  ---------------------  ------------  ------------
+LogCookStats: Display: Texture                                         1.65                   0.00             0         63.02
+LogCookStats: Display: StaticMesh                                      0.10                   0.04             0          9.41
+LogCookStats: Display: NavCollision                                    0.03                   0.00             0          0.04
+LogCookStats: Display: CardRepresentation                              0.02                   0.00             0          0.02
+LogCookStats: Display: STREAMEDAUDIO                                   0.02                   0.00             0          0.09
+LogCookStats: Display: MaterialShader                                  0.02                   0.10             0          5.68
+LogCookStats: Display: BulkDataList                                    0.01                   0.00             0          0.66
+LogCookStats: Display: BodySetup                                       0.01                   0.00             0          1.81
+LogCookStats: Display: Audio                                           0.01                   0.00             0          0.08
+LogCookStats: Display: GlobalShader                                    0.00                   0.01             0          7.46
+LogCookStats: Display: ComputeKernel                                   0.00                   0.00             0          0.18
+LogCookStats: Display: SkeletalMesh                                    0.00                   0.00             0          0.32
+LogCookStats: Display:
+LogCookStats: Display: Accumulated DDC Resource Stats Per Asset Type
+LogCookStats: Display: =======================================================================================================
+LogCookStats: Display: AnimationSequence                               0.00                   0.00             0          0.00
+LogCookStats: Display: Audio                                           0.01                   0.00             0          0.08
+LogCookStats: Display: CardRepresentation                              0.02                   0.00             0          0.02
+LogCookStats: Display: DistanceField                                   0.00                   0.00             0          0.00
+LogCookStats: Display: MaterialShader                                  0.02                   0.10             0          5.68
+LogCookStats: Display: MaterialTranslation                             0.00                   0.00             0          0.00
+LogCookStats: Display: NiagaraScript                                   0.00                   0.00             0          0.00
+LogCookStats: Display: SkeletalMesh                                    0.00                   0.00             0          0.32
+LogCookStats: Display: StaticMesh                                      0.10                   0.04             0          9.41
+LogCookStats: Display: Texture                                         1.65                   0.00             0         63.02
+LogCookStats: Display: Other                                           0.07                   0.01             0         10.25
+LogPackageBuildDependencyTracker: Display: Package Accesses (582 referencing packages with a total of 11281 unique accesses)
+LogConfigBuildDependencyTracker: Display: Config Accesses (520 referencing packages with a total of 3182 unique accesses). 1990 unique accesses that were not associated with a package.
+LogCook: Display: ---- Finalisation: End ----
+LogCook: Display: Done!
+LogSavePackage: Display: Took 0.002767s to verify the EDL loading graph.
+LogInit: Display:
+LogInit: Display: Warning/Error Summary (Unique only)
+LogInit: Display: -----------------------------------
+LogInit: Display: LogHMD: Warning: Required extension XR_BD_controller_interaction is not available
+LogInit: Display: LogHMD: Warning: Failed to create an OpenXR instance, result is XR_ERROR_VALIDATION_FAILURE. Please check if you have an OpenXR runtime installed.
+LogInit: Display: LogHMD: Warning: The following OpenXR API versions were enabled (see project settings:plugins:OpenXR):
+LogInit: Display: LogHMD: Warning: - 1.1
+LogInit: Display: LogHMD: Warning: - 1.0
+LogInit: Display: LogHMD: Warning: The following extensions were enabled:
+LogInit: Display: LogHMD: Warning: - XR_KHR_D3D11_enable
+LogInit: Display: LogHMD: Warning: - XR_KHR_D3D12_enable
+LogInit: Display: LogHMD: Warning: - XR_KHR_opengl_enable
+LogInit: Display: LogHMD: Warning: - XR_KHR_vulkan_enable
+LogInit: Display: LogHMD: Warning: - XR_KHR_composition_layer_depth
+LogInit: Display: LogHMD: Warning: - XR_KHR_composition_layer_cylinder
+LogInit: Display: LogHMD: Warning: - XR_KHR_visibility_mask
+LogInit: Display: LogHMD: Warning: - XR_KHR_binding_modification
+LogInit: Display: LogHMD: Warning: - XR_EXT_dpad_binding
+LogInit: Display: LogHMD: Warning: - XR_EXT_palm_pose
+LogInit: Display: LogHMD: Warning: - XR_EXT_active_action_set_priority
+LogInit: Display: LogHMD: Warning: - XR_EXT_local_floor
+LogInit: Display: LogHMD: Warning: - XR_EXT_user_presence
+LogInit: Display: LogHMD: Warning: - XR_FB_display_refresh_rate
+LogInit: Display: LogHMD: Warning: - XR_EXT_interaction_profile_battery_state_display
+LogInit: Display: LogHMD: Warning: - XR_EXT_render_model
+LogInit: Display: LogHMD: Warning: - XR_EXT_interaction_render_model
+LogInit: Display: LogHMD: Warning: The following layers were enumerated:
+LogInit: Display: LogCore: Warning: 'FField::GetFName' was called with a null 'this' pointer - this is no longer supported.
+LogInit: Display:
+LogInit: Display: Success - 0 error(s), 31 warning(s)
+LogInit: Display:
+
+Execution of commandlet took:  18.32 seconds, PeakPhysMemoryMB=2162 MB, PeakVirtMemoryMB=1984 MB
+LogToolsetRegistry: Display: Unregistering Toolset DataflowEditor.DataflowScriptingSubsystem
+LogToolsetRegistry: Display: Unregistering Toolset ToolsetRegistry.AgentSkillToolset
+LogToolsetRegistry: Display: Unregistering Toolset AIAssistantEditor.AIAssistantToolset
+LogToolsetRegistry: Display: Unregistering Toolset OptimusScripting.DeformerGraphScriptingSubsystem
+LogToolsetRegistry: Display: Unregistering Toolset PCGEditor.PCGEditorSubsystem
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogStreaming: Display: ============ Loader Stats ============
+LogStreaming: Display: Unique Partial Flushes: 0
+LogStreaming: Display: ============ Loader Stats End ============
+LogShaderCompilers: Display: Exiting ShaderCompilingThread
+Took 49.45s to run UnrealEditor-Cmd.exe, ExitCode=0
+Cook command time: 49.57 s
+********** COOK COMMAND COMPLETED **********
+********** STAGE COMMAND STARTED **********
+Creating UECommandLine.txt
+Creating Staging Manifest...
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\RepairData.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseSourceControlSettings.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\WordCount.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\Editor.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\PortableObjectImport.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\Engine.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\Category.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BasePakFileRules.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseLightmass.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseEditor.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\ToolTips.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseEditorSettings.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\Keywords.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseUnrealInsightsSettings.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\PropertyNames.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseEditorKeyBindings.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\Localization\PortableObjectExport.ini
+Excluding config file D:\GameEngine\UE_5.9\Engine\Config\BaseEditorPerProjectUserSettings.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\ConfigRedirects.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\AndroidEngine.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\PluginBase.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\ConsoleVariables.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseGame.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseEngine.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseScalability.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseRuntimeOptions.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\VulkanPC\DataDrivenPlatformInfo.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\DataDrivenPlatformInfo.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\BaseAndroidInstallBundle.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\BaseAndroidInput.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\BaseAndroidGame.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\BaseAndroidEngine.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Android\AndroidScalability.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseInput.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseHardware.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseGameUserSettings.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseDeviceProfiles.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseCompat.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Base.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseMaterialExpressions.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\BaseInstallBundle.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Layouts\UE4ClassicLayout.ini
+Including config file D:\GameEngine\UE_5.9\Engine\Config\Layouts\DefaultLayout.ini
+Including config file F:\CG\Projects\PICOUE\Host\PICOHost59\Config\DefaultInput.ini
+Including config file F:\CG\Projects\PICOUE\Host\PICOHost59\Config\DefaultEngine.ini
+Including config file F:\CG\Projects\PICOUE\Host\PICOHost59\Config\DefaultDeviceProfiles.ini
+Reading oplog from Zen...
+Running UnrealPak with arguments: "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" IoStore -StartZenServerForStage -SponsorProcessID=22660 -ProjectStore="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\ue.projectstore" -unattended
+Running: D:\GameEngine\UE_5.9\Engine\Binaries\Win64\UnrealPak.exe "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" IoStore -StartZenServerForStage -SponsorProcessID=22660 -ProjectStore="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\ue.projectstore" -unattended
+LogTrace: Display: Control listening on port 1985
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: F:/CG/Projects/PICOUE/Host/PICOHost59/
+LogIoStore: Display: ==================== IoStore Utils ====================
+LogIoStore: Display: Using command line for crypto configuration
+LogZenServiceInstance: Display: Launching zen utility 'D:/GameEngine/UE_5.9/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/5.9/Saved/Zen/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Launching executable 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe', working dir 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install', data dir 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir C:\Users\zhou9\AppData\Local\UnrealEngine\Common\Zen\Data --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 16032  --child-id Zen_16032_Startup'
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogPakFile: Display: UnrealPak executed in 3.239862 seconds
+Took 3.86s to run UnrealPak.exe, ExitCode=0
+Reading oplog from http://[::1]:8558/prj/PICOHost59.2ccf01de/oplog/Android/entries?trim_by_referencedset=true
+Parsed 707 package entries from oplog.
+Cleaning Stage Directory: F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android
+Creating pak using staging manifest.
+DumpManifest: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\PrePak_Android_NonUFSFiles.txt, NumItems: 14
+DumpManifest: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\PrePak_Android_NonUFSFilesDebug.txt, NumItems: 5
+DumpManifest: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\PrePak_Android_UFSFiles.txt, NumItems: 2872
+Excluding F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\Engine\Content\EngineMaterials\PPM_DefaultCalibrationGrayscale.uasset from pak files
+Excluding F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\Engine\Content\EngineMaterials\DefaultCalibrationColor.uasset from pak files
+Excluding F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\Engine\Content\EngineMaterials\PPM_DefaultCalibrationColor.uasset from pak files
+Excluding F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\Engine\Content\EngineMaterials\DefaultCalibrationGrayscale.uasset from pak files
+Excluding F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\Engine\Content\EngineMaterials\DefaultBloomKernel.uasset from pak files
+Using 0 pak order files:
+Running UnrealPak with arguments: "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject"  -cryptokeys="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\PICOHost59\Metadata\Crypto.json" -unattended -patchpaddingalign=0 -AlignForMemoryMapping=16 -compressionformats=Oodle -compresslevel=4 -compressmethod=Mermaid  -ProjectStore="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\ue.projectstore" -platform=Android  -CreateMultiple="C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\PakCommands.txt"
+Running: D:\GameEngine\UE_5.9\Engine\Binaries\Win64\UnrealPak.exe "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject"  -cryptokeys="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\PICOHost59\Metadata\Crypto.json" -unattended -patchpaddingalign=0 -AlignForMemoryMapping=16 -compressionformats=Oodle -compresslevel=4 -compressmethod=Mermaid  -ProjectStore="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\ue.projectstore" -platform=Android  -CreateMultiple="C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\PakCommands.txt"
+LogTrace: Display: Control listening on port 1985
+OodleDataCompression: Display: Oodle v2.9.16 format for pak/iostore with method=Mermaid, level=4=Normal
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: F:/CG/Projects/PICOUE/Host/PICOHost59/
+LogPakFile: Display: Parsing crypto keys from a crypto key cache file
+LogPakFile: Display: CompressionFormats in priority order: Oodle, Zlib
+LogZenServiceInstance: Display: Launching zen utility 'D:/GameEngine/UE_5.9/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/5.9/Saved/Zen/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenStore: Display: Opening oplog PICOHost59.2ccf01de / Android
+LogIoStore: Display: Fetched 708 oplog items from Zen in 1.20 seconds
+LogIoStore: Display: Parsed 708 oplog items 0.01 seconds, 3960 chunks
+LogIoStore: Display: Loaded 988 chunk hashes from Zen in 0.04 seconds, 988 hashes updated in 0.00 seconds
+LogPakFile: Display: Oodle enabled on 'NoPluginCompression' files
+LogPakFile: Display: Loading response file D:\GameEngine\UE_5.9\Engine\Programs\AutomationTool\Saved\ResponseFiles\PakList_PICOHost59-Android.txt
+LogPakFile: Display: Added 1882 entries to add to pak file.
+LogPakFile: Display: Collecting files to add to pak file...
+LogPakFile: Display: Collected 1882 files in 0.01s.
+LogPakFile: Display: Creating pak F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/StagedBuilds/Android/PICOHost59/Content/Paks/PICOHost59-Android.pak.
+LogPakFile: Display: Created pak file: F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/StagedBuilds/Android/PICOHost59/Content/Paks/PICOHost59-Android.pak
+LogPakFile: Display: CompressionFormat 0 [Oodle] : 407 files, 22900902 -> 9579526 bytes
+LogPakFile: Display: CompressionFormat 2 [None] : 1475 files, 1216987 -> 1216987 bytes
+LogPakFile: Display: Added 1882 files, 11057044 bytes total
+LogPakFile: Display: PrimaryIndex size: 25666 bytes
+LogPakFile: Display: PathHashIndex size: 60116 bytes
+LogPakFile: Display: FullDirectoryIndex size: 61874 bytes
+LogPakFile: Display: Compression summary: 41.83% of original size. Compressed Size 9579526 bytes, Original Size 22900902 bytes.
+LogPakFile: Display: Encryption - DISABLED
+LogPakFile: Display:
+LogPakFile: Display: Writer and Compression Threads exited.
+LogPakFile: Display: UnrealPak executed in 1.400832 seconds
+Took 2.44s to run UnrealPak.exe, ExitCode=0
+Running UnrealPak with arguments: "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject -CreateGlobalContainer="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android\PICOHost59\Content\Paks\global.utoc" -ProjectStore="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\ue.projectstore" -CookedDirectory="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android" -Commands="C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\IoStoreCommands.txt" -patchpaddingalign=0 -AlignForMemoryMapping=16 -compressionformats=Oodle -compresslevel=4 -compressmethod=Mermaid   -cryptokeys="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\PICOHost59\Metadata\Crypto.json" -compressionMinBytesSaved=1024 -compressionMinPercentSaved=5 -WriteBackMetadataToAssetRegistry=Disabled -platform=Android  -unattended
+Running: D:\GameEngine\UE_5.9\Engine\Binaries\Win64\UnrealPak.exe "F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject -CreateGlobalContainer="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android\PICOHost59\Content\Paks\global.utoc" -ProjectStore="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\ue.projectstore" -CookedDirectory="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android" -Commands="C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\IoStoreCommands.txt" -patchpaddingalign=0 -AlignForMemoryMapping=16 -compressionformats=Oodle -compresslevel=4 -compressmethod=Mermaid   -cryptokeys="F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\PICOHost59\Metadata\Crypto.json" -compressionMinBytesSaved=1024 -compressionMinPercentSaved=5 -WriteBackMetadataToAssetRegistry=Disabled -platform=Android  -unattended
+LogTrace: Display: Control listening on port 1985
+OodleDataCompression: Display: Oodle v2.9.16 format for pak/iostore with method=Mermaid, level=4=Normal
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: F:/CG/Projects/PICOUE/Host/PICOHost59/
+LogIoStore: Display: ==================== IoStore Utils ====================
+LogIoStore: Display: Parsing crypto keys from a crypto key cache file 'F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android\PICOHost59\Metadata\Crypto.json'
+LogIoStore: Display: Container signing - DISABLED
+LogIoStore: Display: Directory index - ENABLED
+LogIoStore: Display: Using compression format 'Oodle'
+LogConfig: Display: Read in platform Android ini files took 0.04 seconds
+LogIoStore: Display: Using memory mapping alignment '16'
+LogIoStore: Display: Using compression block size '65536'
+LogIoStore: Display: Using compression block alignment '0'
+LogIoStore: Display: Using compression min bytes saved '1024'
+LogIoStore: Display: Using compression min percent saved '5'
+LogIoStore: Display: Using max partition size '0'
+LogIoStore: Display: Not using DDC for compression
+LogIoStore: Display: Container metadata disabled
+LogIoStore: Display: Using command list file: 'C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\IoStoreCommands.txt'
+LogIoStore: Display: Selected Oodle level 4 (Normal) from command line for shaders
+LogZenServiceInstance: Display: Launching zen utility 'D:/GameEngine/UE_5.9/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/5.9/Saved/Zen/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.16-202606120834-windows-x64-release-bfcab991'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/zhou9/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenStore: Display: Opening oplog PICOHost59.2ccf01de / Android
+LogIoStore: Display: Fetched 708 oplog items from Zen in 0.82 seconds
+LogIoStore: Display: Parsed 708 oplog items 0.01 seconds, 3960 chunks
+LogIoStore: Display: Loaded 988 chunk hashes from Zen in 0.01 seconds, 988 hashes updated in 0.00 seconds
+LogIoStore: Display: Searching for cooked assets in folder 'F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\Cooked\Android'
+LogIoStore: Display: Found '4' files
+LogIoStore: Display: Creating container targets...
+LogIoStore: Display: Processing shader libraries, compressing with Oodle Mermaid, level 4 (Normal)
+LogIoStore: Display: Shader library chunk override is disabled
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 229 groups (116 of them didn't need new indices), average uncompressed size 118973 bytes, min 493 bytes, max 1002087 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: Global-SF_VULKAN_ES31_ANDROID(VULKAN_ES3_1_ANDROID): Recompressed 1897 shaders as 229 groups. Library size changed from 7137 KB (3.73 : 1 ratio) to 4771 KB (5.58 : 1 ratio), 66.85% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'Global-SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID' with ChunkId '646fdc45f8f6945c00000008' into container 'PICOHost59-Android' for target file 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/PICOHost59/Content/ShaderArchive-Global-SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID.ushaderbytecode'
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 177 groups (63 of them didn't need new indices), average uncompressed size 80857 bytes, min 329 bytes, max 735942 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: PICOHost59-SF_VULKAN_ES31_ANDROID(VULKAN_ES3_1_ANDROID): Recompressed 895 shaders as 177 groups. Library size changed from 3756 KB (3.72 : 1 ratio) to 2407 KB (5.80 : 1 ratio), 64.09% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'PICOHost59-SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID' with ChunkId 'b6b0a404d27d3d7600000008' into container 'PICOHost59-Android' for target file 'F:/CG/Projects/PICOUE/Host/PICOHost59/Saved/Cooked/Android/PICOHost59/Content/ShaderArchive-PICOHost59-SF_VULKAN_ES31_ANDROID-VULKAN_ES3_1_ANDROID.ushaderbytecode'
+LogIoStore: Display: Shaders processed in 0.17 seconds
+LogIoStore: Display: Initialized WriteRequestManager with MaxConcurrentSourceReads=8 (16 cores), MaxSourceBufferMemory=3072MiB
+LogIoStore: Display: Processing redirects...
+LogIoStore: Display: Creating disk layout...
+LogIoStore: Display: Ordered 700 packages using fallback bundle order
+LogIoStore: Display: Disabled WriteRequestManager memory throttling, MaxConcurrentSourceReads=8 (16 cores)
+LogIoStore: Display: Writing container(s)...
+LogIoStore: Display: Writing and compressing took 0.31 seconds, writes to disk took 0.17 seconds for 68,077,312 bytes @ 398,354,277 bytes per second.
+LogIoStore: Display: global: Found perfect hashmap for 1 items.
+LogIoStore: Display: PICOHost59-Android: Found perfect hashmap for 1392 items.
+LogIoStore: Display: Finalize took 0.4 seconds for 2 writers to write 156,626 bytes, 447,197 bytes per second
+LogIoStore: Display: Writing tocs... [Physical: 444 MiB, Virtual: 3260 MiB]
+LogIoStore: Display: 983 / 1,393 hashes were loaded from the hash database, by type:
+LogIoStore: Display:     ExportBundleData           700
+LogIoStore: Display:     BulkData                   283
+LogIoStore: Display: 983 / 1,393 chunks attempted to compress, by type:
+LogIoStore: Display:     ExportBundleData           700 / 700
+LogIoStore: Display:     BulkData                   283 / 283
+LogIoStore: Display:     ScriptObjects              0 / 1
+LogIoStore: Display:     ContainerHeader            0 / 1
+LogIoStore: Display:     ShaderCodeLibrary          0 / 2
+LogIoStore: Display:     ShaderCode                 0 / 406
+LogIoStore: Display: Source bytes read:
+LogIoStore: Display:     Zen:                        137,392,612
+LogIoStore: Display:         ExportBundleData         85,290,512 bytes over 700 reads
+LogIoStore: Display:         BulkData                 52,102,100 bytes over 283 reads
+LogIoStore: Display:     Loose File:                           0
+LogIoStore: Display:     Memory:                      14,871,280
+LogIoStore: Display:         ShaderCodeLibrary           168,400 bytes over 4 reads
+LogIoStore: Display:         ShaderCode               14,702,880 bytes over 812 reads
+LogIoStore: Display: Calculating stats...
+LogIoStore: Display:
+LogIoStore: Display: Container Summary
+LogIoStore: Display: ==================
+LogIoStore: Display:
+LogIoStore: Display:            Container      Flags      Chunk(s) #       TOC (KiB)       Raw Size (MiB)           Size (MiB)
+LogIoStore: Display: ---------------------------------------------------------------------------------------------------------
+LogIoStore: Display:               global  -/-/-/-/-               1            0.83                 3.41                 3.41 -
+LogIoStore: Display:   PICOHost59-Android  C/-/-/I/-            1392          152.12               138.14                61.52 (55.47% Oodle)
+LogIoStore: Display: ---------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                Total                       1393          152.96               141.55                64.92
+LogIoStore: Display:
+LogIoStore: Display: ** Flags: (C)ompressed / (E)ncrypted / (S)igned) / (I)ndexed) / (O)nDemand **
+LogIoStore: Display:
+LogIoStore: Display: Compression block padding:     0.00 MiB
+LogIoStore: Display:
+LogIoStore: Display: Container Directory Index
+LogIoStore: Display: ==========================
+LogIoStore: Display:
+LogIoStore: Display:            Container      Size (KiB)
+LogIoStore: Display: ------------------------------------
+LogIoStore: Display:               global            0.00
+LogIoStore: Display:   PICOHost59-Android           46.86
+LogIoStore: Display:
+LogIoStore: Display: Container Patch Report
+LogIoStore: Display: ========================
+LogIoStore: Display:
+LogIoStore: Display:            Container          Total #       Modified #          Added #   Modified (MiB)      Added (MiB)
+LogIoStore: Display: ---------------------------------------------------------------------------------------------------------
+LogIoStore: Display:               global                1                0                0             0.00             0.00
+LogIoStore: Display:   PICOHost59-Android             1392                0             1392             0.00            61.52
+LogIoStore: Display: ---------------------------------------------------------------------------------------------------------
+LogIoStore: Display:
+LogIoStore: Display: PackageStore
+LogIoStore: Display: =============
+LogIoStore: Display:
+LogIoStore: Display:            Container      Size (KiB)      Packages #     Localized #
+LogIoStore: Display: --------------------------------------------------------------------
+LogIoStore: Display:   PICOHost59-Android              21             700               0
+LogIoStore: Display: --------------------------------------------------------------------
+LogIoStore: Display:                Total              21             700               0
+LogIoStore: Display:
+LogIoStore: Display:
+LogIoStore: Display: Input:       700 Packages
+LogIoStore: Display: Input:         0   B UExp
+LogIoStore: Display: Input:     81.34 MiB UAsset
+LogIoStore: Display: Input:     49.69 MiB UBulk
+LogIoStore: Display: Input:      4.66 MiB for 229 Global shaders
+LogIoStore: Display: Input:    277.61 KiB for 65 Shared shaders
+LogIoStore: Display: Input:      3.30 KiB for 3 Unique shaders
+LogIoStore: Display: Input:      2.08 MiB for 109 Inline shaders
+LogIoStore: Display:
+LogIoStore: Display: Output:     1022 Imported package entries
+LogIoStore: Display: Output:      341 Packages without imports
+LogIoStore: Display: Output:        0 Public runtime script objects
+LogIoStore: Display: Output:     3.41 MiB InitialLoadData
+LogIoStore: Display:
+LogIoStore: Display: Success
+LogPakFile: Display: UnrealPak executed in 1.925155 seconds
+Took 2.81s to run UnrealPak.exe, ExitCode=0
+DumpManifest: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\FinalCopyAndroid_UFSFiles.txt, NumItems: 2873
+DumpManifest: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\FinalCopyAndroid_NonUFSFiles.txt, NumItems: 14
+DumpManifest: C:\Users\zhou9\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+GameEngine+UE_5.9\FinalCopyAndroid_NonUFSFilesDebug.txt, NumItems: 5
+Copying NonUFSFiles to staging directory: F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android
+Copying DebugFiles to staging directory: F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android
+Stage command time: 40.30 s
+********** STAGE COMMAND COMPLETED **********
+********** PACKAGE COMMAND STARTED **********
+GetDeploymentArchitectures: not UnrealGame
+BaseApkName = F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries/Android\PICOHost59.apk
+Creating F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android.obb from F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android
+[1/13] Adding Engine/Binaries/ThirdParty/Vulkan/Android/16kb_page_support.patch to OBB
+[2/13] Adding Engine/Config/StagedBuild_PICOHost59.ini to OBB
+[3/13] Adding Engine/Content/Renderer/TessellationTable.bin to OBB
+[4/13] Adding Engine/Content/SlateDebug/Fonts/LastResort.tps to OBB
+[5/13] Adding Engine/Content/SlateDebug/Fonts/LastResort.ttf to OBB
+[6/13] Adding Engine/Extras/GPUDumpViewer/GPUDumpViewer.html to OBB
+[7/13] Adding Engine/Extras/GPUDumpViewer/OpenGPUDumpViewer.bat to OBB
+[8/13] Adding Engine/Extras/GPUDumpViewer/OpenGPUDumpViewer.sh to OBB
+[9/13] Adding PICOHost59/Content/Paks/global.ucas to OBB
+[10/13] Adding PICOHost59/Content/Paks/global.utoc to OBB
+[11/13] Adding PICOHost59/Content/Paks/PICOHost59-Android.pak to OBB
+[12/13] Adding PICOHost59/Content/Paks/PICOHost59-Android.ucas to OBB
+[13/13] Adding PICOHost59/Content/Paks/PICOHost59-Android.utoc to OBB
+AndroidPlugin: Plugins\Runtime\AndroidFileServer\Source\AndroidFileServer\AndroidFileServer_UPL.xml
+AndroidPlugin: Plugins\Runtime\AndroidPermission\Source\AndroidPermission\AndroidPermission_APL.xml
+AndroidPlugin: Plugins\Runtime\GoogleCloudMessaging\Source\GoogleCloudMessaging\GoogleCloudMessaging_UPL.xml
+AndroidPlugin: Plugins\Runtime\GooglePAD\Source\GooglePAD\GooglePAD_APL.xml
+AndroidPlugin: Plugins\Online\Android\OnlineSubsystemGooglePlay\Source\OnlineSubsystemGooglePlay_UPL.xml
+AndroidPlugin: Source\Runtime\Core\Core_APL.xml
+AndroidPlugin: Source\Runtime\Online\Voice\AndroidVoiceImpl_UPL.xml
+AndroidPlugin: Source/ThirdParty/OpenXR/OpenXR_APL.xml
+AndroidPlugin: F:\CG\Projects\PICOUE\Host\PICOHost59\Plugins\PICOOpenXR\Source\ThirdParty\PICOMobile_APL.xml
+AndroidPlugin: Source\ThirdParty\vkquality\VKQuality_UPL.xml
+AndroidPlugin: Source\ThirdParty\libGPUCounters\libGPUCounters_UPL.xml
+AndroidPlugin: Source\ThirdParty\heapprofd\heapprofd_UPL.xml
+UPL: Engine\Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/AndroidFileServer_UPL.xml
+UPL: Engine\Plugins/Runtime/AndroidPermission/Source/AndroidPermission/AndroidPermission_APL.xml
+UPL: Engine\Plugins/Runtime/GoogleCloudMessaging/Source/GoogleCloudMessaging/GoogleCloudMessaging_UPL.xml
+UPL: Engine\Plugins/Runtime/GooglePAD/Source/GooglePAD/GooglePAD_APL.xml
+UPL: Engine\Plugins/Online/Android/OnlineSubsystemGooglePlay/Source/OnlineSubsystemGooglePlay_UPL.xml
+UPL: Engine\Source/Runtime/Core/Core_APL.xml
+UPL: Engine\Source/Runtime/Online/Voice/AndroidVoiceImpl_UPL.xml
+UPL: Engine\Source/ThirdParty/OpenXR/OpenXR_APL.xml
+UPL: F:/CG/Projects/PICOUE/Host/PICOHost59/Plugins/PICOOpenXR/Source/ThirdParty/PICOMobile_APL.xml
+UPL: Engine\Source/ThirdParty/vkquality/VKQuality_UPL.xml
+UPL: Engine\Source/ThirdParty/libGPUCounters/libGPUCounters_UPL.xml
+UPL: Engine\Source/ThirdParty/heapprofd/heapprofd_UPL.xml
+Target SDK Version 36
+Android (12470979, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin
+Using package name: 'com.YourCompany.PICOHost59'
+GotStoreVersion found v1. (bUseChangeListAsStoreVersion=False IsBuildMachine=False EngineChangeList=0)
+Writing packageInfo pkgName:com.YourCompany.PICOHost59 storeVersion:1 versionDisplayName:1.0 to F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Android\packageInfo.txt
+
+====2026/11/16 7:53:13====PREPARING TO MAKE APK=================================================================
+bBuildForES31: false
+bSupportsVulkan: true
+Requires at least SDK API level 36, currently set to 'android-35'
+Gradle will attempt to download SDK API level 36
+Building Java with SDK API level 'android-36'
+Building with Build Tools version '36.0.0'
+Active UPL files changed, forcing clean
+Cleaning F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android
+On build machine.
+
+==== Writing to OBB data file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\OBBData.java ====
+
+==== Writing to shim file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\epicgames\unreal\DownloadShim.java ====
+
+==== Shim data file up to date so not writing. ====
+
+==== Writing to template target file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\AlarmReceiver.java ====
+
+==== Template target file up to date so not writing. ====
+
+==== Writing to template target file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\DownloaderActivity.java ====
+
+==== Template target file up to date so not writing. ====
+
+==== Writing to template target file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\OBBDownloaderService.java ====
+
+==== Template target file up to date so not writing. ====
+Cleaning up files based on template dir F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59
+bDontBundleLibrariesInAPK is set to false, due to an archive build.
+Application display name is different than last build, forcing repackage.
+UPL Init: arm64-v8a
+AndroidFileServer Plugin Init
+Android Permission Plugin Init
+Google Cloud Messaging init
+GCMClientSenderID set: false
+GooglePAD Plugin Init
+GooglePAD enabled: false
+Subsystem Google Play SDK Android init
+Context: 'Engine/Plugins/Online/Android/OnlineSubsystemGooglePlay/Source' using Architecture='arm64-v8a', NodeName='init', Input=''
+Variables:
+	bool bEnableGooglePlaySupport = false
+	bool bSupportsInAppPurchasing = true
+	int RequestCodeForPlayGamesActivities = 80002
+	string PluginDir = Engine/Plugins/Online/Android/OnlineSubsystemGooglePlay/Source
+	string AbsPluginDir = D:/GameEngine/UE_5.9/Engine/Plugins/Online/Android/OnlineSubsystemGooglePlay/Source
+	string UnrealArch = arm64
+	string Architecture = arm64-v8a
+	string BuildDir = F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64
+	string AbsBuildDir = F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64
+
+Core UPL init
+Android Voice init
+VKQuality init
+libGPUCounters init
+heapprofd init
+OpenXR_APL androidManifestUpdates for bPackageForOpenXRImmersive
+OpenXR_APL SplashActivity detected!
+OpenXR_APL manifest updates for com.epicgames.unreal.SplashActivity
+Copying F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android\UECommandLine.txt to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\UECommandLine.txt
+
+====2026/11/16 7:53:19====PREPARING NATIVE CODE=====arm64============================================================
+bPackageDataInsideApk = False
+UnrealCommandLine.txt exists...
+Copying F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android\UECommandLine.txt to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\assets\UECommandLine.txt
+AddRepositories: Directory F:\GameEngine\AndroidSDK\extras not found; ignored
+AARImports: com.google.android.gms, play-services-auth, 20.7.0
+AARImports: com.google.android.gms, play-services-games-v2, 19.0.0
+Copying permission_library directory to staging before build
+
+Directory D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/AndroidPermission/permission_library copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/JavaLibs/permission_library (True)
+
+==== Writing to OBB data file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\src\com\YourCompany\PICOHost59\OBBData.java ====
+
+==== OBB data file up to date so not writing. ====
+Compile SDK is 35+, adding Android Profiler access.
+
+==== Writing new GameActivity.java file to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\src\com\epicgames\unreal\GameActivity.java ====
+
+==== Writing new GameApplication.java file to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\src\com\epicgames\unreal\GameApplication.java ====
+Copying libVkLayer_khronos_validation.so vulkan layer from D:\GameEngine\UE_5.9\Engine\Binaries\ThirdParty\Vulkan\Android\arm64-v8a
+DebugVulkanLayerDirectory 
+File Engine/Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/Android/java/com/epicgames/unreal/RemoteFileManager.java copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/src/com/epicgames/unreal/RemoteFileManager.java
+File Engine/Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/Android/java/com/epicgames/unreal/IAndroidFileServerSetup.java copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/src/com/epicgames/unreal/IAndroidFileServerSetup.java
+File Engine/Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/Android/java/com/epicgames/unreal/RemoteFileManagerActivity.java copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/src/com/epicgames/unreal/RemoteFileManagerActivity.java
+File Engine/Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/Android/java/com/epicgames/unreal/RemoteFileManagerService.java copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/src/com/epicgames/unreal/RemoteFileManagerService.java
+File D:/GameEngine/UE_5.9/Engine/Source/Runtime/Core/Private/Android/Java/ProfilerAccessor.java copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/src/com/epicgames/unreal/androidprofiling/ProfilerAccessor.java
+Copying libopenxr_loader.so
+File D:/GameEngine/UE_5.9/Engine/Binaries/ThirdParty/OpenXR/Android/arm64-v8a/libopenxr_loader.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libopenxr_loader.so
+Copying libopenxr_loader_pico.so
+File F:/CG/Projects/PICOUE/Host/PICOHost59/Plugins/PICOOpenXR/Source/ThirdParty/PICOOpenXRLoader/libs/arm64-v8a/libopenxr_loader_pico.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libopenxr_loader_pico.so
+File F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/../../../pico_splash.png does not exist, not copied!
+File D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/vkquality/libs/arm64-v8a/libvkquality.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libvkquality.so
+Copying libvkquality.so
+File D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/vkquality/vkq_library/vkquality/src/main/assets/vkqualitydata.vkq copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/assets/vkqualitydata.vkq
+Copying vkqualitydata.vkq
+File D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/libGPUCounters/lib/arm64-v8a/libGPUCounters.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libGPUCounters.so
+Copying libGPUCounters.so
+File D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/heapprofd/arm64-v8a/libheapprofd_standalone_client.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libheapprofd_standalone_client.so
+Copying heapprofd_standalone_client.so
+
+====2026/11/16 7:53:20====PERFORMING FINAL APK PACKAGE OPERATION=====arm64===========================================
+Copying F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\AndroidManifest.xml to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\AndroidManifest.xml
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\Android.mk.
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\Application.mk.
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\arm64-v8a\libpsoservice.so.
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\arm64-v8a\libswappy.so.
+
+Directory Engine/Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/../AFSStub copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject (True)
+
+Directory Engine/Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/Android copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject/app/src/main (True)
+
+Directory F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/app/src/main/res copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject/app/src/main/res (True)
+
+Directory F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/gradle copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject/gradle (True)
+
+Creating rungradle.bat to work around commandline length limit (using unused drive letter Z:)
+Making .apk with Gradle...
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :downloader_library:preBuild UP-TO-DATE
+> Task :downloader_library:preDebugBuild UP-TO-DATE
+> Task :permission_library:preBuild UP-TO-DATE
+> Task :permission_library:preDebugBuild UP-TO-DATE
+> Task :downloader_library:writeDebugAarMetadata
+> Task :permission_library:writeDebugAarMetadata
+> Task :downloader_library:processDebugNavigationResources
+> Task :permission_library:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:compileDebugAidl
+> Task :app:generateDebugResValues
+> Task :downloader_library:generateDebugResValues
+> Task :downloader_library:generateDebugResources
+> Task :app:compileDebugNavigationResources
+> Task :app:javaPreCompileDebug
+> Task :downloader_library:packageDebugResources
+> Task :permission_library:generateDebugResValues
+> Task :permission_library:generateDebugResources
+> Task :permission_library:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :downloader_library:extractDeepLinksDebug
+> Task :app:mergeDebugResources
+> Task :permission_library:extractDeepLinksDebug
+> Task :downloader_library:compileDebugLibraryResources
+> Task :permission_library:compileDebugLibraryResources
+> Task :downloader_library:javaPreCompileDebug
+> Task :permission_library:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :permission_library:parseDebugLocalResources
+> Task :downloader_library:mergeDebugShaders
+> Task :downloader_library:compileDebugShaders NO-SOURCE
+> Task :downloader_library:generateDebugAssets UP-TO-DATE
+> Task :downloader_library:mergeDebugAssets
+> Task :permission_library:mergeDebugShaders
+> Task :downloader_library:parseDebugLocalResources
+> Task :app:parseDebugLocalResources
+> Task :permission_library:compileDebugShaders NO-SOURCE
+> Task :permission_library:generateDebugAssets UP-TO-DATE
+> Task :permission_library:mergeDebugAssets
+> Task :permission_library:processDebugManifest
+> Task :downloader_library:processDebugManifest
+> Task :permission_library:generateDebugRFile
+> Task :downloader_library:generateDebugRFile
+> Task :app:mergeDebugAssets
+
+> Task :app:processDebugMainManifest
+Z:\app\src\main\AndroidManifest.xml:80:5-114 Warning:
+	Element property#android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY at AndroidManifest.xml:80:5-114 duplicated with element declared at AndroidManifest.xml:16:5-114
+
+> Task :app:processDebugManifest
+> Task :downloader_library:compileDebugJavaWithJavac
+> Task :downloader_library:bundleLibCompileToJarDebug
+
+> Task :permission_library:compileDebugJavaWithJavac
+ע: Z:\permission_library\src\main\java\com\google\vr\sdk\samples\permission\PermissionFragment.javaʹ�û򸲸����ѹ�ʱ�� API��
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+
+> Task :permission_library:bundleLibCompileToJarDebug
+> Task :app:compressDebugAssets
+> Task :downloader_library:bundleLibRuntimeToJarDebug
+> Task :permission_library:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :downloader_library:processDebugJavaRes NO-SOURCE
+> Task :permission_library:processDebugJavaRes NO-SOURCE
+> Task :downloader_library:bundleLibRuntimeToDirDebug
+> Task :permission_library:bundleLibRuntimeToDirDebug
+> Task :app:checkDebugDuplicateClasses
+> Task :app:l8DexDesugarLibDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugJniLibFolders
+> Task :downloader_library:mergeDebugJniLibFolders
+> Task :downloader_library:mergeDebugNativeLibs NO-SOURCE
+> Task :downloader_library:copyDebugJniLibsProjectOnly
+> Task :permission_library:mergeDebugJniLibFolders
+> Task :permission_library:mergeDebugNativeLibs NO-SOURCE
+> Task :permission_library:copyDebugJniLibsProjectOnly
+> Task :app:mergeLibDexDebug
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeExtDexDebug
+> Task :app:mergeDebugNativeLibs
+> Task :app:processDebugResources
+> Task :app:stripDebugDebugSymbols
+
+> Task :app:compileDebugJavaWithJavac
+ע: ĳЩ�����ļ�ʹ�û򸲸����ѹ�ʱ�� API��
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+ע: Z:\app\src\main\java\com\epicgames\unreal\GameActivity.javaʹ����δ�����򲻰�ȫ�Ĳ�����
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:unchecked ���±��롣
+
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:ueCleanDebugAPK
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:ueCompleteDebug
+
+[Incubating] Problems report is available at: file:///Z:/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 44s
+80 actionable tasks: 80 executed
+Writing symbols to F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Android\PICOHost59_Symbols_v1\PICOHost59arm64\libUnreal.so
+
+====2026/11/16 7:56:06====COMPLETED MAKE APK=======================================================================
+Using this aapt: F:\GameEngine\AndroidSDK\build-tools\36.0.0\aapt.exe
+GetPackageInfo ReturnValue: com.YourCompany.PICOHost59
+GetPackageInfo ReturnValue: 1
+GetPackageInfo ReturnValue: com.YourCompany.PICOHost59
+GetPackageInfo ReturnValue: com.YourCompany.PICOHost59
+GetPackageInfo ReturnValue: 1
+GetPackageInfo ReturnValue: com.YourCompany.PICOHost59
+Writing bat for install with separate OBB
+Writing bat for uninstall with separate OBB
+Writing bat for symbolize
+GetPackageInfo ReturnValue: 1
+Package command time: 182.66 s
+********** PACKAGE COMMAND COMPLETED **********
+********** ARCHIVE COMMAND STARTED **********
+Archiving to F:\CG\Projects\PICOUE\artifacts\AndroidPackage
+GetDeploymentArchitectures: not UnrealGame
+GetPackageInfo ReturnValue: com.YourCompany.PICOHost59
+GetPackageInfo ReturnValue: 1
+GetPackageInfo ReturnValue: com.YourCompany.PICOHost59
+GetPackageInfo ReturnValue: 1
+GetPackageInfo ReturnValue: 1
+Archive command time: 23.61 s
+********** ARCHIVE COMMAND COMPLETED **********
+BuildCookRun time: 329.09 s
+BUILD SUCCESSFUL
+AutomationTool executed for 0h 5m 30s
+AutomationTool exiting with ExitCode=0 (Success)

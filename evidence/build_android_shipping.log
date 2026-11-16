@@ -1,0 +1,380 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" PICOHost59 Android Shipping -Project="F:\CG\Projects\PICOUE\Host\PICOHost59\PICOHost59.uproject" -WaitMutex
+Log file: C:\Users\zhou9\AppData\Local\UnrealBuildTool\Log.txt
+Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+  Executing up to 8 processes, one per physical core
+UbaServer - Listening on 0.0.0.0:1345
+Invalidating makefile for PICOHost59 (DefaultEngine.ini modified)
+Android (12470979, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin
+NDK toolchain: r27c, NDK version: 270300, ClangVersion: 18.0.3
+Compiling Native 64-bit code with NDK API 'android-26'
+Link: F:\GameEngine\AndroidSDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --gcc-toolchain="F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64" --sysroot="F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -static-libstdc++ -no-canonical-prefixes -shared -Wl,-Bsymbolic -Wl,--no-undefined -Wl,--gc-sections -gz --target=aarch64-none-linux-android26 -DANDROID=1 -march=armv8-a-Wl,--icf=all -Wl,-O3 -Wl,-no-pie -fuse-ld=lld -Wl,-soname,libUnreal.so -Wl,--version-script="F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Build/Android/a/PICOHost59/Shipping/ExportSymbols.ldscript" -Wl,--build-id=sha1 -Wl,--pack-dyn-relocs=android+relr,--use-android-relr-tags -Wl,--hash-style=gnu -z max-page-size=16384 -fdiagnostics-absolute-paths -fdiagnostics-color -fdiagnostics-format=msvc -o "F:/CG/Projects/PICOUE/Host/PICOHost59/Binaries/Android/PICOHost59-Android-Shipping-arm64.so" @"F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Build/Android/a/PICOHost59/Shipping/PICOHost59-Android-Shipping-arm64.so.rsp"
+Building PICOHost59...
+===== Toolchain Information =====
+Using ISPC compiler (D:\GameEngine\UE_5.9\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Clang compiler 18.0.3 (F:\GameEngine\AndroidSDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe)
+  Android (12470979, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262) Target: x86_64-w64-windows-gnu Thread model: posix InstalledDir: F:/GameEngine/AndroidSDK/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin
+Using Clang archiver (F:\GameEngine\AndroidSDK\ndk\27.2.12479018\toolchains\llvm\prebuilt\windows-x86_64\bin\llvm-ar.exe)
+  LLVM (http://llvm.org/):   LLVM version 18.0.3   Optimized build.
+[Adaptive Build] Excluded from PICOOpenXRInput unity file: PICO_Controller.cpp, PICO_InputFunctionLibrary.cpp, PICO_InputModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandInteraction unity file: PICOOpenXRHandInteraction.cpp
+[Adaptive Build] Excluded from PICOOpenXRRuntimeSettings unity file: PICOOpenXRRuntimeSettings.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandTracking unity file: PICO_HandGestureSemanticRecognizerAsset.cpp, PICO_HandTracking.cpp, PICO_HandTrackingComponent.cpp, PICO_HandTrackingFunctionLibrary.cpp
+[Adaptive Build] Excluded from PICOOpenXRMR unity file: PICO_AnchorComponent.cpp, PICO_DynamicObject.cpp, PICO_LightEstimation.cpp, PICO_MR.cpp, PICO_MRAsyncActions.cpp, PICO_MRExtension.cpp, PICO_MRFunctionLibrary.cpp, PICO_MRModule.cpp, PICO_MRSkyLight.cpp, PICO_MRTextures.cpp, PICO_ProceduralMeshComponent.cpp, PICO_SceneCapture.cpp, PICO_SceneCapturesGenerator.cpp, PICO_SpatialAnchor.cpp, PICO_SpatialAnchorActor.cpp, PICO_SpatialMesh.cpp, PICO_SpatialMeshActor.cpp, PICO_SpatialMeshComponent.cpp, PICO_SpatialPlane.cpp, PICO_SpatialPlaneActor.cpp, PICO_SpatialPlaneComponent.cpp
+[Adaptive Build] Excluded from PICOOpenXRMovement unity file: PICO_BodyTracking.cpp, PICO_BodyTrackingComponent.cpp, PICO_ExpandDevice.cpp, PICO_EyeTracking.cpp, PICO_EyeTrackingDebugActor.cpp, PICO_FaceTracking.cpp, PICO_FaceTrackingComponent.cpp, PICO_LiveLinkRetargetAsset.cpp, PICO_LiveLinkSource.cpp, PICO_LiveLinkSourceFactory.cpp, PICO_MotionTracking.cpp, PICO_MovementExtension.cpp, PICO_MovementFunctionLibrary.cpp, PICO_MovementModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRPassthrough unity file: PICO_Passthrough.cpp, PICO_PassthroughFunctionLibrary.cpp, PICO_PassthroughLayer.cpp, PICO_PassthroughLayerShape.cpp, PICO_PassthroughModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRHMD unity file: PICO_CameraFunctionLibrary.cpp, PICO_CameraPreviewActor.cpp, PICO_DynamicResolutionState.cpp, PICO_HMD.cpp, PICO_HMDFunctionLibrary.cpp, PICO_HMDModule.cpp, PICO_MRCCamera.cpp, PICO_OpenXRRenderModelPMC.cpp, PICO_PokeHoleComponent.cpp, PICO_Shaders.cpp
+===== End Toolchain Information =====
+Using Unreal Build Accelerator local executor to run 3 action(s)
+  CPU 8 physical cores, 16 logical cores
+  Memory 31.94 GB physical, 30.6 GB/46.44 GB committed
+  UBA Storage capacity 40 GB
+[1/3] Compile [arm64] PICOOpenXRRuntimeSettings.cpp
+[2/3] clang++ PICOHost59-Android-Shipping-arm64.so
+[3/3] WriteMetadata PICOHost59-Android-Shipping.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 18.64 seconds
+Output binary: F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Android\PICOHost59-Android-Shipping-arm64.so
+Deploying PICOHost59 Android Shipping...
+AndroidPlugin: Plugins\Runtime\AndroidFileServer\Source\AndroidFileServer\AndroidFileServer_UPL.xml
+AndroidPlugin: Plugins\Runtime\AndroidPermission\Source\AndroidPermission\AndroidPermission_APL.xml
+AndroidPlugin: Plugins\Runtime\GoogleCloudMessaging\Source\GoogleCloudMessaging\GoogleCloudMessaging_UPL.xml
+AndroidPlugin: Plugins\Runtime\GooglePAD\Source\GooglePAD\GooglePAD_APL.xml
+AndroidPlugin: Plugins\Online\Android\OnlineSubsystemGooglePlay\Source\OnlineSubsystemGooglePlay_UPL.xml
+AndroidPlugin: Source\Runtime\Core\Core_APL.xml
+AndroidPlugin: Source\Runtime\Online\Voice\AndroidVoiceImpl_UPL.xml
+AndroidPlugin: Source/ThirdParty/OpenXR/OpenXR_APL.xml
+AndroidPlugin: F:\CG\Projects\PICOUE\Host\PICOHost59\Plugins\PICOOpenXR\Source\ThirdParty\PICOMobile_APL.xml
+AndroidPlugin: Source\ThirdParty\vkquality\VKQuality_UPL.xml
+UPL: ..\Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/AndroidFileServer_UPL.xml
+UPL: ..\Plugins/Runtime/AndroidPermission/Source/AndroidPermission/AndroidPermission_APL.xml
+UPL: ..\Plugins/Runtime/GoogleCloudMessaging/Source/GoogleCloudMessaging/GoogleCloudMessaging_UPL.xml
+UPL: ..\Plugins/Runtime/GooglePAD/Source/GooglePAD/GooglePAD_APL.xml
+UPL: ..\Plugins/Online/Android/OnlineSubsystemGooglePlay/Source/OnlineSubsystemGooglePlay_UPL.xml
+UPL: ..\Source/Runtime/Core/Core_APL.xml
+UPL: ..\Source/Runtime/Online/Voice/AndroidVoiceImpl_UPL.xml
+UPL: ..\Source/ThirdParty/OpenXR/OpenXR_APL.xml
+UPL: F:/CG/Projects/PICOUE/Host/PICOHost59/Plugins/PICOOpenXR/Source/ThirdParty/PICOMobile_APL.xml
+UPL: ..\Source/ThirdParty/vkquality/VKQuality_UPL.xml
+Using package name: 'com.YourCompany.PICOHost59'
+GotStoreVersion found v1. (bUseChangeListAsStoreVersion=False IsBuildMachine=False EngineChangeList=0)
+Writing packageInfo pkgName:com.YourCompany.PICOHost59 storeVersion:1 versionDisplayName:1.0 to F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Android\packageInfo.txt
+
+====11/16/2026 06:55:20====PREPARING TO MAKE APK=================================================================
+bBuildForES31: false
+bSupportsVulkan: true
+Requires at least SDK API level 36, currently set to 'android-35'
+Gradle will attempt to download SDK API level 36
+Building Java with SDK API level 'android-36'
+Building with Build Tools version '36.0.0'
+Active UPL files changed, forcing clean
+Cleaning F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android
+Looking for OBB.
+
+==== Writing to OBB data file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\OBBData.java ====
+
+==== OBB data file up to date so not writing. ====
+
+==== Writing to shim file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\epicgames\unreal\DownloadShim.java ====
+
+==== Shim data file up to date so not writing. ====
+
+==== Writing to template target file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\AlarmReceiver.java ====
+
+==== Template target file up to date so not writing. ====
+
+==== Writing to template target file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\DownloaderActivity.java ====
+
+==== Template target file up to date so not writing. ====
+
+==== Writing to template target file F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59\OBBDownloaderService.java ====
+
+==== Template target file up to date so not writing. ====
+Cleaning up files based on template dir F:\CG\Projects\PICOUE\Host\PICOHost59\Build\Android\src\com\YourCompany\PICOHost59
+bDontBundleLibrariesInAPK is set to false, due to not called from MSBuild or UAT (bFromMSBuild=False, bIsFromUAT=False), use "-ForceDontBundleLibrariesInAPK=true" to override.
+Application display name is different than last build, forcing repackage.
+UPL Init: arm64-v8a
+AndroidFileServer Plugin Init
+Disabled embedding AFS because shipping
+Android Permission Plugin Init
+Google Cloud Messaging init
+GCMClientSenderID set: false
+GooglePAD Plugin Init
+GooglePAD enabled: false
+Subsystem Google Play SDK Android init
+Context: '../Plugins/Online/Android/OnlineSubsystemGooglePlay/Source' using Architecture='arm64-v8a', NodeName='init', Input=''
+Variables:
+	bool bEnableGooglePlaySupport = false
+	bool bSupportsInAppPurchasing = true
+	int RequestCodeForPlayGamesActivities = 80002
+	string PluginDir = ../Plugins/Online/Android/OnlineSubsystemGooglePlay/Source
+	string AbsPluginDir = D:/GameEngine/UE_5.9/Engine/Plugins/Online/Android/OnlineSubsystemGooglePlay/Source
+	string UnrealArch = arm64
+	string Architecture = arm64-v8a
+	string BuildDir = F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64
+	string AbsBuildDir = F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64
+
+Core UPL init
+Android Voice init
+VKQuality init
+OpenXR_APL androidManifestUpdates for bPackageForOpenXRImmersive
+OpenXR_APL SplashActivity detected!
+OpenXR_APL manifest updates for com.epicgames.unreal.SplashActivity
+Copying F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android\UECommandLine.txt to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\UECommandLine.txt
+
+====11/16/2026 06:55:24====PREPARING NATIVE CODE=====arm64============================================================
+bPackageDataInsideApk = False
+UnrealCommandLine.txt exists...
+Copying F:\CG\Projects\PICOUE\Host\PICOHost59\Saved\StagedBuilds\Android\UECommandLine.txt to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\assets\UECommandLine.txt
+AddRepositories: Directory F:\GameEngine\AndroidSDK\extras not found; ignored
+AARImports: com.google.android.gms, play-services-auth, 20.7.0
+AARImports: com.google.android.gms, play-services-games-v2, 19.0.0
+Copying permission_library directory to staging before build
+
+Directory ../Source/ThirdParty/AndroidPermission/permission_library copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/JavaLibs/permission_library (True)
+
+==== Writing to OBB data file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\src\com\YourCompany\PICOHost59\OBBData.java ====
+
+==== OBB data file up to date so not writing. ====
+Compile SDK is 35+, adding Android Profiler access.
+
+==== Writing new GameActivity.java file to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\src\com\epicgames\unreal\GameActivity.java ====
+
+==== Writing new GameApplication.java file to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\src\com\epicgames\unreal\GameApplication.java ====
+File ../Source/Runtime/Core/Private/Android/Java/ProfilerAccessor.java copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/src/com/epicgames/unreal/androidprofiling/ProfilerAccessor.java
+Copying libopenxr_loader.so
+File ../Binaries/ThirdParty/OpenXR/Android/arm64-v8a/libopenxr_loader.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libopenxr_loader.so
+Copying libopenxr_loader_pico.so
+File F:/CG/Projects/PICOUE/Host/PICOHost59/Plugins/PICOOpenXR/Source/ThirdParty/PICOOpenXRLoader/libs/arm64-v8a/libopenxr_loader_pico.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libopenxr_loader_pico.so
+File F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/../../../pico_splash.png does not exist, not copied!
+File D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/vkquality/libs/arm64-v8a/libvkquality.so copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/libs/arm64-v8a/libvkquality.so
+Copying libvkquality.so
+File D:/GameEngine/UE_5.9/Engine/Source/ThirdParty/vkquality/vkq_library/vkquality/src/main/assets/vkqualitydata.vkq copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/assets/vkqualitydata.vkq
+Copying vkqualitydata.vkq
+
+====11/16/2026 06:55:24====PERFORMING FINAL APK PACKAGE OPERATION=====arm64===========================================
+Copying F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\AndroidManifest.xml to F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\AndroidManifest.xml
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\Android.mk.
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\Application.mk.
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\arm64-v8a\libpsoservice.so.
+Copied file F:\CG\Projects\PICOUE\Host\PICOHost59\Intermediate\Android\arm64\gradle\app\src\main\jniLibs\arm64-v8a\libswappy.so.
+
+Directory ../Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/../AFSStub copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject (True)
+
+Directory ../Plugins/Runtime/AndroidFileServer/Source/AndroidFileServer/Android copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject/app/src/main (True)
+
+Directory F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/app/src/main/res copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject/app/src/main/res (True)
+
+Directory F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/gradle copied to F:/CG/Projects/PICOUE/Host/PICOHost59/Intermediate/Android/arm64/gradle/AFSProject/gradle (True)
+
+Creating rungradle.bat to work around commandline length limit (using unused drive letter Z:)
+Making .apk with Gradle...
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :downloader_library:preBuild UP-TO-DATE
+> Task :downloader_library:preDebugBuild UP-TO-DATE
+> Task :permission_library:preBuild UP-TO-DATE
+> Task :permission_library:preDebugBuild UP-TO-DATE
+> Task :downloader_library:writeDebugAarMetadata
+> Task :permission_library:writeDebugAarMetadata
+> Task :downloader_library:processDebugNavigationResources
+> Task :permission_library:processDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:javaPreCompileDebug
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :downloader_library:generateDebugResValues
+> Task :downloader_library:generateDebugResources
+> Task :app:compileDebugNavigationResources
+> Task :app:compileDebugAidl
+> Task :downloader_library:packageDebugResources
+> Task :permission_library:generateDebugResValues
+> Task :permission_library:generateDebugResources
+> Task :permission_library:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :downloader_library:extractDeepLinksDebug
+> Task :permission_library:extractDeepLinksDebug
+> Task :permission_library:compileDebugLibraryResources
+> Task :downloader_library:javaPreCompileDebug
+> Task :permission_library:javaPreCompileDebug
+> Task :downloader_library:compileDebugLibraryResources
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :downloader_library:mergeDebugShaders
+> Task :downloader_library:compileDebugShaders NO-SOURCE
+> Task :downloader_library:generateDebugAssets UP-TO-DATE
+> Task :downloader_library:mergeDebugAssets
+> Task :permission_library:mergeDebugShaders
+> Task :permission_library:compileDebugShaders NO-SOURCE
+> Task :permission_library:generateDebugAssets UP-TO-DATE
+> Task :permission_library:mergeDebugAssets
+> Task :permission_library:parseDebugLocalResources
+> Task :downloader_library:parseDebugLocalResources
+> Task :downloader_library:processDebugManifest
+> Task :permission_library:processDebugManifest
+> Task :app:parseDebugLocalResources
+> Task :app:mergeDebugAssets
+
+> Task :app:processDebugMainManifest
+Z:\app\src\main\AndroidManifest.xml:80:5-114 Warning:
+	Element property#android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY at AndroidManifest.xml:80:5-114 duplicated with element declared at AndroidManifest.xml:16:5-114
+
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :downloader_library:generateDebugRFile
+> Task :permission_library:generateDebugRFile
+> Task :app:compressDebugAssets
+> Task :app:processDebugResources
+> Task :downloader_library:compileDebugJavaWithJavac
+> Task :downloader_library:bundleLibCompileToJarDebug
+
+> Task :permission_library:compileDebugJavaWithJavac
+ע: Z:\permission_library\src\main\java\com\google\vr\sdk\samples\permission\PermissionFragment.javaʹ�û򸲸����ѹ�ʱ�� API��
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+
+> Task :downloader_library:bundleLibRuntimeToJarDebug
+> Task :app:desugarDebugFileDependencies
+> Task :downloader_library:processDebugJavaRes NO-SOURCE
+> Task :permission_library:processDebugJavaRes NO-SOURCE
+> Task :permission_library:bundleLibCompileToJarDebug
+> Task :permission_library:bundleLibRuntimeToJarDebug
+> Task :app:checkDebugDuplicateClasses
+> Task :app:l8DexDesugarLibDebug
+
+> Task :app:compileDebugJavaWithJavac
+ע: ĳЩ�����ļ�ʹ�û򸲸����ѹ�ʱ�� API��
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+ע: Z:\app\src\main\java\com\epicgames\unreal\GameActivity.javaʹ����δ�����򲻰�ȫ�Ĳ�����
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:unchecked ���±��롣
+
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :downloader_library:bundleLibRuntimeToDirDebug
+> Task :permission_library:bundleLibRuntimeToDirDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeExtDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeDebugJniLibFolders
+> Task :downloader_library:mergeDebugJniLibFolders
+> Task :downloader_library:mergeDebugNativeLibs NO-SOURCE
+> Task :downloader_library:copyDebugJniLibsProjectOnly
+> Task :permission_library:mergeDebugJniLibFolders
+> Task :permission_library:mergeDebugNativeLibs NO-SOURCE
+> Task :permission_library:copyDebugJniLibsProjectOnly
+> Task :app:mergeLibDexDebug
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeDebugNativeLibs
+> Task :app:stripDebugDebugSymbols
+> Task :app:ueCleanDebugAPK
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:ueCompleteDebug
+
+> Task :app:ueAFSProjectAssembleDebug
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :app:javaPreCompileDebug
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResValues
+> Task :app:compileDebugNavigationResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
+
+> Task :app:processDebugMainManifest
+Z:\AFSProject\app\src\main\AndroidManifest.xml:80:5-114 Warning:
+	Element property#android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY at AndroidManifest.xml:80:5-114 duplicated with element declared at AndroidManifest.xml:16:5-114
+
+> Task :app:processDebugManifest
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:ueCleanDebugAPK SKIPPED
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeLibDexDebug
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugResources
+> Task :app:l8DexDesugarLibDebug
+> Task :app:mergeExtDexDebug
+
+> Task :app:compileDebugJavaWithJavac
+ע: ĳЩ�����ļ�ʹ�û򸲸����ѹ�ʱ�� API��
+ע: �й���ϸ��Ϣ, ��ʹ�� -Xlint:deprecation ���±��롣
+
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:ueCompleteDebug
+
+[Incubating] Problems report is available at: file:///Z:/AFSProject/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 33s
+38 actionable tasks: 38 executed
+
+[Incubating] Problems report is available at: file:///Z:/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 4m 2s
+81 actionable tasks: 81 executed
+Writing symbols to F:\CG\Projects\PICOUE\Host\PICOHost59\Binaries\Android\PICOHost59_Symbols_v1\PICOHost59arm64\libUnreal.so
+
+====11/16/2026 06:59:30====COMPLETED MAKE APK=======================================================================
+================================================================================================================================
+Non-default apk(s) have been made: If you are debugging, you will need to manually select one to run in the debugger properties!
+================================================================================================================================
+
+Result: Succeeded
+Trace written to file C:\Users\zhou9\AppData\Local\UnrealBuildTool\Trace.uba with size 47.1kb

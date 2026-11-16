@@ -1,0 +1,156 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" PICOClean59Editor Win64 Development -Project="F:\CG\Projects\PICOUE\Host\PICOClean59\PICOClean59.uproject" -WaitMutex
+Log file: C:\Users\zhou9\AppData\Local\UnrealBuildTool\Log.txt
+Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+  Executing up to 8 processes, one per physical core
+UbaStorageServer - Previous run was not gracefully shutdown. Reparsing cas directory C:\ProgramData\Epic\UnrealBuildAccelerator\cas\ to check for added/missing/corrupt files (Saved 2026-11-16 08:41:00)
+UbaStorageServer - Validated storage (size 0b) in <1ms
+UbaServer - Listening on 0.0.0.0:1345
+Warning: Plugin 'Fab' does not list plugin 'ToolsetRegistry' as a dependency, but module 'FabToolset' depends on module 'ToolsetRegistry'.
+Building PICOClean59Editor...
+===== Toolchain Information =====
+Using ISPC compiler (D:\GameEngine\UE_5.9\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.44.35229 toolchain (F:\GameEngine\UE5.8.3Source\Tools\VS2022\VC\Tools\MSVC\14.44.35207) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[Adaptive Build] Excluded from PICOOpenXRHMD unity file: PICO_CameraFunctionLibrary.cpp, PICO_CameraPreviewActor.cpp, PICO_DynamicResolutionState.cpp, PICO_HMD.cpp, PICO_HMDFunctionLibrary.cpp, PICO_HMDModule.cpp, PICO_MRCCamera.cpp, PICO_OpenXRRenderModelPMC.cpp, PICO_PokeHoleComponent.cpp, PICO_Shaders.cpp
+[Adaptive Build] Excluded from PICOOpenXRInput unity file: PICO_Controller.cpp, PICO_InputFunctionLibrary.cpp, PICO_InputModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRMovement unity file: PICO_BodyTracking.cpp, PICO_BodyTrackingComponent.cpp, PICO_ExpandDevice.cpp, PICO_EyeTracking.cpp, PICO_EyeTrackingDebugActor.cpp, PICO_FaceTracking.cpp, PICO_FaceTrackingComponent.cpp, PICO_LiveLinkRetargetAsset.cpp, PICO_LiveLinkSource.cpp, PICO_LiveLinkSourceFactory.cpp, PICO_MotionTracking.cpp, PICO_MovementExtension.cpp, PICO_MovementFunctionLibrary.cpp, PICO_MovementModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandTracking unity file: PICO_HandGestureSemanticRecognizerAsset.cpp, PICO_HandTracking.cpp, PICO_HandTrackingComponent.cpp, PICO_HandTrackingFunctionLibrary.cpp
+[Adaptive Build] Excluded from PICOOpenXRMR unity file: PICO_AnchorComponent.cpp, PICO_DynamicObject.cpp, PICO_LightEstimation.cpp, PICO_MR.cpp, PICO_MRAsyncActions.cpp, PICO_MRExtension.cpp, PICO_MRFunctionLibrary.cpp, PICO_MRModule.cpp, PICO_MRSkyLight.cpp, PICO_MRTextures.cpp, PICO_ProceduralMeshComponent.cpp, PICO_SceneCapture.cpp, PICO_SceneCapturesGenerator.cpp, PICO_SpatialAnchor.cpp, PICO_SpatialAnchorActor.cpp, PICO_SpatialMesh.cpp, PICO_SpatialMeshActor.cpp, PICO_SpatialMeshComponent.cpp, PICO_SpatialPlane.cpp, PICO_SpatialPlaneActor.cpp, PICO_SpatialPlaneComponent.cpp
+[Adaptive Build] Excluded from PICOOpenXRHandInteraction unity file: PICOOpenXRHandInteraction.cpp
+[Adaptive Build] Excluded from PICOOpenXRPassthrough unity file: PICO_Passthrough.cpp, PICO_PassthroughFunctionLibrary.cpp, PICO_PassthroughLayer.cpp, PICO_PassthroughLayerShape.cpp, PICO_PassthroughModule.cpp
+[Adaptive Build] Excluded from PICOOpenXRRuntimeSettings unity file: PICOOpenXRRuntimeSettings.cpp
+[Adaptive Build] Excluded from PICOOpenXREditor unity file: PICOHapticAssetFactory.cpp, PICOHapticAssetThumbnailRenderer.cpp, PICOOpenXRConfigEditorWidget.cpp, PICOOpenXREditor.cpp, PICO_HandGestureEditorLibrary.cpp, PICO_HandGestureRecognizerExporter.cpp, PICO_HandGestureRecognizerFactory.cpp, PICO_HandGestureSemanticRecognizerExporter.cpp, PICO_HandGestureSemanticRecognizerFactory.cpp, PICO_PoseAssetExporter.cpp, PICO_PoseAssetFactory.cpp
+[Adaptive Build] Excluded from PICOOpenXRPortal unity file: PICO_AppLog.cpp, PICO_PerformancePackSettings.cpp, PICO_PerfPackDeviceSettingsCustomization.cpp, PICO_PortalFunctionLibrary.cpp, PICO_PortalModule.cpp, PICO_PortalSettings.cpp, PICO_PortalSubsystem.cpp, PICO_VerificationObject.cpp, PICO_VerificationComponents.cpp, PICO_VerificationStyle.cpp, SPICO__VerificationWidget.cpp
+===== End Toolchain Information =====
+Using Unreal Build Accelerator local executor to run 111 action(s)
+  CPU 8 physical cores, 16 logical cores
+  Memory 31.94 GB physical, 35.13 GB/46.44 GB committed
+  UBA Storage capacity 40 GB
+[1/111] Compile [x64] PICOOpenXRRuntimeSettings.cpp
+[2/111] Link [x64] UnrealEditor-PICOOpenXRRuntimeSettings.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRRuntimeSettings/UnrealEditor-PICOOpenXRRuntimeSettings.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRRuntimeSettings/UnrealEditor-PICOOpenXRRuntimeSettings.exp
+[3/111] Link [x64] UnrealEditor-PICOOpenXRRuntimeSettings.dll
+[4/111] Compile [x64] Module.PICOOpenXRHMD.cpp
+[5/111] Compile [x64] PICO_CameraPreviewActor.cpp
+[6/111] Compile [x64] PICO_CameraFunctionLibrary.cpp
+[7/111] Compile [x64] PICO_DynamicResolutionState.cpp
+[8/111] Compile [x64] PICO_HMDFunctionLibrary.cpp
+[9/111] Compile [x64] PICO_HMD.cpp
+[10/111] Compile [x64] PICO_HMDModule.cpp
+[11/111] Compile [x64] PICO_MRCCamera.cpp
+[12/111] Compile [x64] PICO_OpenXRRenderModelPMC.cpp
+[13/111] Compile [x64] PICO_PokeHoleComponent.cpp
+[14/111] Compile [x64] PICO_Shaders.cpp
+[15/111] Link [x64] UnrealEditor-PICOOpenXRHMD.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRHMD/UnrealEditor-PICOOpenXRHMD.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRHMD/UnrealEditor-PICOOpenXRHMD.exp
+[16/111] Link [x64] UnrealEditor-PICOOpenXRHMD.dll
+[17/111] Compile [x64] Module.PICOOpenXRHandTracking.cpp
+[18/111] Compile [x64] PICO_HandGestureSemanticRecognizerAsset.cpp
+[19/111] Compile [x64] PICO_HandTracking.cpp
+[20/111] Compile [x64] PICO_HandTrackingComponent.cpp
+[21/111] Compile [x64] PICO_HandTrackingFunctionLibrary.cpp
+[22/111] Link [x64] UnrealEditor-PICOOpenXRHandTracking.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRHandTracking/UnrealEditor-PICOOpenXRHandTracking.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRHandTracking/UnrealEditor-PICOOpenXRHandTracking.exp
+[23/111] Link [x64] UnrealEditor-PICOOpenXRHandTracking.dll
+[24/111] Compile [x64] Module.PICOOpenXRInput.cpp
+[25/111] Compile [x64] PICO_Controller.cpp
+[26/111] Compile [x64] PICO_InputFunctionLibrary.cpp
+[27/111] Compile [x64] PICO_InputModule.cpp
+[28/111] Link [x64] UnrealEditor-PICOOpenXRInput.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRInput/UnrealEditor-PICOOpenXRInput.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRInput/UnrealEditor-PICOOpenXRInput.exp
+[29/111] Link [x64] UnrealEditor-PICOOpenXRInput.dll
+[30/111] Compile [x64] Module.PICOOpenXRMR.cpp
+[31/111] Compile [x64] PICO_AnchorComponent.cpp
+[32/111] Compile [x64] PICO_DynamicObject.cpp
+[33/111] Compile [x64] PICO_LightEstimation.cpp
+[34/111] Compile [x64] PICO_MR.cpp
+[35/111] Compile [x64] PICO_MRExtension.cpp
+[36/111] Compile [x64] PICO_MRAsyncActions.cpp
+[37/111] Compile [x64] PICO_MRFunctionLibrary.cpp
+[38/111] Compile [x64] PICO_MRModule.cpp
+[39/111] Compile [x64] PICO_MRSkyLight.cpp
+[40/111] Compile [x64] PICO_ProceduralMeshComponent.cpp
+[41/111] Compile [x64] PICO_MRTextures.cpp
+[42/111] Compile [x64] PICO_SceneCapture.cpp
+[43/111] Compile [x64] PICO_SceneCapturesGenerator.cpp
+[44/111] Compile [x64] PICO_SpatialAnchor.cpp
+[45/111] Compile [x64] PICO_SpatialAnchorActor.cpp
+[46/111] Compile [x64] PICO_SpatialMesh.cpp
+[47/111] Compile [x64] PICO_SpatialMeshActor.cpp
+[48/111] Compile [x64] PICO_SpatialMeshComponent.cpp
+[49/111] Compile [x64] PICO_SpatialPlane.cpp
+[50/111] Compile [x64] PICO_SpatialPlaneComponent.cpp
+[51/111] Compile [x64] PICO_SpatialPlaneActor.cpp
+[52/111] Link [x64] UnrealEditor-PICOOpenXRMR.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRMR/UnrealEditor-PICOOpenXRMR.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRMR/UnrealEditor-PICOOpenXRMR.exp
+[53/111] Link [x64] UnrealEditor-PICOOpenXRMR.dll
+[54/111] Compile [x64] Module.PICOOpenXRMovement.cpp
+[55/111] Compile [x64] PICO_BodyTrackingComponent.cpp
+[56/111] Compile [x64] PICO_BodyTracking.cpp
+[57/111] Compile [x64] PICO_ExpandDevice.cpp
+[58/111] Compile [x64] PICO_EyeTrackingDebugActor.cpp
+[59/111] Compile [x64] PICO_EyeTracking.cpp
+[60/111] Compile [x64] PICO_FaceTracking.cpp
+[61/111] Compile [x64] PICO_FaceTrackingComponent.cpp
+[62/111] Compile [x64] PICO_LiveLinkRetargetAsset.cpp
+[63/111] Compile [x64] PICO_LiveLinkSource.cpp
+[64/111] Compile [x64] PICO_MotionTracking.cpp
+[65/111] Compile [x64] PICO_LiveLinkSourceFactory.cpp
+[66/111] Compile [x64] PICO_MovementExtension.cpp
+[67/111] Compile [x64] PICO_MovementFunctionLibrary.cpp
+[68/111] Compile [x64] PICO_MovementModule.cpp
+[69/111] Link [x64] UnrealEditor-PICOOpenXRMovement.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRMovement/UnrealEditor-PICOOpenXRMovement.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRMovement/UnrealEditor-PICOOpenXRMovement.exp
+[70/111] Link [x64] UnrealEditor-PICOOpenXRMovement.dll
+[71/111] Compile [x64] Module.PICOOpenXREditor.cpp
+[72/111] Compile [x64] PICOHapticAssetThumbnailRenderer.cpp
+[73/111] Compile [x64] PICOHapticAssetFactory.cpp
+[74/111] Compile [x64] PICO_HandGestureEditorLibrary.cpp
+[75/111] Compile [x64] PICOOpenXRConfigEditorWidget.cpp
+[76/111] Compile [x64] PICOOpenXREditor.cpp
+[77/111] Compile [x64] PICO_HandGestureRecognizerExporter.cpp
+[78/111] Compile [x64] PICO_HandGestureRecognizerFactory.cpp
+[79/111] Compile [x64] PICO_HandGestureSemanticRecognizerExporter.cpp
+[80/111] Compile [x64] PICO_HandGestureSemanticRecognizerFactory.cpp
+[81/111] Compile [x64] PICO_PoseAssetExporter.cpp
+[82/111] Compile [x64] PICO_PoseAssetFactory.cpp
+[83/111] Link [x64] UnrealEditor-PICOOpenXREditor.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXREditor/UnrealEditor-PICOOpenXREditor.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXREditor/UnrealEditor-PICOOpenXREditor.exp
+[84/111] Compile [x64] Module.PICOOpenXRHandInteraction.cpp
+[85/111] Link [x64] UnrealEditor-PICOOpenXREditor.dll
+[86/111] Compile [x64] Module.PICOOpenXRPassthrough.cpp
+[87/111] Compile [x64] PICO_Passthrough.cpp
+[88/111] Compile [x64] PICOOpenXRHandInteraction.cpp
+[89/111] Link [x64] UnrealEditor-PICOOpenXRHandInteraction.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRHandInteraction/UnrealEditor-PICOOpenXRHandInteraction.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRHandInteraction/UnrealEditor-PICOOpenXRHandInteraction.exp
+[90/111] Compile [x64] PICO_PassthroughFunctionLibrary.cpp
+[91/111] Link [x64] UnrealEditor-PICOOpenXRHandInteraction.dll
+[92/111] Compile [x64] PICO_PassthroughLayerShape.cpp
+[93/111] Compile [x64] PICO_PassthroughLayer.cpp
+[94/111] Compile [x64] PICO_PassthroughModule.cpp
+[95/111] Link [x64] UnrealEditor-PICOOpenXRPassthrough.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRPassthrough/UnrealEditor-PICOOpenXRPassthrough.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRPassthrough/UnrealEditor-PICOOpenXRPassthrough.exp
+[96/111] Link [x64] UnrealEditor-PICOOpenXRPassthrough.dll
+[97/111] Compile [x64] Module.PICOOpenXRPortal.cpp
+[98/111] Compile [x64] PICO_AppLog.cpp
+[99/111] Compile [x64] PICO_PerfPackDeviceSettingsCustomization.cpp
+[100/111] Compile [x64] PICO_PerformancePackSettings.cpp
+[101/111] Compile [x64] PICO_PortalFunctionLibrary.cpp
+[102/111] Compile [x64] PICO_PortalModule.cpp
+[103/111] Compile [x64] PICO_PortalSettings.cpp
+[104/111] Compile [x64] PICO_VerificationComponents.cpp
+[105/111] Compile [x64] PICO_PortalSubsystem.cpp
+[106/111] Compile [x64] PICO_VerificationStyle.cpp
+[107/111] Compile [x64] PICO_VerificationObject.cpp
+[108/111] Compile [x64] SPICO__VerificationWidget.cpp
+[109/111] Link [x64] UnrealEditor-PICOOpenXRPortal.lib
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRPortal/UnrealEditor-PICOOpenXRPortal.lib ﾺￍﾶￔￏ￳ F:/CG/Projects/PICOUE/Host/PICOClean59/Plugins/PICOOpenXR/Intermediate/Build/Win64/x64/UnrealEditor/Development/PICOOpenXRPortal/UnrealEditor-PICOOpenXRPortal.exp
+[110/111] Link [x64] UnrealEditor-PICOOpenXRPortal.dll
+[111/111] WriteMetadata PICOClean59Editor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 414.01 seconds
+Output binary: D:\GameEngine\UE_5.9\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Trace written to file C:\Users\zhou9\AppData\Local\UnrealBuildTool\Trace.uba with size 97.3kb

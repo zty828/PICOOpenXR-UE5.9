@@ -1,0 +1,127 @@
+{
+ "spawned": [
+  {
+   "class": "/Script/PICOOpenXRHMD.PICOCameraPreviewActor",
+   "name": "PICOCameraPreviewActor_UAID_00E0971E3C294D1503_1972021559",
+   "components": 2
+  },
+  {
+   "class": "/Script/PICOOpenXRMovement.PICOEyeTrackingDebugActor",
+   "name": "PICOEyeTrackingDebugActor_UAID_00E0971E3C294D1503_1972024560",
+   "components": 0
+  },
+  {
+   "class": "/Script/PICOOpenXRMR.SceneCapturesGeneratorPICO",
+   "name": "SceneCapturesGeneratorPICO_UAID_00E0971E3C294D1503_1972027561",
+   "components": 0
+  },
+  {
+   "class": "/Script/PICOOpenXRMR.SpatialAnchorActorPICO",
+   "name": "SpatialAnchorActorPICO_UAID_00E0971E3C294D1503_1972032562",
+   "components": 0
+  },
+  {
+   "class": "/Script/PICOOpenXRMR.SpatialMeshActorPICO",
+   "name": "SpatialMeshActorPICO_UAID_00E0971E3C294D1503_1972035563",
+   "components": 0
+  },
+  {
+   "class": "/Script/PICOOpenXRMR.SpatialPlaneActorPICO",
+   "name": "SpatialPlaneActorPICO_UAID_00E0971E3C294D1503_1972038564",
+   "components": 0
+  }
+ ],
+ "components": [
+  "OpenXRRenderModelPMCPICO",
+  "PokeHoleComponentPICO",
+  "BodyTrackingComponentPICO",
+  "FaceTrackingComponentPICO",
+  "AnchorComponentPICO",
+  "ProceduralMeshComponentPICO",
+  "SpatialMeshComponentPICO",
+  "SpatialPlaneComponentPICO",
+  "HandTrackingComponentPICO",
+  "PassthroughLayerComponentPICO",
+  "PassthroughCustomShapeLayerPICO",
+  "PassthroughFullScreenLayerPICO"
+ ],
+ "sample_bp": 8,
+ "map_saved": true,
+ "errors": [
+  "bp spawn /PICOOpenXR/DevTools/MixedReality/BP_SpatialPlaneComponent_Sample: EditorActorSubsystem: Failed to convert parameter 'actor_class' when calling function 'EditorActorSubsystem.SpawnActorFromClass' on 'EditorActorSubsystem_0'\n  TypeError: NativizeProperty: Cannot nativize 'BlueprintGeneratedClass' as 'ActorClass' (ClassProperty)\n    TypeError: NativizeClass: Cannot nativize 'BlueprintGeneratedClass' as 'Class' (allowed Class type: 'Actor')"
+ ],
+ "component_detail": [
+  {
+   "name": "OpenXRRenderModelPMCPICO",
+   "class": "OpenXRRenderModelPMCPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "PokeHoleComponentPICO",
+   "class": "PokeHoleComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "BodyTrackingComponentPICO",
+   "class": "BodyTrackingComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "FaceTrackingComponentPICO",
+   "class": "FaceTrackingComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "AnchorComponentPICO",
+   "class": "AnchorComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "ProceduralMeshComponentPICO",
+   "class": "ProceduralMeshComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "SpatialMeshComponentPICO",
+   "class": "SpatialMeshComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "SpatialPlaneComponentPICO",
+   "class": "SpatialPlaneComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "HandTrackingComponentPICO",
+   "class": "HandTrackingComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "PassthroughLayerComponentPICO",
+   "class": "PassthroughLayerComponentPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "PassthroughCustomShapeLayerPICO",
+   "class": "PassthroughCustomShapeLayerPICO",
+   "super": "?",
+   "registered": null
+  },
+  {
+   "name": "PassthroughFullScreenLayerPICO",
+   "class": "PassthroughFullScreenLayerPICO",
+   "super": "?",
+   "registered": null
+  }
+ ]
+}

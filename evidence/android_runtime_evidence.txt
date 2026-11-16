@@ -1,0 +1,152 @@
+# PICOOpenXR UE5.9 - Android Runtime Evidence (PICO Emulator, launched with -vr)
+# device: emulator-5554 (swan_x86_64, Android 16, PICO OS 6)
+# apk: artifacts/AndroidPackage/PICOHost59-arm64.apk  131201389 bytes
+
+
+## adb am start command line override
+count: 1
+  adb am start command line override: -vr
+
+## OpenXRImmersiveHMD
+count: 1
+  [GameActivity] OpenXR_APL Found OpenXRImmersiveHMD mode.
+
+## packaged for Android OpenXR
+count: 1
+  [2026.11.15-22.37.44:185][  0]LogHMD: OpenXRHMDModule: App is packaged for Android OpenXR ImmersiveHMD
+
+## CustomLoader from plugin HMDPICO
+count: 1
+  [2026.11.15-22.37.44:287][  0]LogHMD: OpenXRHMDModule::InitInstance found and will use CustomLoader from plugin HMDPICO
+
+## PICO OpenXR API layer enabled
+count: 1
+  [2026.11.15-22.37.44:287][  0]LogPICOOpenXRHMD: PICO OpenXR API layer enabled: filtering VK_FORMAT_B8G8R8A8_SRGB swapchain format.
+
+## pvr.sdk.version
+count: 1
+  pvr.sdk.version: UE_PICO_OpenXR_6.1.4
+
+## xrCreateInstance succeeded
+count: 1
+  [2026.11.15-22.37.44:521][  0]LogHMD: xrCreateInstance succeeded with XR_API_VERSION_1_1
+
+## Initialized OpenXR on
+count: 1
+  [2026.11.15-22.37.44:521][  0]LogHMD: Initialized OpenXR on Pico XRRuntime() runtime version 31356.55360.16384
+
+## Loaded PICO OpenXR Loader
+count: 1
+  [2026.11.15-22.37.44:287][  0]LogPICOOpenXRHMD: Loaded PICO OpenXR Loader
+
+## PICO disable RHI thread requested
+count: 1
+  [2026.11.15-22.37.48:185][  0]LogPICOOpenXRHMD: PICO disable RHI thread requested (r.RHIThread.Enable 0), issued: 1
+
+## XR session state changed
+count: 5
+  [2026.11.15-22.37.51:405][  0]LogPICOOpenXRHMD: XR session state changed: 1 (IDLE)
+  [2026.11.15-22.37.51:405][  0]LogPICOOpenXRHMD: XR session state changed: 2 (READY)
+  [2026.11.15-22.37.51:751][  1]LogPICOOpenXRHMD: XR session state changed: 3 (SYNCHRONIZED)
+  [2026.11.15-22.37.51:751][  1]LogPICOOpenXRHMD: XR session state changed: 4 (VISIBLE)
+  [2026.11.15-22.37.51:752][  1]LogPICOOpenXRHMD: XR session state changed: 5 (FOCUSED)
+
+## Swapchain format not supported
+count: 1
+  [2026.11.15-22.37.52:161][  2]LogHMD: Warning: Swapchain format not supported (50), falling back to runtime preferred format (43).
+
+## parametric haptic properties
+count: 2
+  [2026.11.15-22.37.51:752][  1]LogPICOOpenXRInput: Left hand parametric haptic properties: MinFreq=50.0 Hz, MaxFreq=500.0 Hz, IdealRate=0.020 s, MinFirstFrame=0.020 s
+  [2026.11.15-22.37.51:752][  1]LogPICOOpenXRInput: Right hand parametric haptic properties: MinFreq=50.0 Hz, MaxFreq=500.0 Hz, IdealRate=0.020 s, MinFirstFrame=0.020 s
+
+## Mobile Multiview
+count: 1
+  [2026.11.15-22.37.45:683][  0]LogInit: XR: Mobile Multiview is Enabled
+
+## IOpenXRExtensionPlugin API layer enabled
+count: 1
+  [2026.11.15-22.37.44:287][  0]LogHMD: IOpenXRExtensionPlugin API layer enabled: HMDPICO
+
+## Extension plugin registration
+  [2026.11.15-22.37.44:307][  0]LogHMD:   PICOOpenXRPassthrough:
+  [2026.11.15-22.37.44:308][  0]LogHMD:   PICOOpenXRHandInteraction:
+  [2026.11.15-22.37.44:308][  0]LogHMD:   HandTrackingPICO:
+  [2026.11.15-22.37.44:308][  0]LogHMD:   MRModuleExtensionPICO:
+  [2026.11.15-22.37.44:308][  0]LogHMD:   MovementExtensionPICO:
+  [2026.11.15-22.37.44:309][  0]LogHMD:   ControllerPICO:
+  [2026.11.15-22.37.44:309][  0]LogHMD:   HMDPICO:
+
+## Optional PICO extensions not available
+  [2026.11.15-22.37.44:310][  0]LogHMD: Optional extension XR_PICO_external_camera is not available
+
+## PxrMetric frame submission (last 8)
+  I/PxrMetric( 5101): FPS=11/60,MTP=18.13ms,AppSW=off,FrmEarly=0,FrmLate=0,FrmCpu=61.95ms,FrmGpu=2.86ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=10,Pkg=com.YourCompany.PICOHost59,FrmId=148,Skip=0
+  I/PxrMetric( 5101): FPS=10/60,MTP=50.89ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=57.39ms,FrmGpu=2.08ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=11,Pkg=com.YourCompany.PICOHost59,FrmId=159,Skip=0
+  I/PxrMetric( 5101): FPS=11/60,MTP=34.72ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=51.67ms,FrmGpu=2.53ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=12,Pkg=com.YourCompany.PICOHost59,FrmId=171,Skip=0
+  I/PxrMetric( 5101): FPS=11/60,MTP=34.83ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=55.12ms,FrmGpu=2.45ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=11,Pkg=com.YourCompany.PICOHost59,FrmId=182,Skip=0
+  I/PxrMetric( 5101): FPS=11/60,MTP=18.05ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=62.74ms,FrmGpu=2.29ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=12,Pkg=com.YourCompany.PICOHost59,FrmId=194,Skip=0
+  I/PxrMetric( 5101): FPS=12/60,MTP=34.83ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=53.54ms,FrmGpu=2.22ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=11,Pkg=com.YourCompany.PICOHost59,FrmId=205,Skip=0
+  I/PxrMetric( 5101): FPS=11/60,MTP=34.82ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=54.01ms,FrmGpu=2.51ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=12,Pkg=com.YourCompany.PICOHost59,FrmId=217,Skip=0
+  I/PxrMetric( 5101): FPS=11/60,MTP=18.04ms,AppSW=off,FrmEarly=0,FrmLate=32,FrmCpu=57.20ms,FrmGpu=3.28ms,FrmTime=100.00ms,ATWGPU=0.00ms,VsyncDelay=6,GPU=0%/0Mhz,GPUTemp=0.0C,LayerCnt=2,Stuck=12,Pkg=com.YourCompany.PICOHost59,FrmId=229,Skip=0
+
+## Errors (filtered)
+  WSContainerManager-currentSpace[1], updateContainerInfo, containerId=3, error: no diff.
+  Binder transaction failure. id: 518081, BR_*: 29189, error: -22 (Invalid argument)
+  Binder transaction failure. id: 520972, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 520975, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 524860, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 524870, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 528712, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 528714, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 532548, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 532553, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 536357, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 536359, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 540221, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 540224, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 544023, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 544029, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 548027, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 548029, BR_*: 29201, error: -1 (Operation not permitted)
+  ANGLE Error:vk_renderer.cpp:5584 (initFeatures): Vulkan subgroup range: subgroupSize=32, minSubgroupSize=32, maxSubgroupSize=32
+  Binder transaction failure. id: 552264, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 552273, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 556320, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 556322, BR_*: 29201, error: -1 (Operation not permitted)
+  ANGLE Error:vk_renderer.cpp:5584 (initFeatures): Vulkan subgroup range: subgroupSize=32, minSubgroupSize=32, maxSubgroupSize=32
+  Binder transaction failure. id: 559814, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 559819, BR_*: 29201, error: -1 (Operation not permitted)
+  [###][###:53]: low speed file node fd error: -1
+  pre_display_error: has lasted for 7.5s
+  Ensure condition failed: (XRES_Result = xrSuggestInteractionProfileBindings(Instance, &InteractionProfile), ((XRES_Result) >= 0)) [File:./../Plugins/Runtime/OpenXR/Source/OpenXRInput/Private/OpenXRInput.cpp] [Line: 560] 
+  [2026.11.15-22.37.51:528][  0]LogOutputDevice: Error: === Handled ensure: ===
+  [2026.11.15-22.37.51:528][  0]LogOutputDevice: Error: 
+  [2026.11.15-22.37.51:528][  0]LogOutputDevice: Error: Ensure condition failed: (XRES_Result = xrSuggestInteractionProfileBindings(Instance, &InteractionProfile), ((XRES_Result) >= 0))  [File:./../Plugins/Runtime/OpenXR/Source/OpenXRInput/Private/OpenXRInput.cpp] [Line: 560] 
+  [2026.11.15-22.37.51:529][  0]LogOutputDevice: Error: XR call xrSuggestInteractionProfileBindings(Instance, &InteractionProfile) failed with result: XR_ERROR_PATH_UNSUPPORTED
+  [2026.11.15-22.37.51:529][  0]LogOutputDevice: Error: Stack: 
+  [2026.11.15-22.37.51:529][  0]LogOutputDevice: Error: [Callstack] 0x000040002E400C40 libUnreal.so(0x000000000DC00C40)![Unknown]()  []
+  [2026.11.15-22.37.51:530][  0]LogOutputDevice: Error: [Callstack] 0x000040002E3F9A24 libUnreal.so(0x000000000DBF9A24)![Unknown]()  []
+  [2026.11.15-22.37.51:530][  0]LogOutputDevice: Error: [Callstack] 0x000040002E3BF6A4 libUnreal.so(0x000000000DBBF6A4)![Unknown]()  []
+  [2026.11.15-22.37.51:530][  0]LogOutputDevice: Error: [Callstack] 0x000040002E3D5EF8 libUnreal.so(0x000000000DBD5EF8)![Unknown]()  []
+  [2026.11.15-22.37.51:530][  0]LogOutputDevice: Error: [Callstack] 0x00004000276C1AD8 libUnreal.so(0x0000000006EC1AD8)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x00004000274188B4 libUnreal.so(0x0000000006C188B4)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x000040002AAE9A78 libUnreal.so(0x000000000A2E9A78)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x000040002AAE6560 libUnreal.so(0x000000000A2E6560)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x000040002AAECBF8 libUnreal.so(0x000000000A2ECBF8)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x000040002AB0B590 libUnreal.so(0x000000000A30B590)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x00004000600F4110 libtcb.so(0x00000000000F4110)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: [Callstack] 0x00004000600F4110 libtcb.so(0x00000000000F4110)![Unknown]()  []
+  [2026.11.15-22.37.51:531][  0]LogOutputDevice: Error: 
+  Binder transaction failure. id: 562993, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 563003, BR_*: 29201, error: -1 (Operation not permitted)
+  java.util.concurrent.ExecutionException: java.lang.RuntimeException: error: 9
+  Caused by: java.lang.RuntimeException: error: 9
+  Binder transaction failure. id: 565379, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 565388, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 567830, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 567833, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 570009, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 570015, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 572292, BR_*: 29201, error: -1 (Operation not permitted)
+  Binder transaction failure. id: 572295, BR_*: 29201, error: -1 (Operation not permitted)

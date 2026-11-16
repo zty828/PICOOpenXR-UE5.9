@@ -1,0 +1,18 @@
+{
+ "classes_total": 86,
+ "class_ok": 86,
+ "cdo_ok": 86,
+ "class_fail": [],
+ "cdo_fail": [],
+ "structs": {
+  "total": 51,
+  "ok": 51,
+  "fail": []
+ },
+ "enums": {
+  "total": 63,
+  "ok": 63,
+  "fail": []
+ },
+ "errors": []
+}
