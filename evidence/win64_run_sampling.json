@@ -1,0 +1,49 @@
+{
+  "exe": "F:\\CG\\Projects\\PICOUE\\artifacts\\Win64Package\\PICOHost59\\Binaries\\Win64\\PICOHost59.exe",
+  "exeBytes": 349819392,
+  "exeSha256": "3662FD2E45144DFC37E63DB24E154C4A7A24A65C454461294340E05ED3A97C7A",
+  "exeMtime": "2026-11-16 08:30:53",
+  "map": "/Game/Maps/PICOTestMap",
+  "logPath": "F:\\CG\\Projects\\PICOUE\\artifacts\\DELIVERY\\VerifyReports\\win64_packaged_run.log",
+  "logBytes": 132646,
+  "samples": [
+    {
+      "sec": 10,
+      "exited": false,
+      "cpuSec": 13.06,
+      "logBytes": 103916,
+      "wsMb": 1212
+    },
+    {
+      "sec": 20,
+      "exited": false,
+      "cpuSec": 47.92,
+      "logBytes": 108966,
+      "wsMb": 1219
+    },
+    {
+      "sec": 30,
+      "exited": false,
+      "cpuSec": 85.06,
+      "logBytes": 114016,
+      "wsMb": 1220
+    },
+    {
+      "sec": 45,
+      "exited": false,
+      "cpuSec": 141.27,
+      "logBytes": 121591,
+      "wsMb": 1220
+    },
+    {
+      "sec": 60,
+      "exited": false,
+      "cpuSec": 198.44,
+      "logBytes": 129166,
+      "wsMb": 1221
+    }
+  ],
+  "closeSent": true,
+  "exitCode": 0,
+  "sampledAt": "2026-11-16 11:34:47"
+}

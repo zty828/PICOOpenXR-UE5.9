@@ -170,11 +170,26 @@ ProceduralMeshComponent, AndroidPermission, LiveLink。
   SUMMARY|known=2|unregistered=0|compiled=3|missing=0
   产物: VerifyReports/PICOShaderCheck.txt
 
-[Win64 运行] 打包后的 PICOHost59.exe 实跑：插件挂载成功
-  （LogPluginManager: Mounting Project plugin PICOOpenXR），
-  7 个扩展插件全部注册，插件 Actor 的 BeginPlay/Tick 与 PICO API
-  调用链完整执行，零 Error 零断言。
+[Win64 运行] 打包后的 PICOHost59.exe 实跑（显式带地图
+  /Game/Maps/PICOTestMap 启动，因为 cook 后的 Saved\Config 没有
+  GameDefaultMap，不传地图会落到 /Engine/Maps/Templates/OpenWorld）：
+  插件挂载成功（LogPluginManager: Mounting Project plugin PICOOpenXR），
+  7 个扩展插件全部注册，LogLoad: LoadMap: /Game/Maps/PICOTestMap?Name=Player
+  后进入游戏循环。插件 C++ Actor 真实执行：
+    LogPICOCameraPreview          5 行（BeginPlay / StartAfterPermission /
+                                  IsCameraImageSupported=false / ShutdownCamera）
+    PICO ET Debug（眼睛追踪）      51 行逐 tick，跨 50.2 秒
+  进程在第 10/20/30/45/60 秒采样时全部存活，累计 CPU 198.44 秒，
+  工作集稳定 1.2 GB；以 WM_CLOSE 正常关闭，退出码 0
+  （ViewportClosed -> RequestExit(0) -> Game engine shut down -> Exiting）。
+  Fatal error / Assertion failed / Ensure condition failed /
+  LogOutputDevice: Error / XR_ERROR_PATH_UNSUPPORTED 全部为 0。
+  说明：本机没有可用的 PC OpenXR 运行时，唯一一条 XR_ERROR 是
+  「Failed to create an OpenXR instance, result is XR_ERROR_VALIDATION_FAILURE」，
+  属环境限制；PC 端 OpenXR 会话无法在本机构建，完整会话证据见 Android 段。
   日志: VerifyReports/win64_packaged_run.log
+        VerifyReports/win64_runtime_evidence.txt（脚本生成）
+        VerifyReports/win64_run_sampling.json
 
 [Win64 完整打包] RunUAT BuildCookRun（cook+build+stage+pak+archive）
   BUILD SUCCESSFUL，ExitCode=0。
@@ -249,7 +264,7 @@ ProceduralMeshComponent, AndroidPermission, LiveLink。
 
 五、文件校验
 ----------------------------------------------------------------
-交付目录: 352 个文件 / 20,841,623 字节（含本说明文件）
+交付目录: 352 个文件 / 20,842,779 字节（含本说明文件）
 与原版 6.1.4 对比: 350 -> 351 文件，修改 14 个，新增 1 个，删除 0 个
 Content/ 下 121 个资产与原版完全一致（未增删改）
 逐 hunk 差异报告: VerifyReports/PATCH_REPORT.txt

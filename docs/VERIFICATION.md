@@ -15,13 +15,20 @@ Every claim is backed by a file in [`evidence/`](../evidence) — the log is nam
 | `PICOHost59` | Win64 Shipping | **Succeeded** |
 | `PICOHost59` | Android Shipping (arm64, ASTC) | **Succeeded** |
 
-Toolchain reported by UBT:
+Toolchain reported by UBT (quoted verbatim, Win64 from `build_win64_game_shipping.log:12`,
+Android from `build_android_shipping.log:10-14`):
 
 ```
 Using Visual Studio 14.44.35229 toolchain
-  (C:\...\MSVC\14.44.35207) and Windows 10.0.22621.0 SDK
-Using Android SDK API 36 / NDK 27.2.12479018 / build-tools 36.0.0
+  (F:\GameEngine\UE5.8.3Source\Tools\VS2022\VC\Tools\MSVC\14.44.35207)
+  and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+NDK toolchain: r27c, NDK version: 270300, ClangVersion: 18.0.3
+Compiling Native 64-bit code with NDK API 'android-26'
 ```
+
+The "14.44.35229 toolchain / 14.44.35207 directory" split is UBT's own wording: the *toolchain
+label* it prints and the *MSVC directory* it resolves differ in the last component on this
+install. Both come from the same VS 2022 17.14 installation.
 
 ### Clean-room install
 
@@ -129,7 +136,57 @@ The plugin's materials compile on **both** Android shader platforms
 
 ---
 
-## 8. Runtime — Android, end-to-end OpenXR
+## 8. Runtime — Win64, packaged build
+
+The staged package (`Win64Package/`, built by `BuildCookRun` above) was launched from its
+own executable, with the test map passed on the command line because the cooked
+`Saved\Config\Windows\Engine.ini` carries no `GameDefaultMap` (without it the engine falls
+back to `/Engine/Maps/Templates/OpenWorld`):
+
+```
+PICOHost59.exe /Game/Maps/PICOTestMap -game -log -abslog=... \
+    -nosplash -NoSound -nop4 -windowed -ResX=1280 -ResY=720
+```
+
+| Observation | Value |
+|---|---|
+| `Mounting Project plugin PICOOpenXR` | 1 |
+| `IOpenXRExtensionPlugin` implementations registered | **7 / 7** |
+| `LogLoad: LoadMap: /Game/Maps/PICOTestMap?Name=Player` | 1 |
+| `LogPICOCameraPreview` lines (`BeginPlay` → `ShutdownCamera`) | 5 |
+| `PICO ET Debug` eye-tracking tick lines | 51, spanning 50.2 s |
+| Process alive at the 10 / 20 / 30 / 45 / 60 s samples | **5 / 5**, CPU time grew 13.06 s → **198.44 s** |
+| Graceful shutdown | `WM_CLOSE` → `RequestExit(0, UGameEngine::Tick.ViewportClosed)` → exit code **0** |
+| `Fatal error` / `Assertion failed` / `Ensure condition failed` / `LogOutputDevice: Error` / `XR_ERROR_PATH_UNSUPPORTED` | **0 / 0 / 0 / 0 / 0** |
+
+→ `evidence/win64_packaged_run.log` (1,304 lines), summary in
+`evidence/win64_runtime_evidence.txt`, raw process samples in `evidence/win64_run_sampling.json`.
+
+Like the Android summary, that evidence file is **generated, not hand-written** — every counter
+and quoted line is recomputed from the raw engine log and the sampling JSON by
+[`tools/evidence/gen_win64_evidence.ps1`](../tools/evidence/gen_win64_evidence.ps1). The
+sampling JSON itself comes from
+[`tools/evidence/run_win64_packaged_test.ps1`](../tools/evidence/run_win64_packaged_test.ps1),
+which launches the exe, samples it, and closes it with `WM_CLOSE` instead of killing it:
+
+```
+pwsh -File tools/evidence/run_win64_packaged_test.ps1 \
+    -ExePath <staging>/PICOHost59/Binaries/Win64/PICOHost59.exe \
+    -Map /Game/Maps/PICOTestMap \
+    -LogPath evidence/win64_packaged_run.log \
+    -SamplePath evidence/win64_run_sampling.json
+pwsh -File tools/evidence/gen_win64_evidence.ps1 -LogPath evidence/win64_packaged_run.log \
+    -SamplePath evidence/win64_run_sampling.json -OutPath evidence/win64_runtime_evidence.txt
+```
+
+**What this does not prove:** no PC OpenXR session was ever created — this machine has no working
+PC OpenXR runtime (see §10), so the loader returns `XR_ERROR_VALIDATION_FAILURE` and every
+`XR_PICO_*` extension reports *not available*. The extension list above comes from the plugin
+side. The session-level proof is the Android capture in §9.
+
+---
+
+## 9. Runtime — Android, end-to-end OpenXR
 
 This is the strongest evidence: the packaged APK was installed on a **PICO device-class Android
 runtime** (PICO OS emulator image, Android 16, Pico XRRuntime `31258.43072.16384`) and driven
@@ -190,11 +247,11 @@ is skipped instead of poisoning the whole `xrSuggestInteractionProfileBindings` 
 
 ---
 
-## 9. What could NOT be verified here
+## 10. What could NOT be verified here
 
 | Item | Why |
 |---|---|
-| PC VR (Win64) OpenXR session | No working PC OpenXR runtime on the build machine. SteamVR is installed and registered as the active runtime, but its `vrserver` exits immediately (empty `SteamVR/logs`), so the loader returns `XR_ERROR_VALIDATION_FAILURE`. The packaged Win64 build is verified to *start, mount the plugin, and register all 7 extension plugins* with 0 errors — `evidence/win64_packaged_run.log` — but the XR instance itself cannot be created on this box. **Android is the target platform for this plugin, and it is fully verified.** |
+| PC VR (Win64) OpenXR session | No working PC OpenXR runtime on the build machine. SteamVR is installed and registered as the active runtime, but its `vrserver` exits immediately (empty `SteamVR/logs`), so the loader returns `XR_ERROR_VALIDATION_FAILURE`. The packaged Win64 build is verified to *start, mount the plugin, register all 7 extension plugins, load the test map, run the plugin actors and shut down with exit code 0* with 0 errors — §8 above and `evidence/win64_runtime_evidence.txt` — but the XR instance itself cannot be created on this box. **Android is the target platform for this plugin, and it is fully verified.** |
 | Physical PICO headset | Not available; the PICO OS emulator was used instead. It ships the real PICO OpenXR runtime, so the API-level path is genuine, but comfort/display characteristics are not testable. |
 
 ---

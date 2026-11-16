@@ -8,7 +8,7 @@ Verified on **UE 5.9.0 (CL 60351404, `++UE5+Release-5.9`)** — editor, Win64 pa
 
 <img src="docs/images/android-run.jpg" width="420" alt="The packaged APK rendering through PICO OpenXR on a PICO Android runtime">
 
-*The packaged APK running through PICO OpenXR on a PICO OS Android runtime — session `FOCUSED`, stereo submit at ~90 Hz. This is a frame captured from the device, not a render target.*
+*The packaged APK running through PICO OpenXR on a PICO OS Android runtime — the session reached `FOCUSED` and stereo layers were submitted every frame. This is a frame captured from the device, not a render target. Frame rate on the PICO emulator image is CPU-bound at ~12 FPS (`FrmCpu` ≈ 50 ms, `FrmGpu` ≈ 2.4 ms); that is the emulator's software path, not the plugin.*
 
 ---
 
@@ -74,9 +74,10 @@ Everything below was executed on UE 5.9.0. The raw logs and reports behind each 
 | Instantiation & calls | 6 C++ actors + 12 components + 8 sample blueprints instantiate; 10/10 zero-arg BlueprintCallable functions invoke successfully |
 | Shaders (real D3D12) | known 2 · unregistered 0 · compiled 3 · missing 0 |
 | Win64 BuildCookRun | 737 packages · 0 errors · 31 warnings · `BUILD SUCCESSFUL` |
+| Win64 packaged runtime | exe mounts the plugin, loads `/Game/Maps/PICOTestMap`, 7/7 extension plugins register, plugin actors run `BeginPlay` and tick (5 `LogPICOCameraPreview` lines, 51 eye-tracking tick lines over 50.2 s), alive through 60 s with 198 s CPU consumed, exits 0 via `WM_CLOSE`; fatal/assert/ensure/error signatures all 0 |
 | Android BuildCookRun | 737 packages · 0 errors · `BUILD SUCCESSFUL` (APK 131,193,373 B + OBB 85,153,006 B) |
 | Clean install (fresh empty project, full rebuild) | 111 actions / 414.01 s · `Result: Succeeded` · 86/51/63/121/17 all pass |
-| **Android runtime, real PICO runtime** | `xrCreateInstance succeeded` (XR_API_VERSION_1_1) · session `IDLE→READY→SYNCHRONIZED→VISIBLE→FOCUSED` · 102 rendered frames · `XR_ERROR_PATH_UNSUPPORTED` 0 · `Critical error` 0 · `Assertion failed` 0 |
+| **Android runtime, real PICO runtime** | `xrCreateInstance succeeded` (XR_API_VERSION_1_1) · session `IDLE→READY→SYNCHRONIZED→VISIBLE→FOCUSED` · 97 frame submissions from the app process (102 `PxrMetric` lines in the capture) · `XR_ERROR_PATH_UNSUPPORTED` 0 · `Critical error` 0 · `Assertion failed` 0 |
 
 ---
 
@@ -95,6 +96,10 @@ docs/
   images/android-run.jpg         the Android session this port was validated on
 evidence/                        raw logs and reports behind every number above
 tools/
+  evidence/gen_android_evidence.ps1   regenerates evidence/android_runtime_evidence.txt
+  evidence/gen_win64_evidence.ps1     regenerates evidence/win64_runtime_evidence.txt
+  evidence/run_win64_packaged_test.ps1  launches the staged exe, samples CPU/log/working
+                                 set, then closes it with WM_CLOSE
   PICOValidate/                  the standalone UE module that dumps the reflection
                                  surface and checks that plugin shaders compile
   python/verify_plugin.py        editor-side self-check (Maps all types, assets,
@@ -108,7 +113,7 @@ To re-run the verification in your own project, see [tools/README.md](tools/READ
 
 ## Known limitations
 
-1. **No PC OpenXR runtime was available on the build machine**, so the Windows build could only be verified as far as "package starts, plugin mounts, 7 extension plugins register, 0 errors" — the OpenXR instance itself fails with `XR_ERROR_VALIDATION_FAILURE` because SteamVR's `vrserver` exits immediately on that machine. Full OpenXR runtime evidence comes from Android. If you have a PICO headset, please re-test on Win64 and open an issue with the log.
+1. **No PC OpenXR runtime was available on the build machine**, so the Windows build is verified as far as "packaged exe starts, mounts the plugin, registers 7 extension plugins, loads the test map, runs the plugin actors, and shuts down cleanly with exit code 0" — the OpenXR instance itself fails with `XR_ERROR_VALIDATION_FAILURE` because SteamVR's `vrserver` exits immediately on that machine, so no XR session is ever created and every `XR_PICO_*` extension reports "not available". Full OpenXR session evidence comes from Android. If you have a PICO headset, please re-test on Win64 and open an issue with the log.
 2. **Two upstream assets are genuinely missing** in 6.1.4: `/PICOOpenXR/Meshes/MixedReality/S_Gnomon` and `SceneCaptureBounds`. A recursive search of the whole SDK returns 0 hits. No placeholder assets were added, to stay byte-identical to the official content.
 3. **Android emulator flakes.** After several install/crash cycles the emulator's `RHICache` ownership or EGL state gets corrupted, producing a `VulkanChunkedPipelineCache.cpp` `bWriteSuccess` assert or a `libEGL` SIGSEGV. `adb emu kill` + cold boot fixes it; the same APK then runs fine. Neither failure is in plugin code.
 

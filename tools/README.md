@@ -22,6 +22,36 @@ extension-plugin list, the XR state chain, frame-submission counts, the nine plu
 signatures (all must be 0 for `Verdict: PASS`), and the platform-side error histogram. The only
 literals in the script are section titles.
 
+## `evidence/run_win64_packaged_test.ps1` + `evidence/gen_win64_evidence.ps1` — the Win64 pair
+
+Same idea for the staged Windows build. The first script launches the packaged exe, samples it
+(CPU time, log growth, working set) and then closes it with `WM_CLOSE` instead of `Stop-Process`,
+so the shutdown path is the one a real user would take. The second turns the resulting engine log
+plus the sampling JSON into `evidence/win64_runtime_evidence.txt`.
+
+```powershell
+pwsh -File tools/evidence/run_win64_packaged_test.ps1 `
+    -ExePath <staging>/PICOHost59/Binaries/Win64/PICOHost59.exe `
+    -Map /Game/Maps/PICOTestMap `
+    -LogPath evidence/win64_packaged_run.log `
+    -SamplePath evidence/win64_run_sampling.json
+
+pwsh -File tools/evidence/gen_win64_evidence.ps1 `
+    -LogPath evidence/win64_packaged_run.log `
+    -SamplePath evidence/win64_run_sampling.json `
+    -OutPath evidence/win64_runtime_evidence.txt
+```
+
+`-Map` matters: `BuildCookRun` cooks the map you pass to it, but the cooked
+`Saved\Config\Windows\Engine.ini` has no `GameDefaultMap`, so a packaged build launched without
+an explicit map falls back to `/Engine/Maps/Templates/OpenWorld`. Pass the map on the command line
+(or set `GameDefaultMap` in your own project's config).
+
+The generated file states plainly what it does and does not prove. On a machine with no PC OpenXR
+runtime the plugin still mounts and its actors still run, but no XR session is created — the
+`Verdict` block only claims the packaged-exe facts (mount, 7 extension plugins, map load, actor
+tick, clean exit 0, zero failure signatures).
+
 ## `PICOValidate/` — a UE module that dumps the plugin's reflected surface
 
 Copy this folder into your project's `Source/`, next to your game module, and add `"PICOValidate"`
