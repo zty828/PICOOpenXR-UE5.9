@@ -1,7 +1,7 @@
 # Keep Windows line endings out of the repo for text; never touch binary payloads.
 * text=auto eol=lf
 
-# Unreal assets and compiled payloads are binary — no newline translation, no diff.
+# Unreal assets and compiled payloads are binary - no newline translation, no diff.
 *.uasset binary
 *.umap  binary
 *.so    binary
@@ -23,3 +23,9 @@
 *.txt  text eol=lf
 *.bat  text eol=crlf
 *.uplugin text eol=lf
+
+# Evidence artifacts are raw machine output captured on Windows. They are checksummed
+# in docs/PATCH_REPORT.txt and in the delivery manifest, so their bytes must survive a
+# clone unchanged: no newline translation at all.
+evidence/** -text
+docs/PATCH_REPORT.txt -text
