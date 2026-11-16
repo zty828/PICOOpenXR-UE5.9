@@ -21,7 +21,9 @@
 *.json text eol=lf
 *.md   text eol=lf
 *.txt  text eol=lf
-*.bat  text eol=crlf
+# The upstream SDK ships this .bat with bare-LF line endings and it is hashed in the
+# delivery manifest, so checkout must not rewrite it to CRLF.
+*.bat  -text
 *.uplugin text eol=lf
 
 # Evidence artifacts are raw machine output captured on Windows. They are checksummed
