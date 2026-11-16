@@ -87,8 +87,18 @@ PICOOpenXR/                      the plugin itself (drop into <Project>/Plugins/
 docs/
   PATCHES.md                     every change, file by file
   VERIFICATION.md                what was tested, how, and the evidence
+  PATCH_REPORT.txt               generated per-hunk diff against upstream 6.1.4
+  images/android-run.png         the Android session this port was validated on
+evidence/                        raw logs and reports behind every number above
+tools/
+  PICOValidate/                  the standalone UE module that dumps the reflection
+                                 surface and checks that plugin shaders compile
+  python/verify_plugin.py        editor-side self-check (Maps all types, assets,
+                                 blueprints, modules) — run it in your own project
 NOTICE.md                        upstream copyright and third-party licenses
 ```
+
+To re-run the verification in your own project, see [tools/README.md](tools/README.md).
 
 ---
 
