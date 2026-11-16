@@ -6,6 +6,10 @@ Unofficial adaptation of **PICO OpenXR** (shipped inside *PICO Unreal SDK 6.1.4*
 
 Verified on **UE 5.9.0 (CL 60351404, `++UE5+Release-5.9`)** — editor, Win64 packaging and a full Android OpenXR session on a real PICO runtime.
 
+<img src="docs/images/android-run.jpg" width="420" alt="The packaged APK rendering through PICO OpenXR on a PICO Android runtime">
+
+*The packaged APK running through PICO OpenXR on a PICO OS Android runtime — session `FOCUSED`, stereo submit at ~90 Hz. This is a frame captured from the device, not a render target.*
+
 ---
 
 ## Why a port is needed
@@ -88,7 +92,7 @@ docs/
   PATCHES.md                     every change, file by file
   VERIFICATION.md                what was tested, how, and the evidence
   PATCH_REPORT.txt               generated per-hunk diff against upstream 6.1.4
-  images/android-run.png         the Android session this port was validated on
+  images/android-run.jpg         the Android session this port was validated on
 evidence/                        raw logs and reports behind every number above
 tools/
   PICOValidate/                  the standalone UE module that dumps the reflection
