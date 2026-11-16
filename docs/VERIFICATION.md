@@ -157,11 +157,24 @@ Counters over the whole 26,075-line session log:
 | XR session state transitions (1→5) | 5 |
 | `XR_ERROR_PATH_UNSUPPORTED` | **0** |
 | `Skipping haptic bindings` (G3 gating active) | 1 |
-| `PxrMetric` submit lines | 102 (frame id monotonically increasing) |
+| `PxrMetric` submit lines, whole logcat | 102 (app process: 97; the other 5 come from the PICO launcher / spatial runtime) |
+| App frame ids submitted | 2 → 1214 (monotonically increasing) |
 | UE-side `Error:` / `Assertion failed` / `Critical error` | **0** |
+| UE `LogOutputDevice: Error` / `Ensure condition failed` | **0** |
 
 → `evidence/android_openxr_vr_session.log` (5.0 MB), summary in
-`evidence/android_runtime_evidence.txt`
+`evidence/android_runtime_evidence.txt`.
+
+That summary file is **generated, not hand-written**: every counter and quoted line in it is
+recomputed from the raw logcat and from the APK on disk by
+[`tools/evidence/gen_android_evidence.ps1`](../tools/evidence/gen_android_evidence.ps1).
+
+```
+pwsh -File tools/evidence/gen_android_evidence.ps1 `
+  -LogPath evidence/android_openxr_vr_session.log `
+  -ApkPath <build>/PICOHost59-arm64.apk `
+  -OutPath evidence/android_runtime_evidence.txt
+```
 
 The `Skipping haptic bindings` line is the direct proof that the G3 interaction-profile fix
 (documented in [`PATCHES.md`](PATCHES.md) §4–5) works: the profile that has no haptic output path

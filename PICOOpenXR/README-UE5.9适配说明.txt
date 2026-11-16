@@ -217,12 +217,14 @@ ProceduralMeshComponent, AndroidPermission, LiveLink。
       (r.RHIThread.Enable 0), issued: 1
     LogPICOOpenXRInput: Skipping haptic bindings - interaction profile 23
       does not expose a haptic output path
-    PxrMetric 逐帧指标 102 条，FrmId 连续递增，LayerCnt=2/3
+    PxrMetric 逐帧指标 102 条（app 进程 97 条，余 5 条属 PICO
+      launcher/spatial runtime），FrmId 2 -> 1214 连续递增，LayerCnt=2/3
   统计: not packaged for OpenXR = 0；XR_ERROR_PATH_UNSUPPORTED = 0；
         Critical error = 0；Assertion failed = 0。
   即: 插件在真实 PICO OpenXR 运行时上完整走通「创建实例 -> 注册扩展 ->
       建立会话 -> 进入 FOCUSED -> 提交图层」全流程。
-  另: 常用扩展面证据见 VerifyReports/android_runtime_evidence.txt。
+  另: 扩展面计数摘要见 VerifyReports/android_runtime_evidence.txt，
+      该文件由脚本从上面这份原始日志与 APK 重新计算生成（非手抄）。
 
 四、已知的环境限制（非插件缺陷）
 ----------------------------------------------------------------

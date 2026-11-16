@@ -3,6 +3,25 @@
 Small, project-agnostic helpers used to verify the port. Nothing here is part of the plugin —
 you do not need any of it to *use* PICOOpenXR.
 
+## `evidence/gen_android_evidence.ps1` — regenerate the Android runtime summary
+
+`evidence/android_runtime_evidence.txt` is a derived artefact: it is rebuilt from the raw logcat
+(`evidence/android_openxr_vr_session.log`) and from the APK on disk on every run, so its numbers can
+never drift away from the log the way a hand-edited summary does.
+
+```powershell
+pwsh -File tools/evidence/gen_android_evidence.ps1 `
+    -LogPath evidence/android_openxr_vr_session.log `
+    -ApkPath <build>/PICOHost59-arm64.apk `
+    -OutPath evidence/android_runtime_evidence.txt `
+    -AppPid  3647                     # PID of com.YourCompany.PICOHost59 in that capture
+```
+
+Everything it prints is computed: file sizes, line counts, the engine/OS/command-line banner, the
+extension-plugin list, the XR state chain, frame-submission counts, the nine plugin-failure
+signatures (all must be 0 for `Verdict: PASS`), and the platform-side error histogram. The only
+literals in the script are section titles.
+
 ## `PICOValidate/` — a UE module that dumps the plugin's reflected surface
 
 Copy this folder into your project's `Source/`, next to your game module, and add `"PICOValidate"`
