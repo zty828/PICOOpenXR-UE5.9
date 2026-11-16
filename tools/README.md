@@ -5,8 +5,15 @@ you do not need any of it to *use* PICOOpenXR.
 
 ## `PICOValidate/` — a UE module that dumps the plugin's reflected surface
 
-Drop this folder into your project's `Source/` next to your game module, add
-`"PICOValidate"` to your `.Target.cs` `ExtraModuleNames`, and it gives you two console commands:
+Copy this folder into your project's `Source/`, next to your game module, and add `"PICOValidate"`
+to the `ExtraModuleNames` of the **Editor** target only:
+
+```csharp
+// <Project>Editor.Target.cs
+ExtraModuleNames.AddRange(new string[] { "<Project>", "PICOValidate" });
+```
+
+It gives you two console commands:
 
 | Command | What it does |
 |---|---|
@@ -36,12 +43,15 @@ Runs inside the editor's Python environment and checks, in one pass:
    the `.uplugin` listed it).
 
 ```bash
+set PICO_SURFACE=<abs>/Saved/PICOSurface.txt   # output of PICODumpReflectionSurface
+set PICO_OUT=<abs>/Saved/PICOPluginVerify.json
 UnrealEditor-Cmd.exe <abs>/<Project>.uproject \
-    -run=pythonscript -script="<abs>/tools/python/verify_plugin.py" \
-    -unattended -nosplash -nullrhi -nop4
+    -ExecutePythonScript="<abs>/tools/python/verify_plugin.py" \
+    -unattended -nosplash -nullrhi -NoSound -nop4
 ```
 
-Environment overrides: `PICO_SURFACE` (input dump) and `PICO_OUT` (JSON report path).
+`PICO_SURFACE` is required — it is the reflection dump produced by `PICODumpReflectionSurface` in
+step 1. `PICO_OUT` is optional and defaults to `<Project>/Saved/PICOPluginVerify.json`.
 Exit code 0 = pass, 1 = fail; the JSON report is always written so you can see what broke.
 
 ### Notes on two non-obvious API quirks

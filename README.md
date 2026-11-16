@@ -59,7 +59,7 @@ Required engine plugins (all bundled with UE 5.9): `OpenXR`, `XRBase`, `PICOCont
 
 ## Verification summary
 
-Everything below was executed on UE 5.9.0; raw reports live in the original delivery bundle and are summarised in [docs/VERIFICATION.md](docs/VERIFICATION.md).
+Everything below was executed on UE 5.9.0. The raw logs and reports behind each number are in [`evidence/`](evidence/); the method behind them is in [docs/VERIFICATION.md](docs/VERIFICATION.md).
 
 | Check | Result |
 |---|---|

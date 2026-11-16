@@ -193,13 +193,24 @@ is skipped instead of poisoning the whole `xrSuggestInteractionProfileBindings` 
 "<UE5.9>/Engine/Build/BatchFiles/Build.bat" <YourProject>Editor Win64 Development \
     -Project="<abs>/<YourProject>.uproject" -WaitMutex
 
-# 2. reflection surface + shader check
-#    (add tools/PICOValidate to your project's Source/, then:)
+# 2. copy tools/PICOValidate into <YourProject>/Source/ and build again.
+#    It registers two console commands. Reflection dump works headless:
 UnrealEditor-Cmd.exe <abs>/<YourProject>.uproject \
-    -run=pythonscript -script="<abs>/tools/python/run_checks.py" \
-    -unattended -nosplash -nullrhi -nop4
+    -ExecCmds="PICODumpReflectionSurface <abs>/Saved/PICOSurface.txt,quit" \
+    -unattended -nosplash -nullrhi -NoSound -nop4
 
-# 3. or drive it interactively from the editor console:
-#    PICODumpReflectionSurface
-#    PICOShaderCheck
+#    The shader check needs a real RHI (a null RHI device compiles nothing and
+#    reports every shader MISSING), so drop -nullrhi for this one:
+UnrealEditor-Cmd.exe <abs>/<YourProject>.uproject \
+    -ExecCmds="PICOShaderCheck <abs>/Saved/PICOShaderCheck.txt,quit" \
+    -unattended -nosplash -NoSound -nop4
+
+# 3. editor-side self-check: loads every /Script/PICO* type, every asset under
+#    /PICOOpenXR and every Blueprint, then writes a JSON verdict (exit code 0/1).
+#    PICO_SURFACE points at the PICODumpReflectionSurface output from step 2.
+set PICO_SURFACE=<abs>/Saved/PICOSurface.txt
+set PICO_OUT=<abs>/Saved/PICOPluginVerify.json
+UnrealEditor-Cmd.exe <abs>/<YourProject>.uproject \
+    -ExecutePythonScript="<abs>/tools/python/verify_plugin.py" \
+    -unattended -nosplash -nullrhi -NoSound -nop4
 ```
